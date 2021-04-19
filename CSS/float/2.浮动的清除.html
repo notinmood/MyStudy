@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .my_float {
+            float: left;
+        }
+
+        .my_clear {
+            clear: both;
+        }
+
+        .red {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+
+        .blue {
+            background-color: blue;
+            width: 120px;
+            height: 120px;
+        }
+
+        .green {
+            background-color: green;
+            width: 250px;
+            height: 250px;
+        }
+
+        .pink {
+            background-color: pink;
+            width: 250px;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+<div class="green">
+    <div class="red my_float my_clear"></div>
+    <div class="blue my_float "></div>
+</div>
+红块和蓝块都是float元素，但如果给红块设置clear的时候（即便clear设置为left或者both），都无法清除掉后面蓝块的横向跟随。
+<br/>
+<div class="pink">
+    <div class="red my_float "></div>
+    <div class="blue my_float my_clear"></div>
+</div>
+红块和蓝块都是float元素，只有给蓝块设置clear的时候，才能够让蓝块取掉对红块的横向跟随。
+</body>
+</html>
