@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <style type="text/css">
+        .container {
+            width: 600px;
+            height: 200px;
+            float: left;
+            margin: 5px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 5px;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .pink {
+            background-color: pink;
+        }
+
+        .blue{
+            background-color: blue;
+        }
+
+        .absolute {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="container yellow">
+
+</div>
+<div class="container green" style="clear: both">
+    红色的色块，本来属于绿块。即便红快设置了position为absolute，但因为绿块没有改变原来的position，所以红块的定位绝对基点为body的左上角。
+    <div class="box red absolute">One</div>
+</div>
+<div class="container pink" style="clear: both;position: relative">
+    蓝色的色块，属于紫红的父色块。因为除了给蓝块设置了position：absolute外，还给父色块设置了position，这样就改变了原来的在body左上角的零点到了紫红块的左上角。
+    <div class="box blue absolute">Two</div>
+</div>
+
+</body>
+</html>
