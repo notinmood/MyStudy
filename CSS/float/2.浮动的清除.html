@@ -24,6 +24,12 @@
             height: 120px;
         }
 
+        .cyan {
+            background-color: cyan;
+            width: 130px;
+            height: 130px;
+        }
+
         .green {
             background-color: green;
             width: 250px;
@@ -35,19 +41,60 @@
             width: 250px;
             height: 250px;
         }
+
+        .yellow {
+            background-color: yellow;
+            width: 300px;
+            height: auto;
+        }
     </style>
 </head>
 <body>
+元素声明clear: both;那么就是让它就会忽略上一个元素的浮动声明而不去补之前的空缺。
 <div class="green">
     <div class="red my_float my_clear"></div>
     <div class="blue my_float "></div>
 </div>
 红块和蓝块都是float元素，但如果给红块设置clear的时候（即便clear设置为left或者both），都无法清除掉后面蓝块的横向跟随。
 <br/>
+<br/>
+<br/>
 <div class="pink">
     <div class="red my_float "></div>
     <div class="blue my_float my_clear"></div>
 </div>
 红块和蓝块都是float元素，只有给蓝块设置clear的时候，才能够让蓝块取掉对红块的横向跟随。
+<br/>
+<br/>
+<br/>
+<div class="yellow">
+    <div class="red my_float"></div>
+    <div class="blue my_clear"></div>
+    <div class="cyan my_float"></div>
+</div>
+
+<div class="my_clear"></div>
+红块设置了float，蓝块设置了clear，青块设置了float。<br>
+红块浮动之后，本来蓝块应该自动向上填充红块原来的空间（如果蓝块为标准流）；
+或者蓝块自动横向移动到红块后面（如果蓝块设置为float）。
+但是因为蓝块设置了clear，蓝块就摆脱了前一个红块浮动的影响，不去占领红块的空间了，还在原来的地方，
+这样就还属于文档标准流，还受黄块约束。
+<br>青块，设置了浮动，因此其可以突破黄块的束缚，显示在黄块外面。
+
+<br/>
+<br/>
+<br/>
+<div class="yellow" style="width: 400px">
+    <div class="red my_float"></div>
+    <div class="blue my_float"></div>
+    <div class="cyan my_clear"></div>
+</div>
+<div class="my_clear"></div>
+红块、蓝块都设置了float，青块设置了clear。青块在标准流中，但可以摆脱前面float的影响，不去占用前面色块的空间。
+仔细观察，只是清除了最近一个邻居蓝块的影响（就是蓝块该占用的空间，青块不去占用了。
+就是说如果蓝块没有浮动的话，蓝块会顶着黄块最上沿放置（因为红块已经浮动走了），现在因为蓝块浮动了，
+如果青块在纯标准流中的话，他会占用蓝块的位置，但现在青块clear了，他不去占用蓝块的位置了）。
+红块不会直接影响青块的位置（红块会影响蓝块的位置）。
+
 </body>
 </html>

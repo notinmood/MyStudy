@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <style>
+        .container {
+            width: 300px;
+            height: auto;
+            background: rgb(54, 181, 219);
+            position: relative;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 2px solid rgb(247, 129, 129);
+        }
+
+        .my_float {
+            float: left;
+        }
+
+        .my_clear {
+            clear: both;
+        }
+
+        .my_overflow {
+            overflow: hidden;
+        }
+
+        .my_after:after {
+            content: "";
+            height: 0;
+            clear: both;
+            overflow: hidden;
+            display: block;
+            visibility: hidden;
+        }
+
+    </style>
+</head>
+<body>
+描述：父元素高度自适应 ，子元素 float后，造成父元素高度为0，称之为高度塌陷问题。<br>
+1、正常情况（子元素不设置浮动）
+<div class="container">
+    <div class="box"></div>
+</div>
+
+2、给子元素设置浮动，那么父元素的高度将坍塌成0（在下图中，根本就看不到这个高度为0的父元素了）
+<div class="container">
+    <div class="box my_float"></div>
+</div>
+
+<div class="my_clear"></div>
+3、解决方案A<br>
+在子元素的末尾添加一个高度为0的空白 div来清除浮动属性。
+（缺点：在页面中添加无意义的div会造成代码冗余）
+<div class="container">
+    <div class="box my_float"></div>
+    <div class="my_clear"></div>
+</div>
+4、解决方案B<br>
+给父元素添加 overflow：hidden；隐藏溢出，当内容超过其父元素时，可以使用该属性和值将溢出的部分裁剪掉，使页面更加美观
+清除浮动，当子元素浮动时，给父元素添加overflow：hidden，按照它的第一个特性，应该将子元素超出的部分截掉，但是因为子元素有浮动，无法裁剪，所有只能由父元素增加高度去包裹住子元素，使得父元素拥有了高度，而这个高度是跟随子元素自适应的高度，这样就把浮动的子元素包含在父元素内了。
+（缺点：当子元素 存在position定位，显示在父元素框之外部分将会被隐藏掉。）
+<div class="container">
+    <div class="box my_float"></div>
+    <div class="my_clear"></div>
+</div>
+5、解决方案C（******推荐方法******）<br>
+给父元素中添加一个伪元素，在伪元素里面设置清除浮动。
+<div class="container my_after">
+    <div class="box my_float"></div>
+</div>
+
+</body>
+</html>
+
