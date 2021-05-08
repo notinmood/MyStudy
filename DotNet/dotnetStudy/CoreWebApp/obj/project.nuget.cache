@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "wxhzQq6IlQAlULRVfbO62I0yr9zc4sFP3Jj0h0InVy1FzNuWRte7oOO4nHHGco/D+fd7bHj97KJwg511OZvWWw==",
+  "success": true,
+  "projectFilePath": "E:\\myworkspace\\MyStudy\\DotNet\\dotnetStudy\\CoreWebApp\\CoreWebApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\develope\\.nuget\\packages\\microsoft.typescript.msbuild\\4.2.4\\microsoft.typescript.msbuild.4.2.4.nupkg.sha512"
+  ],
+  "logs": []
+}

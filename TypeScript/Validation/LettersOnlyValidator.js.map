@@ -1,0 +1,1 @@
+{"version":3,"file":"LettersOnlyValidator.js","sourceRoot":"","sources":["LettersOnlyValidator.ts"],"names":[],"mappings":"AAAA,wCAAwC;AACxC,IAAU,UAAU,CAQnB;AARD,WAAU,UAAU;IAChB,MAAM,aAAa,GAAG,aAAa,CAAC;IAEpC,MAAa,oBAAoB;QAC7B,YAAY,CAAC,CAAS;YAClB,OAAO,aAAa,CAAC,IAAI,CAAC,CAAC,CAAC,CAAC;QACjC,CAAC;KACJ;IAJY,+BAAoB,uBAIhC,CAAA;AACL,CAAC,EARS,UAAU,KAAV,UAAU,QAQnB"}
