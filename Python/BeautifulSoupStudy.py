@@ -41,3 +41,4 @@ print(my_tag.attrs['href'])  # http://example.com/elsie
 my_tag['href'] = 'http://www.sina.com.cn'
 print(my_tag.attrs['href'])  # http://www.sina.com.cn
 print(my_tag.string)  # Elsie
+print(my_tag.get_text()) #如果有嵌套标签，my_tag.string获取不到内容，但my_tag.get_text()可以
