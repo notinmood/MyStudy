@@ -11,8 +11,10 @@ class ArrayItemAssign
 {
     public static function composeArray(): array
     {
-        $myArray= [];
-        $myArray = ['a' => 'AA', b => 'BB'];
+        $myArray = [];
+        //$myArray = ['a':'AA']; //这种写法不对
+        //$myArray = ['a' = 'AA']; //这种写法不对
+        $myArray = ['a' => 'AA', 'b' => 'BB'];
         $myArray['c'] = "CC";
 
         return $myArray;
@@ -20,4 +22,4 @@ class ArrayItemAssign
 }
 
 
-var_dump( ArrayItemAssign::composeArray());
+var_dump(ArrayItemAssign::composeArray());

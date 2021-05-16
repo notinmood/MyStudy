@@ -1,1 +1,1 @@
-let promise = new Promise()
+let promise = new Promise(()=>{})
