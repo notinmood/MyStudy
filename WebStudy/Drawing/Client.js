@@ -1,17 +1,10 @@
-/// <reference path = "IShape.ts" />
-/// <reference path = "Circle.ts" />
-/// <reference path = "Rectangle.ts" />
-var Drawing;
-(function (Drawing) {
-    // import ISharp = Drawing.IShape;
-    // import Circle = Drawing.Circle;
-    // import Rectangle = Drawing.Rectangle;
-    function drawSharp(sharp) {
-        sharp.draw();
-    }
-    let circle = new Drawing.Circle();
-    let rectangle = new Drawing.Rectangle();
-    drawSharp(circle);
-    drawSharp(rectangle);
-})(Drawing || (Drawing = {}));
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const circle = require("./Circle");
+const triangle = require("./Triangle");
+function drawAllShapes(shapeToDraw) {
+    shapeToDraw.draw();
+}
+drawAllShapes(new circle.Circle());
+drawAllShapes(new triangle.Triangle());
 //# sourceMappingURL=Client.js.map

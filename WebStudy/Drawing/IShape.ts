@@ -1,8 +1,6 @@
-namespace Drawing {
-    export interface IShape {
-        draw();
-    }
-}
 
+export interface IShape {
+    draw():void;
+}
 
 

@@ -1,10 +1,10 @@
 let promise = new Promise((resolve, reject) => {
-    let i = 12;
-    if (i < 10) {
-        resolve("ok");
+    let i = Math.random();
+    if (i < 0.5) {
+        resolve("ok" + i);
     }
     else {
-        reject("bad");
+        reject("bad" + i);
     }
 });
 promise.then(value => {

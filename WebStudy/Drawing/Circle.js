@@ -1,11 +1,10 @@
-/// <reference path = "IShape.ts" />
-var Drawing;
-(function (Drawing) {
-    class Circle {
-        draw() {
-            console.log("I am Circle");
-        }
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Circle = void 0;
+class Circle {
+    draw() {
+        console.log("Circle is drawn (external module)");
     }
-    Drawing.Circle = Circle;
-})(Drawing || (Drawing = {}));
+}
+exports.Circle = Circle;
 //# sourceMappingURL=Circle.js.map

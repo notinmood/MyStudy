@@ -1,17 +1,10 @@
-/// <reference path = "IShape.ts" />
-/// <reference path = "Circle.ts" />
-/// <reference path = "Rectangle.ts" />
-namespace Drawing{
-    // import ISharp = Drawing.IShape;
-    // import Circle = Drawing.Circle;
-    // import Rectangle = Drawing.Rectangle;
+import shape = require("./IShape");
+import circle = require("./Circle");
+import triangle = require("./Triangle");
 
-    function drawSharp(sharp:Drawing.IShape){
-        sharp.draw();
-    }
-
-    let circle= new Circle();
-    let rectangle= new Rectangle();
-    drawSharp(circle);
-    drawSharp(rectangle);
+function drawAllShapes(shapeToDraw: shape.IShape) {
+    shapeToDraw.draw();
 }
+
+drawAllShapes(new circle.Circle());
+drawAllShapes(new triangle.Triangle());
