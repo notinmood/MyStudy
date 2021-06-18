@@ -1,5 +1,6 @@
 //TODO:如何导入带路径的文件
-import '/Hiland/Utils/StringHelper'
+// import '/Hiland/Utils/StringHelper'
+let sh= require('Hiland/Utils/StringHelper.js')
 
 //两种调用方式
 let template1="我是{0}，今年{1}了";

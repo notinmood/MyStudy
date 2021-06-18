@@ -1,5 +1,9 @@
 from builtins import *
 
+'''
+异步函数就是协程
+'''
+
 
 def common_function():
     return 1
@@ -10,6 +14,7 @@ def common_generator():
 
 
 async def async_function():
+    # await async_generator()
     return 1
 
 

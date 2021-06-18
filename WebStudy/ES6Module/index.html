@@ -1,0 +1,40 @@
+1、export 可以作为修饰符直接放在各个成员前面
+// export_01.js
+export var firstName = 'Michael';
+export var lastName = 'Jackson';
+export var year = 1958;
+export function get_fullName(){
+    return `${firstName}·${lastName}`
+}
+
+2、也可以将export放在文件末尾，统一向外暴露接口（推荐这种做法）
+// export_02.js
+const firstName = 'Michael';
+let lastName = 'Jackson';
+let year = 1958;
+
+function get_fullName() {
+return `${firstName}·${lastName}`
+}
+
+export {
+firstName, lastName, year, get_fullName
+};
+
+3、当然export在文件末尾统一向外暴露的时候，也可以用as给接口加上别名
+// export_03.js
+const firstName = 'Michael';
+let lastName = 'Jackson';
+let year = 1958;
+
+function get_fullName() {
+return `${firstName}·${lastName}`
+}
+
+export {
+firstName as fn, lastName as ln, year as y,get_fullName as g_fn
+};
+
+
+注意：
+export后面的{}：这个{}不是对象的表述语法，内部不是对象实例，不能用对象的语法书写内部成员。
