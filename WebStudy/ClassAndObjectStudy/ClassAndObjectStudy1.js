@@ -12,7 +12,7 @@ function Person(name, age) {
      * NNN 要使用匿名函数的方式,给类型定义方法的不可行
      * @returns {*}
      */
-    let getName= function () {
+    let getName = function () {
         return this.name;
     }
 
@@ -20,7 +20,7 @@ function Person(name, age) {
      * NNN 采用传统的function给类型定义方法，不可行。
      * @param name
      */
-     function setName (name) {
+    function setName(name) {
         this.name = name;
     }
 }

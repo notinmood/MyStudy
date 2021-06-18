@@ -1,6 +1,8 @@
 <?php
 
-namespace Misc;
+namespace CollectionStudy;
+
+use phpDocumentor\Reflection\Types\Array_;
 
 /**
  *  => 数组中元素赋值符号的使用
@@ -9,11 +11,14 @@ namespace Misc;
  */
 class ArrayItemAssign
 {
-    public static function composeArray(): array
+    public static function composeArray()
     {
+        $myArray = array();
         $myArray = [];
+
         //$myArray = ['a':'AA']; //这种写法不对
         //$myArray = ['a' = 'AA']; //这种写法不对
+
         $myArray = ['a' => 'AA', 'b' => 'BB'];
         $myArray['c'] = "CC";
 

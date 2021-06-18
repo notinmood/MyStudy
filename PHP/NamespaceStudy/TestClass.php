@@ -4,9 +4,9 @@ namespace NamespaceStudy;
 
 class TestClass
 {
-    var string $b;
+    var $b;
 
-    function test(string $param): void
+    function test(string $param)
     {
         echo $this->b = $param;
     }

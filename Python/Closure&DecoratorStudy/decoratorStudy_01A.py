@@ -1,7 +1,9 @@
 from builtins import *
+
 """
 普通的装饰器
 """
+
 
 def inner_func(a, b):
     print(f"传递进来的参数为{a},{b}")
