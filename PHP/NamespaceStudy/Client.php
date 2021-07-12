@@ -1,13 +1,15 @@
 <?php
 
 
-namespace NamespaceStudy;
-require 'TestClass.php';
-use NamespaceStudy\TestClass;
+namespace PHP\Study\NamespaceStudy;
+
+require "../vendor/autoload.php";
+//require 'TestClass.php';
+
 //
-$p= new TestClass();
+$p = new TestClass();
 var_dump($p);
-//$p->test("pp");
+$p->test("pp");
 ////use x\testClass;
 //class Client
 //{

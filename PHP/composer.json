@@ -1,13 +1,22 @@
 {
-    "name": "jetbrains/phpstorm-workshop",
-    "description": "Materials for the PhpStorm workshop. Check https://github.com/jetbrains/phpstorm-workshop/ for more info.",
-    "minimum-stability": "dev",
-    "license": "Apache-2.0",
+    "name": "develope/bb",
+    "description": "studying for php",
     "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "PHP\\Study\\": ""
+        }
+    },
     "authors": [
         {
-            "name": "Maksim Kolmakov",
-            "email": "maxim.kolmakov@jetbrains.com"
+            "name": "xiedali",
+            "email": "notinmood@gmail.com"
         }
-    ]
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "PHP":">=7.4",
+        "hiland/basiclibrary.php": "dev-master"
+    }
 }

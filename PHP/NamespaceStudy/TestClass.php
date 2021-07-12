@@ -1,14 +1,15 @@
 <?php
 
-namespace NamespaceStudy;
+namespace PHP\Study\NamespaceStudy;
 
 class TestClass
 {
     var $b;
 
-    function test(string $param)
+    function test($param)
     {
-        echo $this->b = $param;
+        $this->b = $param;
+        echo "参数的值为{$param}";
     }
 }
 

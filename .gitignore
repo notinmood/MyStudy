@@ -1,0 +1,7 @@
+/PHP/vendor
+/ESLint/node_modules
+/ESLint/1/node_modules
+/DotNet/dotnetStudy/CoreConsoleApp/obj
+/DotNet/dotnetStudy/CoreWebApp/bin
+/DotNet/dotnetStudy/CoreWebApp/obj
+/VSCode/TypeScript工作区/node_modules

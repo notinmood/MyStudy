@@ -1,0 +1,10 @@
+{
+  "name": "npm_study_000",
+  "version": "1.0.1",
+  "description": "这是一个学习ESLint的例子",
+  "main": "merge.js",
+  "scripts": {},
+  "author": "xiedali",
+  "license": "ISC",
+  "devDependencies": {}
+}
