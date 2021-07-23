@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="jquery-1.4.4.js"></script>
+    <script type="text/javascript">
+        // jQuery插件。一个jQuery对象，而不是直接调用。
+        jQuery.fn.simulateKeyPress = function(character) {
+            // 内部调用jQuery.event.trigger
+            // 参数有 (Event, data, elem). 最后一个参数是非常重要的的！
+            jQuery(this).trigger({ type: 'keypress', which: character.charCodeAt(0) });
+        };
+
+        //页面调用
+        jQuery(document).ready( function($) {
+            // 绑定事件处理程序
+            $( 'body' ).keypress( function(e) {
+                alert( String.fromCharCode( e.which ) );
+                console.log(e);
+            });
+            // 模拟按键了 x
+            $( 'body' ).simulateKeyPress('x');
+        });
+    </script>
 </head>
 <body>
-$END$
+
 </body>
 </html>

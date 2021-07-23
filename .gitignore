@@ -5,3 +5,7 @@
 /DotNet/dotnetStudy/CoreWebApp/bin
 /DotNet/dotnetStudy/CoreWebApp/obj
 /VSCode/TypeScript工作区/node_modules
+/DotNet/NuGetStudySolution/ClassStandardLibrary/bin
+obj
+bin
+packages
