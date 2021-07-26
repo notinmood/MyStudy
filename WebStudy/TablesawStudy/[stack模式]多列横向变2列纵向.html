@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <title>多列横向变2列纵向(stack模式)</title>
     <link rel="stylesheet" href="res/tablesaw.css">
-    <script src="res/tablesaw.js"></script>
+<!--    <script src="res/tablesaw.js"></script>-->
+    <script src="res/jquery-3.4.1.js"></script>
+    <script src="res/tablesaw.jquery.js"></script>
     <script src="res/tablesaw-init.js"></script>
+
 </head>
 <body>
 当窗口宽度大于40em（640px）时，表头横向排列<br/>
 当窗口宽度小于40em（640px）时，表头与左头切换为两栏布局。<br>
 table设置属性class="tablesaw"以及data-tablesaw-mode="stack"
 其他html元素的属性可以选择性设置,非必须 <br>
-<table class="tablesaw" data-tablesaw-mode="stack">
+<table class="tablesaw tablesaw-row-border tablesaw-row-zebra" data-tablesaw-mode="stack">
     <thead>
     <tr>
         <th scope="col">Movie Title</th>

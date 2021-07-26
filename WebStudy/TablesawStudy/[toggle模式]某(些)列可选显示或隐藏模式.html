@@ -11,9 +11,20 @@
 <pre>
 table设置属性class="tablesaw"以及data-tablesaw-mode="columntoggle" <br>
 table设置属性data-tablesaw-minimap 可选，如果使用就会出现一个列是否正在显示或者隐藏的导航地图
-th设置data-tablesaw-priority="xxx",其中xxx取值为
+th设置data-tablesaw-priority="xxx",其中xxx取值为(1-6只在本模式下有意义)
     persist:(持久不动)
-    1-6:表示如果一行放不下的时候,优先显示列的次序
+    1-6:是一个从1到6的数值，它决定了一个列将显示的默认断点。断点为默认值：
+        <th data-tablesaw-priority="persist"><!-- Not eligible for toggle, always shows --></th>
+        <th data-tablesaw-priority="0"><!-- Hidden at all breakpoints by default, must be toggled back on manually --></th>
+        <th data-tablesaw-priority="1"><!-- Shows at (min-width: 20em) (320px) --></th>
+        <th data-tablesaw-priority="2"><!-- Shows at (min-width: 30em) (480px) --></th>
+        <th data-tablesaw-priority="3"><!-- Shows at (min-width: 40em) (640px) --></th>
+        <th data-tablesaw-priority="4"><!-- Shows at (min-width: 50em) (800px) --></th>
+        <th data-tablesaw-priority="5"><!-- Shows at (min-width: 60em) (960px) --></th>
+        <th data-tablesaw-priority="6"><!-- Shows at (min-width: 70em) (1120px) --></th>
+
+    就是当在页面打开的时候,页面宽度为某个值的时候,在用户不选择的情况下data-tablesaw-priority为x时，是否默认显示本列
+    参考 read://https_www.5axxw.com/?url=https%3A%2F%2Fwww.5axxw.com%2Fwiki%2Fcontent%2F3gd3dv
 </pre>
 
 <table class="tablesaw" data-tablesaw-mode="columntoggle">
@@ -23,10 +34,10 @@ th设置data-tablesaw-priority="xxx",其中xxx取值为
         <th scope="col" data-tablesaw-sortable-default-col data-tablesaw-priority="3">Rank</th>
         <th scope="col" data-tablesaw-priority="2">Year</th>
         <th scope="col" data-tablesaw-priority="1"><abbr title="Rotten Tomato Rating">Rating</abbr></th>
-        <th scope="col" data-tablesaw-priority="4">Gross</th>
-        <th scope="col" data-tablesaw-priority="2">Year</th>
-        <th scope="col" data-tablesaw-priority="1"><abbr title="Rotten Tomato Rating">Rating</abbr></th>
-        <th scope="col" data-tablesaw-priority="1">Gross</th>
+        <th scope="col" data-tablesaw-priority="3">Gross</th>
+        <th scope="col" data-tablesaw-priority="4">Year</th>
+        <th scope="col" data-tablesaw-priority="5"><abbr title="Rotten Tomato Rating">Rating</abbr></th>
+        <th scope="col" data-tablesaw-priority="6">Gross</th>
     </tr>
     </thead>
     <tbody>
