@@ -5,6 +5,8 @@
     <title>Title</title>
     <script type="text/javascript" src="jquery-1.4.4.js"></script>
     <script type="text/javascript">
+        //整理后的功能在 BasicLibrary.JavaScript内
+
         // jQuery插件。一个jQuery对象，而不是直接调用。
         jQuery.fn.simulateKeyPress = function (character) {
             let charName = '';
@@ -27,8 +29,8 @@
                 alert(String.fromCharCode(e.which));
                 console.log(e);
             });
-            // 模拟按键了 x
-            $('body').simulateKeyPress(27);
+            // 模拟按了x键
+            $('body').simulateKeyPress('x');
         });
     </script>
 </head>
