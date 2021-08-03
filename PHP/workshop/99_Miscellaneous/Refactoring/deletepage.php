@@ -22,7 +22,7 @@ if (isset($_POST['submit'])) {
     // TODO: Check for == 1 instead of > 0 when page names become unique.
     $deletionWasSuccessful = $statement->affected_rows > 0 ? true : false;
     if ($deletionWasSuccessful) {
-        header("Location: index.php");
+        header("Location: Index.php");
         exit;
     } else {
         echo "Failed deleting page";

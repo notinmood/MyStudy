@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
 
     $creationWasSuccessful = $statement->affected_rows == 1 ? true : false;
     if ($creationWasSuccessful) {
-        header("Location: index.php");
+        header("Location: Index.php");
         exit;
     } else {
         echo 'Failed adding new page';

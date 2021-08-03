@@ -31,7 +31,7 @@ function confirm_is_admin($session)
     }
 
     if (!is_admin($session)) {
-        header("Location: index.php");
+        header("Location: Index.php");
         exit;
     }
 }

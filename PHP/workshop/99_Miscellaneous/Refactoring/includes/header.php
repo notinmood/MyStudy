@@ -54,7 +54,7 @@
 
                     $statement->bind_result($id, $menulabel);
                     while ($statement->fetch()) {
-                        echo "<li><a href=\"/index.php?pageid=$id\">$menulabel</a></li>\n";
+                        echo "<li><a href=\"/Index.php?pageid=$id\">$menulabel</a></li>\n";
                     }
                     ?>
                 </ul>

@@ -28,7 +28,7 @@ if (isset($_POST['submit'])) {
 
         $session->set('userid', $userId);
         $session->set('username', $username);
-        header("Location: index.php");
+        header("Location: Index.php");
         exit;
     } else {
         echo "Failed registration";

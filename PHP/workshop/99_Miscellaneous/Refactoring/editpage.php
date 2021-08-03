@@ -25,7 +25,7 @@ if (isset($_GET['id'])) {
         $statement->bind_result($menulabel, $content);
         $statement->fetch();
     } else {
-        header("Location: index.php");
+        header("Location: Index.php");
         exit;
     }
 } else if (isset($_POST['submit'])) {
@@ -45,13 +45,13 @@ if (isset($_GET['id'])) {
 
     $creationWasSuccessful = $statement->affected_rows == 1 ? true : false;
     if ($creationWasSuccessful) {
-        header("Location: index.php");
+        header("Location: Index.php");
         exit;
     } else {
         echo 'Failed to edit page';
     }
 } else {
-    header("Location: index.php");
+    header("Location: Index.php");
     exit;
 }
 ?>
