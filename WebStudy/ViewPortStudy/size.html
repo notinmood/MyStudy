@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input style="width: 400px;" type="text" id="iptDisplay" name="iptDisplay" value=""> <br>
+
+<button onclick="displayScreenData();">屏幕的size信息</button>
+<button onclick="displayWindowInnerData();">浏览器的内部size信息</button>
+<button onclick="displayWindowOuterData();">浏览器的外部size信息</button>
+<button onclick="displayOffsetData();">浏览器滚动条滚动的X和Y信息</button>
+<button onclick="displayDocumentData();">浏览器内部文档的size信息</button>
+<br>
+<script type="text/javascript">
+    function displayScreenData() {
+        let sw = screen.width;
+        let sh = screen.height;
+
+        let displayInfo = `屏幕的宽和高分别为${sw}、 ${sh}`;
+        document.getElementById("iptDisplay").setAttribute("value", displayInfo);
+    }
+
+    function displayWindowInnerData(){
+        let ww= window.innerWidth;
+        let wh= window.innerHeight;
+
+        let displayInfo = `浏览器窗口内部的宽和高分别为${ww}、 ${wh}`;
+        document.getElementById("iptDisplay").setAttribute("value", displayInfo);
+    }
+
+    function displayWindowOuterData(){
+        let ww= window.outerWidth;
+        let wh= window.outerHeight;
+
+        let displayInfo = `浏览器窗口外部的宽和高分别为${ww}、 ${wh}`;
+        document.getElementById("iptDisplay").setAttribute("value", displayInfo);
+    }
+
+    function displayOffsetData(){
+        let ww= window.pageXOffset;
+        let wh= window.pageYOffset;
+
+        let displayInfo = `浏览器窗口滚动的X和Y分别为${ww}、 ${wh}`;
+        document.getElementById("iptDisplay").setAttribute("value", displayInfo);
+    }
+
+    function displayDocumentData(){
+        let ww= document.documentElement.clientWidth;
+        let wh= document.documentElement.clientHeight;
+
+        let displayInfo = `浏览器内部文档的宽高分别为${ww}、 ${wh}`;
+        document.getElementById("iptDisplay").setAttribute("value", displayInfo);
+    }
+</script>
+
+1、屏幕的宽高信息screen.width和screen.height是只跟用户当前使用的电脑屏幕有关系;跟浏览器没有关系,无论浏览器怎么进行大小放缩都无法改变screen的尺寸信息. <br>
+<img src="res/desktop_screen.jpg" height="313" width="500"/><br>
+2、我们感兴趣的是浏览器窗口的内部尺寸window.innerWidth和window.innerHeight。这是用户当前css层可用的实际空间，分别是 window.innerWidth 和 window.innerHeight。
+当用户改变浏览器尺寸的时候,这个两个值的变化的.可以分别在改变浏览器尺寸前后,获取验证异同。<br>
+另外window还有outerWidth和outerHeight。outer的值是浏览器所占用的最外部的宽和高;inner仅仅是可以显示内容的区域(不包括菜单栏,状态栏等;但包括滚动条.)
+<img src="res/desktop_inner.jpg" height="313" width="500"/> <br>
+3、当浏览器出现滚动条后,我们滑动滚动条的时候,就会产生X和Y方向的位移，这两个值分别为window.pageXOffset、window.pageYOffset; <br>
+<img src="res/desktop_page_offset.jpg" height="541" width="500"/> <br>
+4、document.documentElement.clientWidth 和 document.documentElement.clientHeight分别表示文档的宽和高.
+不包含滚动条的宽高.(window.innerWidth和window.innerHeight包含滚动条的宽高)
+</body>
+</html>
