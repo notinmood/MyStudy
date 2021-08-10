@@ -10,6 +10,11 @@ namespace PHP\Study\GetCalledClass_GetClass;
 
 class MyClassA
 {
+    public function it_Class(){
+        echo __CLASS__;
+        echo PHP_EOL;
+    }
+    
     public function itCalledClass(){
         echo get_called_class();
         echo PHP_EOL;

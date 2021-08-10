@@ -1,22 +1,28 @@
 {
-    "name": "develope/bb",
-    "description": "studying for php",
-    "type": "project",
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "PHP\\Study\\": ""
-        }
+  "name": "study/php",
+  "description": "studying for php",
+  "type": "project",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "PHP\\Study\\": ""
     },
-    "authors": [
-        {
-            "name": "xiedali",
-            "email": "notinmood@gmail.com"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {
-        "PHP":">=7.4",
-        "hiland/basiclibrary.php": "dev-master"
+    "files": [
+      "Common/helper.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "xiedali",
+      "email": "notinmood@gmail.com"
     }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "PHP": ">=7.4",
+    "hiland/basiclibrary.php": "dev-master"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "9.*"
+  }
 }
