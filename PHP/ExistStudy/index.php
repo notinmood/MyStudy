@@ -126,3 +126,4 @@ displayInfo($exist, "数组元素", "赋值");
 //6.2.2
 $exist = isset($arr[1]);
 displayInfo($exist, "数组元素", "赋值");
+
