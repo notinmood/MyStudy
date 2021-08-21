@@ -1,6 +1,9 @@
 <?php
 
 namespace Misc;
+require "../vendor/autoload.php";
+
+use Hiland\Utils\Environment\EnvHelper;
 
 /**自 PHP 5.5 起，关键词 class 也可用于类名的解析。
  * 使用 ClassName::class 你可以获取一个字符串，
@@ -18,8 +21,8 @@ class Demo
     }
 }
 
-echo gettype(Demo::class) . "<br/>";
-echo Demo::class . "<br/>";
+echo gettype(Demo::class), EnvHelper::getNewLineSymbol();
+echo Demo::class, EnvHelper::getNewLineSymbol();
 
 
 
