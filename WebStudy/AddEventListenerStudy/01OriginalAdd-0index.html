@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<pre>
+本连续几个页面是研究  addEventListener("click", displayDIV,useCapture=false);的第三个参数的.
+第三个参数的意思是是否启用"捕获"(默认是false).
+
+当一个控件a包含另外一个控件b的时候(即b在a的内部,在本例这种p在div内),
+点击控件b的时候,究竟是先执行b上的事件处理方法还是先执行a上的事件处理方法,这个叫做 冒泡和捕获.
+--冒泡,就是先执行里面元素b的方法,再执行a上的方法(默认的冒泡方式的)
+--捕获,是先执行a上的方法,再执行b上的方法.
+
+01OriginalAdd-1None.html 演示 不设置第三个参数,默认是冒泡.先b后a(先内后外)
+01OriginalAdd-2False.html演示 设置第三个参数false,默认是冒泡.先b后a(先内后外)
+01OriginalAdd-3True.html 演示 设置第三个参数true,启用捕获发告诉你.先a后b(先外后内)
+</pre>
+</body>
+</html>

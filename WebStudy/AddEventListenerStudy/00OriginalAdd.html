@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #myDiv {
+            width: 300px;
+            height: 300px;
+            background: #0d6efd;
+        }
+
+        #myP {
+            width: 200px;
+            height: 200px;
+            background: #157347;
+            text-align: center;
+            align-items: center;
+            align-content: center;
+            align-self: center;
+            vertical-align: center;
+        }
+    </style>
+    <script src="../res/jquery-3.6.0.js"></script>
+</head>
+<body>
+<pre>
+    本文件是验证 addEventListener方法的第二个参数(某个函数(假定名称为f)作为第二个参数).
+    这个f函数还有自己的参数f(event),event内有各种属性,其中event.target是触发本f方法的控件
+</pre>
+<div id="myDiv">
+    <p id="myP">
+        Hello world!
+    </p>
+</div>
+<script type="text/javascript">
+    function displayTarget(event) {
+        console.log(event); //event 内包含了非常多的参数信息.
+        let srcElement = event.target;//其中target为触发本方法的控件
+        if (srcElement) {
+            alert("i am in " + srcElement.nodeName);
+        } else {
+            alert("No Trigger Control");
+        }
+    }
+
+    let myDiv = document.getElementById("myDiv");
+    myDiv.addEventListener("click", displayTarget, true);
+</script>
+</body>
+</html>
