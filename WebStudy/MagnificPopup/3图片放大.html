@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="res/magnific-popup.css" rel="stylesheet">
+    <script src="../res/jquery-3.6.0.js"></script>
+    <script src="res/jquery.magnific-popup.js"></script>
+</head>
+<body>
+<div class="parent-container">
+    <a href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg">Open popup 1</a>
+    <a href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg">Open popup 2</a>
+    <a href="http://farm9.staticflickr.com/8225/8558295635_b1c5ce2794_b.jpg">Open popup 3</a>
+</div>
+
+<script>
+    $('.parent-container').magnificPopup({
+        delegate: 'a', // child items selector, by clicking on it popup will open
+        type: 'image'
+        // other options
+    });
+</script>
+</div>
+</body>
+</html>

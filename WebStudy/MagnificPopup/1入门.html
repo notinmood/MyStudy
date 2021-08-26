@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #pop {
+            position: relative;
+            background: #FFF;
+            padding: 20px;
+            width: auto;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+    </style>
+    <link href="res/magnific-popup.css" rel="stylesheet">
+    <script src="../res/jquery-3.6.0.js"></script>
+    <script src="res/jquery.magnific-popup.js"></script>
+</head>
+<body>
+<!-- 添加一个a标签，设置href属性指向一个要弹出来的一个div盒子。 -->
+<a href="#pop" id="btn">添加</a>
+
+<!-- 以下就是要弹出来的层，注意：添加mfp-hide先进行隐藏起来。 -->
+<div class="mfp-hide" id="pop">
+    <lable for="sname">用户名</lable>
+    <input id="sname" name="ss" type="text" value="">
+    <hr>
+    <input id="btnClose" type="button" value="关闭">
+</div>
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        // 给超级连接添加magnificPopup初始化方法。
+        $('#btn').magnificPopup({
+            type: 'inline',         // 行内的类型，类比图片的模式
+            closeBtnInside: true,   // 显示关闭按钮
+            closeOnBgClick: false   // 点击遮罩透明背景关闭弹出层
+        });
+
+        //给自定义的按钮添加关闭方法
+        jQuery("#btnClose").click(function () {
+            $.fn.magnificPopup('close');
+        });
+    });
+
+    //1、magnificPopup方法的选项设置
+    //     mainClass： String类型，要添加到根元素上的样式类。默认是空字符串。
+    //     closeOnContentClick： Boolean类型，默认false，点击内容区域关闭弹出层。
+    //     closeOnBgClick： Boolean类型，默认true，点击背景区域关闭弹出层。
+    //     closeBtnInside： Boolean类型，默认true，是否有内置的关闭按钮。
+    //     modal： Boolean类型，默认false，是否是模态对话框。
+    //2、常用的其他api
+    //     关闭图层close方法： $.fn.magnificPopup('close');
+    //     打开弹出层open方法：$.fn.magnificPopup('open')
+    //     下一个图片next方法： $('.element-with-popup').magnificPopup('next');
+    //     其他方法：$.fn.magnificPopup('methodName' /*, param1, param2 ... */)
+    //
+    // 作者：IT老马
+    // 链接：https://www.jianshu.com/p/0c7a1446a857
+    //     来源：简书
+    // 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+</script>
+</body>
+</html>
