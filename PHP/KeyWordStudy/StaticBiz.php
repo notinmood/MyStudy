@@ -1,6 +1,6 @@
 <?php
 /**
- * @file   : StaticStudy.php
+ * @file   : StaticBiz.php
  * @time   : 7:07
  * @date   : 2021/9/3
  * @emailto: 9727005@qq.com
@@ -11,13 +11,13 @@
 
 namespace PHP\Study\KeyWordStudy;
 
-class StaticStudy
+class StaticBiz
 {
     /**
      * 静态实例
-     * @var StaticStudy
+     * @var StaticBiz
      */
-    public static $instance;
+    private static $instance;
 
     /**
      * 实例成员
@@ -26,9 +26,9 @@ class StaticStudy
     public $myName;
 
     /**
-     * @return StaticStudy
+     * @return StaticBiz
      */
-    public static function getInstance(): StaticStudy
+    public static function getInstance(): StaticBiz
     {
         //调用静态成员的时候,static的作用和self一样的.
         if (!static::$instance) {

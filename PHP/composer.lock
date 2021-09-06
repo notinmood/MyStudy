@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/notinmood/BasicLibrary.PHP.git",
-                "reference": "1b22dd6cf931ed5fd7f7b3f6ef4a86f8f59bc4ff"
+                "reference": "b50574364c4cea1128ad3205167df5065700798f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/notinmood/BasicLibrary.PHP/zipball/1b22dd6cf931ed5fd7f7b3f6ef4a86f8f59bc4ff",
-                "reference": "1b22dd6cf931ed5fd7f7b3f6ef4a86f8f59bc4ff",
+                "url": "https://api.github.com/repos/notinmood/BasicLibrary.PHP/zipball/b50574364c4cea1128ad3205167df5065700798f",
+                "reference": "b50574364c4cea1128ad3205167df5065700798f",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -38,7 +38,10 @@
                 "psr-4": {
                     "Hiland\\Test\\": "",
                     "Hiland\\": ""
-                }
+                },
+                "files": [
+                    "Utils/Common/functions.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -55,7 +58,7 @@
                 "issues": "https://github.com/notinmood/BasicLibrary.PHP/issues",
                 "source": "https://github.com/notinmood/BasicLibrary.PHP/tree/master"
             },
-            "time": "2021-08-21T00:57:10+00:00"
+            "time": "2021-09-06T13:35:49+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -608,12 +611,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "c5ac781da36459457837159b308fe88912e07a78"
+                "reference": "44e31d19a6e81eb6ede34ef40c5687247d6eaaf3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/c5ac781da36459457837159b308fe88912e07a78",
-                "reference": "c5ac781da36459457837159b308fe88912e07a78",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/44e31d19a6e81eb6ede34ef40c5687247d6eaaf3",
+                "reference": "44e31d19a6e81eb6ede34ef40c5687247d6eaaf3",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -664,7 +667,7 @@
                 "issues": "https://github.com/phpDocumentor/ReflectionDocBlock/issues",
                 "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/master"
             },
-            "time": "2021-08-13T09:13:23+00:00"
+            "time": "2021-09-05T10:40:50+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -802,12 +805,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "d96981c0d2718c56aea9eeb254d3159b808156c3"
+                "reference": "9a43a2a488965a839e5d5b6708cc0e294e5e1e9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/d96981c0d2718c56aea9eeb254d3159b808156c3",
-                "reference": "d96981c0d2718c56aea9eeb254d3159b808156c3",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/9a43a2a488965a839e5d5b6708cc0e294e5e1e9b",
+                "reference": "9a43a2a488965a839e5d5b6708cc0e294e5e1e9b",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -877,7 +880,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-08-17T14:56:04+00:00"
+            "time": "2021-08-30T06:30:49+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -1150,12 +1153,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "0979089082b2506ad2e75fb221268018b9bb79eb"
+                "reference": "7a3568b9cb7fc86f1bf696c0aaf8d2c2d57bb54d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/0979089082b2506ad2e75fb221268018b9bb79eb",
-                "reference": "0979089082b2506ad2e75fb221268018b9bb79eb",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/7a3568b9cb7fc86f1bf696c0aaf8d2c2d57bb54d",
+                "reference": "7a3568b9cb7fc86f1bf696c0aaf8d2c2d57bb54d",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1251,7 +1254,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-08-20T05:38:37+00:00"
+            "time": "2021-09-06T09:06:52+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -2191,6 +2194,7 @@
                     "type": "github"
                 }
             ],
+            "abandoned": true,
             "time": "2020-09-28T06:45:17+00:00"
         },
         {

@@ -7,3 +7,12 @@
  * @creator: ShanDong Xiedali
  * @company: HiLand & RainyTop
  */
+
+require "../vendor/autoload.php";
+
+use PHP\Study\KeyWordStudy\StaticBiz;
+
+$biz= StaticBiz::getInstance();
+$biz->  myName= "zhangsan";
+
+var_dump($biz->myName);
