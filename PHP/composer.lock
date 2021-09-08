@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/notinmood/BasicLibrary.PHP.git",
-                "reference": "b50574364c4cea1128ad3205167df5065700798f"
+                "reference": "42755e69886763ad2939e63a23a7ff802332f513"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/notinmood/BasicLibrary.PHP/zipball/b50574364c4cea1128ad3205167df5065700798f",
-                "reference": "b50574364c4cea1128ad3205167df5065700798f",
+                "url": "https://api.github.com/repos/notinmood/BasicLibrary.PHP/zipball/42755e69886763ad2939e63a23a7ff802332f513",
+                "reference": "42755e69886763ad2939e63a23a7ff802332f513",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -58,7 +58,7 @@
                 "issues": "https://github.com/notinmood/BasicLibrary.PHP/issues",
                 "source": "https://github.com/notinmood/BasicLibrary.PHP/tree/master"
             },
-            "time": "2021-09-06T13:35:49+00:00"
+            "time": "2021-09-08T12:40:18+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1153,12 +1153,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "7a3568b9cb7fc86f1bf696c0aaf8d2c2d57bb54d"
+                "reference": "945290fc212307359838e14f678b373ae71f8e51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/7a3568b9cb7fc86f1bf696c0aaf8d2c2d57bb54d",
-                "reference": "7a3568b9cb7fc86f1bf696c0aaf8d2c2d57bb54d",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/945290fc212307359838e14f678b373ae71f8e51",
+                "reference": "945290fc212307359838e14f678b373ae71f8e51",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1254,7 +1254,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-09-06T09:06:52+00:00"
+            "time": "2021-09-08T05:59:55+00:00"
         },
         {
             "name": "sebastian/cli-parser",

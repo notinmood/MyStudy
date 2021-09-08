@@ -17,7 +17,6 @@ class HighHandler extends Handler
     public function handle($request)
     {
         if ($request->level > 80) {
-
             ConsoleHelper::echoLine('HighHandler>>>处理中');
             return "【优秀】请求{$request->name}的级别为{$request->level},正在被HighHandler处理";
         } else {

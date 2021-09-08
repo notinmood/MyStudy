@@ -8,7 +8,7 @@
  * @company: HiLand & RainyTop
  */
 
-//TODO: xiedali 用链表实现 职责链模式
+//用链表实现 职责链模式
 
 require "../../vendor/autoload.php";
 
