@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/notinmood/BasicLibrary.PHP.git",
-                "reference": "42755e69886763ad2939e63a23a7ff802332f513"
+                "reference": "9e4482e0dc257a72c06fd4408662a1d14f2305d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/notinmood/BasicLibrary.PHP/zipball/42755e69886763ad2939e63a23a7ff802332f513",
-                "reference": "42755e69886763ad2939e63a23a7ff802332f513",
+                "url": "https://api.github.com/repos/notinmood/BasicLibrary.PHP/zipball/9e4482e0dc257a72c06fd4408662a1d14f2305d6",
+                "reference": "9e4482e0dc257a72c06fd4408662a1d14f2305d6",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -58,7 +58,7 @@
                 "issues": "https://github.com/notinmood/BasicLibrary.PHP/issues",
                 "source": "https://github.com/notinmood/BasicLibrary.PHP/tree/master"
             },
-            "time": "2021-09-08T12:40:18+00:00"
+            "time": "2021-09-09T05:20:23+00:00"
         },
         {
             "name": "monolog/monolog",
