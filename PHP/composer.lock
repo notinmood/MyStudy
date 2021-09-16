@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/notinmood/BasicLibrary.PHP.git",
-                "reference": "9e4482e0dc257a72c06fd4408662a1d14f2305d6"
+                "reference": "7e5c6079c9b71fe95f5603903807a65bf14b14ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/notinmood/BasicLibrary.PHP/zipball/9e4482e0dc257a72c06fd4408662a1d14f2305d6",
-                "reference": "9e4482e0dc257a72c06fd4408662a1d14f2305d6",
+                "url": "https://api.github.com/repos/notinmood/BasicLibrary.PHP/zipball/7e5c6079c9b71fe95f5603903807a65bf14b14ef",
+                "reference": "7e5c6079c9b71fe95f5603903807a65bf14b14ef",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -27,6 +27,7 @@
                 ]
             },
             "require": {
+                "ext-mbstring": "*",
                 "php": "^5.3.3 || ^7.4"
             },
             "require-dev": {
@@ -58,7 +59,7 @@
                 "issues": "https://github.com/notinmood/BasicLibrary.PHP/issues",
                 "source": "https://github.com/notinmood/BasicLibrary.PHP/tree/master"
             },
-            "time": "2021-09-09T05:20:23+00:00"
+            "time": "2021-09-16T07:24:13+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -728,16 +729,16 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "1.13.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "be1996ed8adc35c3fd795488a653f4b518be70ea"
+                "reference": "d86dfc2e2a3cd366cee475e52c6bb3bbc371aa0e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/be1996ed8adc35c3fd795488a653f4b518be70ea",
-                "reference": "be1996ed8adc35c3fd795488a653f4b518be70ea",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/d86dfc2e2a3cd366cee475e52c6bb3bbc371aa0e",
+                "reference": "d86dfc2e2a3cd366cee475e52c6bb3bbc371aa0e",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -748,19 +749,20 @@
             },
             "require": {
                 "doctrine/instantiator": "^1.2",
-                "php": "^7.2 || ~8.0, <8.1",
+                "php": "^7.2 || ~8.0, <8.2",
                 "phpdocumentor/reflection-docblock": "^5.2",
                 "sebastian/comparator": "^3.0 || ^4.0",
                 "sebastian/recursion-context": "^3.0 || ^4.0"
             },
             "require-dev": {
-                "phpspec/phpspec": "^6.0",
+                "phpspec/phpspec": "^6.0 || ^7.0",
                 "phpunit/phpunit": "^8.0 || ^9.0"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.11.x-dev"
+                    "dev-master": "1.x-dev"
                 }
             },
             "autoload": {
@@ -795,9 +797,9 @@
             ],
             "support": {
                 "issues": "https://github.com/phpspec/prophecy/issues",
-                "source": "https://github.com/phpspec/prophecy/tree/1.13.0"
+                "source": "https://github.com/phpspec/prophecy/tree/1.14.0"
             },
-            "time": "2021-03-17T13:42:18+00:00"
+            "time": "2021-09-10T09:02:12+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -1153,12 +1155,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "945290fc212307359838e14f678b373ae71f8e51"
+                "reference": "d1fcd1a30da8849cc760637e783c617fff8908b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/945290fc212307359838e14f678b373ae71f8e51",
-                "reference": "945290fc212307359838e14f678b373ae71f8e51",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/d1fcd1a30da8849cc760637e783c617fff8908b3",
+                "reference": "d1fcd1a30da8849cc760637e783c617fff8908b3",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1254,7 +1256,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-09-08T05:59:55+00:00"
+            "time": "2021-09-16T05:20:09+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -2194,7 +2196,6 @@
                     "type": "github"
                 }
             ],
-            "abandoned": true,
             "time": "2020-09-28T06:45:17+00:00"
         },
         {
@@ -2324,12 +2325,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "46cd95797e9df938fdd2b03693b5fca5e64b01ce"
+                "reference": "f24ae462b1d60c333df104f0b81ec7d0e12f6e9f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/46cd95797e9df938fdd2b03693b5fca5e64b01ce",
-                "reference": "46cd95797e9df938fdd2b03693b5fca5e64b01ce",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/f24ae462b1d60c333df104f0b81ec7d0e12f6e9f",
+                "reference": "f24ae462b1d60c333df104f0b81ec7d0e12f6e9f",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2386,7 +2387,7 @@
                 "portable"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.23.0"
+                "source": "https://github.com/symfony/polyfill-ctype/tree/main"
             },
             "funding": [
                 {
@@ -2402,7 +2403,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-19T12:13:01+00:00"
+            "time": "2021-09-14T14:02:44+00:00"
         },
         {
             "name": "theseer/tokenizer",

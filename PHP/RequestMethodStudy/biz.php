@@ -26,11 +26,6 @@ if (RequestHelper::isPost()) {
 
 echo EnvHelper::getNewLineSymbol();
 
-// $isPost = isPost();
-// echo "是否为Post请求:";
-// ConsoleHelper::echoBool($isPost);
-// echo EnvHelper::getNewLineSymbol();
-
 if (RequestHelper::isGet()) {
     echo "YYY get";
 } else {
@@ -40,7 +35,7 @@ echo EnvHelper::getNewLineSymbol();
 
 echo "Hello World!";
 
-function isPost()
-{
-    return ($_SERVER['REQUEST_METHOD'] == 'POST' && (empty($_SERVER['HTTP_REFERER']) || preg_replace("~https?:\/\/([^\:\/]+).*~i", "\\1", $_SERVER['HTTP_REFERER']) == preg_replace("~([^\:]+).*~", "\\1", $_SERVER['HTTP_HOST']))) ? 1 : 0;
-}
+// function isPost(): int
+// {
+//     return ($_SERVER['REQUEST_METHOD'] == 'POST' && (empty($_SERVER['HTTP_REFERER']) || preg_replace("~https?:\/\/([^\:\/]+).*~i", "\\1", $_SERVER['HTTP_REFERER']) == preg_replace("~([^\:]+).*~", "\\1", $_SERVER['HTTP_HOST']))) ? 1 : 0;
+// }
