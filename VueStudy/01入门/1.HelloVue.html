@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../dist/3.2.18/vue.global.js"></script>
+</head>
+<body>
+<div id="myCounter">
+    Counter:{{counter}}
+    <br>
+    myName:{{myName}}
+    <br>
+    FooName:{{fooName}}
+    <br>
+    BarName:{{barName}}
+    <br>
+    BeeName:{{beeName}}
+    <br>
+    FeeName:{{feeName}}
+    <br>
+    <span v-bind:title="beeName">
+    鼠标悬停几秒钟查看此处动态绑定的提示信息！
+  </span>
+</div>
+<pre>
+本页面注意的3点知识：
+1、给对象(此处的Counter)定义成员方法的时候,可以通过具名函数(此处的data方法)也可以通过匿名函数(此处的mounted方法);
+2、如果使用this关键字后面调用属性名称的时候,如果这个属性已经存在(此处的barName)就直接使用原来定义的属性信息;如果这个名称对应的属性不存在(此处的beeName)就立即自动创建一个属性.
+3、只有在data()或者mounted()方法内指定名称的成员才能最终呈现在页面上;本feeName虽然被定义在Counter对象内成为其属性,但在页面上无法呈现出来.
+</pre>
+<script type="text/javascript">
+    const Counter = {
+        /**
+         * 只有在data()或者mounted()方法内指定名称的成员才能最终呈现在页面上;
+         * 本feeName虽然被定义在Counter对象内成为其属性,但在页面上无法呈现出来.
+         */
+        feeName: "feeNameContent",
+        barName: "myNameContent",
+        /**
+         * 使用具名函数,设置对象的成员-执行方法
+         * @returns {{counter: number}}
+         */
+        data() {
+            return {
+                myName: "ZHANGSAN",
+                counter: 0
+            }
+        },
+
+        foo() {
+            return {
+                fooName: "FooNameContent",
+            };
+        },
+
+        /**
+         * 使用匿名函数,设置对象的成员-执行方法
+         */
+        mounted: function () {
+            setInterval(() => {
+
+                /**
+                 * 这个counter是对象Counter的属性(此处动态添加上的),
+                 * 跟data()方法内的counter不是同一个目标标的
+                 */
+                this.counter++;
+
+                this.fooName = Date().toString();
+
+                /**
+                 * barName在对象Counter的开头有声明，此处通过this.barName是调用上面声明的属性成员
+                 * @type {string}
+                 */
+                this.barName = new Date().toString();
+
+                /**
+                 * beeName在对象Counter内从来没有定义过,此处this.beeName是新建一个属性成员
+                 * @type {string}
+                 */
+                this.beeName = new Date().toString();
+            }, 1000)
+        }
+    }
+
+    Vue.createApp(Counter).mount('#myCounter')
+</script>
+</body>
+</html>

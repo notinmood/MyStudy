@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../dist/3.2.18/vue.global.js"></script>
+</head>
+<body>
+<div id="myContainer">
+    SchoolName:{{schoolName}}
+    <br>
+    <span v-bind:title="address">
+    鼠标悬停几秒钟查看此处动态绑定的提示信息(address)！
+  </span>
+</div>
+
+<pre>
+════════════════════════
+两种展示数据的方式
+1、使用{{varName}}
+2、使用v-bind:***
+</pre>
+<script type="text/javascript">
+    const displayData = {
+        data() {
+            return {
+                "schoolName": "QDU",
+                "address": "No.288, Rd.NingXia,Qingdao City",
+            };
+        },
+    };
+
+    Vue.createApp(displayData).mount("#myContainer")
+</script>
+</body>
+</html>
