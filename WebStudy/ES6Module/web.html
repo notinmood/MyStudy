@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <pre>
+    我们知道，在script标签中写js代码，或者使用src引入js文件时，默认不能使用module形式，即不能使用import导入文件，但是我们可以再script标签上加上type=module属性来改变方式。
+    ════════════════════════
+    </pre>
+    <div id="myDiv">
+
+    </div>
+</head>
+<body>
+<script type="module">
+    import {g_fn} from "./export_03.js";
+
+    let fullName = g_fn();
+    // console.log(fullName);
+    // alert(fullName);
+    document.getElementById("myDiv").innerText = `通过es6方式获取的到的函数返回值为：${fullName}`;
+</script>
+</body>
+</html>
