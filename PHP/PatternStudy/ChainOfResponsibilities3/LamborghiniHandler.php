@@ -8,17 +8,14 @@
  * @company: HiLand & RainyTop
  */
 
-
 namespace PHP\Study\PatternStudy\ChainOfResponsibilities3;
-
 
 // 兰博基尼 Handler 3
 class LamborghiniHandler extends Handler
 {
-
     public function handlerRequest1(string $car)
     {
-        if ($car==("兰博基尼")) {
+        if ($car == ("兰博基尼")) {
             echo("这里是兰博基尼公司，可以接收兰博基尼汽车退货");
         } else {
             $this->successor->handlerRequest1($car);
@@ -27,7 +24,7 @@ class LamborghiniHandler extends Handler
 
     public function handlerRequest2(string $car)
     {
-        if ($car ==("兰博基尼")) {
+        if ($car == ("兰博基尼")) {
             echo("这里是兰博基尼公司，可以修理兰博基尼汽车");
         } else {
             $this->successor->handlerRequest2($car);

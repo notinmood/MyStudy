@@ -8,4 +8,5 @@
  * @company: HiLand & RainyTop
  */
 
+// var_dump(PHP_INT_SIZE);
 phpinfo();
