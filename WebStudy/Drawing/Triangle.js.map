@@ -1,1 +1,1 @@
-{"version":3,"file":"Triangle.js","sourceRoot":"","sources":["Triangle.ts"],"names":[],"mappings":";;;AACA,MAAa,QAAQ;IACV,IAAI;QACP,OAAO,CAAC,GAAG,CAAC,qCAAqC,CAAC,CAAC;IACvD,CAAC;CACJ;AAJD,4BAIC"}
+{"version":3,"file":"Triangle.js","sourceRoot":"","sources":["Triangle.ts"],"names":[],"mappings":";;;AACA;IAAA;IAIA,CAAC;IAHU,uBAAI,GAAX;QACI,OAAO,CAAC,GAAG,CAAC,qCAAqC,CAAC,CAAC;IACvD,CAAC;IACL,eAAC;AAAD,CAAC,AAJD,IAIC;AAJY,4BAAQ"}

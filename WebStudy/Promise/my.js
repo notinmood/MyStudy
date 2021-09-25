@@ -1,5 +1,5 @@
-let promise = new Promise((resolve, reject) => {
-    let i = Math.random();
+var promise = new Promise(function (resolve, reject) {
+    var i = Math.random();
     if (i < 0.5) {
         resolve("ok" + i);
     }
@@ -7,9 +7,9 @@ let promise = new Promise((resolve, reject) => {
         reject("bad" + i);
     }
 });
-promise.then(value => {
+promise.then(function (value) {
     console.log(value);
-}, err => {
+}, function (err) {
     console.log(err);
 });
 //# sourceMappingURL=my.js.map

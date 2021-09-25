@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const thirdClass_1 = require("./thirdClass");
+var thirdClass_1 = require("./thirdClass");
 var MyNameSpace;
 (function (MyNameSpace) {
     MyNameSpace.myName = 'zhangsan';

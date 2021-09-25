@@ -1,10 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Triangle = void 0;
-class Triangle {
-    draw() {
-        console.log("Triangle is drawn (external module)");
+var Triangle = /** @class */ (function () {
+    function Triangle() {
     }
-}
+    Triangle.prototype.draw = function () {
+        console.log("Triangle is drawn (external module)");
+    };
+    return Triangle;
+}());
 exports.Triangle = Triangle;
 //# sourceMappingURL=Triangle.js.map

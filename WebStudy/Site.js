@@ -1,10 +1,11 @@
-class Site {
-    constructor(name) {
+var Site = /** @class */ (function () {
+    function Site(name) {
         this.name = "xie ran";
         this.name = name;
     }
-    getName() {
+    Site.prototype.getName = function () {
         return ("helle,Mr." + this.name);
-    }
-}
+    };
+    return Site;
+}());
 //# sourceMappingURL=Site.js.map

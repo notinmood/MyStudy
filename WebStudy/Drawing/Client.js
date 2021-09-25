@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const circle = require("./Circle");
-const triangle = require("./Triangle");
+var circle = require("./Circle");
+var triangle = require("./Triangle");
 function drawAllShapes(shapeToDraw) {
     shapeToDraw.draw();
 }

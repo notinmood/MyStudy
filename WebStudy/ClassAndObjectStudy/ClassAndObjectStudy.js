@@ -1,22 +1,23 @@
-class Person {
-    constructor(name, age) {
+var Person = /** @class */ (function () {
+    function Person(name, age) {
         this.name = name;
         this.age = age;
     }
-    setName(name) {
+    Person.prototype.setName = function (name) {
         this.name = name;
-    }
-    getName() {
+    };
+    Person.prototype.getName = function () {
         return this.name;
-    }
-    getAge() {
+    };
+    Person.prototype.getAge = function () {
         return this.age;
-    }
-    setAge(age) {
+    };
+    Person.prototype.setAge = function (age) {
         this.age = age;
-    }
-}
-let p = new Person("zhangsan", 20);
+    };
+    return Person;
+}());
+var p = new Person("zhangsan", 20);
 console.log(p.getName());
 console.log(p.getAge());
 //# sourceMappingURL=ClassAndObjectStudy.js.map

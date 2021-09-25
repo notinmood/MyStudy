@@ -1,3 +1,10 @@
+/**
+ * 格式化字符串
+ * ════════════════════════
+ * 字符串的格式化,建议使用 `${key}` 这种方式
+ * @param args
+ * @returns {String}
+ */
 String.prototype.format = function (args) {
     let result = this;
     if (arguments.length < 1) {
@@ -9,6 +16,7 @@ String.prototype.format = function (args) {
         //如果模板参数是对象
         data = args;
     }
+
     for (let key in data) {
         let value = data[key];
         if (undefined != value) {
@@ -16,6 +24,14 @@ String.prototype.format = function (args) {
         }
     }
     return result;
+}
+
+/**
+ * 将字符串进行前后翻转
+ * @returns {string}
+ */
+String.prototype.reverse = function () {
+    return this.split('').reverse().join('');
 }
 
 export default {}
