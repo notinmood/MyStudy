@@ -62,7 +62,9 @@
 
                 /**
                  * 这个counter是对象Counter的属性(此处动态添加上的),
-                 * 跟data()方法内的counter不是同一个目标标的
+                 * 跟data()方法内的counter是同一个目标标的.
+                 * 因为data()内的所有顶级属性都会自动被添加到Counter上,作为Counter的属性.
+                 * 参考 https://v3.cn.vuejs.org/guide/data-methods.html#data-property
                  */
                 this.counter++;
 

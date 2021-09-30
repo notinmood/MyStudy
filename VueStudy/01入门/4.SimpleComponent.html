@@ -8,7 +8,6 @@
 <body>
 <div id="myDiv">
     <ol>
-
         <city-item
                 v-for="item in cityList"
                 v-bind:city="item"
@@ -34,7 +33,7 @@
     app.component("city-item", {
         props: ["city"],
         template: `
-          <li>{{ city.text }}</li>`
+          <li>{{ city.text }}</li>`,
     });
     app.mount("#myDiv");
 </script>
