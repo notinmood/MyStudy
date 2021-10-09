@@ -13,6 +13,10 @@ namespace PHP\Study\PHPStormTips;
 
 use PHP\Study\PHPStormTips\res\Student;
 
+/**
+ * 本方式来源于 https://ask.csdn.net/questions/847102
+ */
+
 class IntelliTip3
 {
     /**
