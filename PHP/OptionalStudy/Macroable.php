@@ -16,6 +16,9 @@ use Closure;
 use ReflectionClass;
 use ReflectionMethod;
 
+/**
+ *
+ */
 trait Macroable
 {
     /**
@@ -73,12 +76,10 @@ trait Macroable
 
     /**
      * Dynamically handle calls to the class.
-     *
      * @param  string  $method
      * @param  array  $parameters
      * @return mixed
-     *
-     * @throws \BadMethodCallException
+     * @throws BadMethodCallException
      */
     public static function __callStatic($method, $parameters)
     {
@@ -99,12 +100,10 @@ trait Macroable
 
     /**
      * Dynamically handle calls to the class.
-     *
-     * @param  string  $method
+     * @param  string $method
      * @param  array  $parameters
      * @return mixed
-     *
-     * @throws \BadMethodCallException
+     * @throws BadMethodCallException
      */
     public function __call($method, $parameters)
     {

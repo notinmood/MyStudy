@@ -22,15 +22,13 @@ class Optional
 
     /**
      * The underlying object.
-     *
      * @var mixed
      */
     protected $value;
 
     /**
      * Create a new optional instance.
-     *
-     * @param  mixed  $value
+     * @param mixed $value
      * @return void
      */
     public function __construct($value)
@@ -40,9 +38,8 @@ class Optional
 
     /**
      * Dynamically access a property on the underlying object.
-     *
-     * @param  string  $key
-     * @return mixed
+     * @param string $key
+     * @return void|null
      */
     public function __get($key)
     {
@@ -53,8 +50,7 @@ class Optional
 
     /**
      * Dynamically check a property exists on the underlying object.
-     *
-     * @param  mixed  $name
+     * @param mixed $name
      * @return bool
      */
     public function __isset($name)
@@ -71,15 +67,13 @@ class Optional
     }
 
 
-
     /**
      * Dynamically pass a method to the underlying object.
-     *
-     * @param  string  $method
-     * @param  array  $parameters
+     * @param string $method
+     * @param array  $parameters
      * @return mixed
      */
-    public function __call($method, $parameters)
+    public function __call(string $method, $parameters)
     {
         if (static::hasMacro($method)) {
             return $this->macroCall($method, $parameters);
