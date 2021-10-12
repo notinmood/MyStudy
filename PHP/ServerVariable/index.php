@@ -12,6 +12,11 @@ require "../vendor/autoload.php";
 
 use Hiland\Utils\Web\ServerHelper;
 
+/**
+ * 更多信息,参考如下文章
+ * https://www.cnblogs.com/meng529694498/articles/2918327.html
+ */
+
 echo "显示脚本文件的相对路径和文件名:" . $_SERVER["PHP_SELF"] . "<br>";
 echo "显示当前脚本的路径:" . $_SERVER["SCRIPT_NAME"] . " <br>";
 echo "显示当前运行脚本的文档根目录:" . $_SERVER["DOCUMENT_ROOT"] . " <br>";

@@ -12,3 +12,4 @@ packages
 /WebPackStudy/node_modules
 node_modules
 dist
+/PHP/composer.lock
