@@ -8,7 +8,7 @@
  * @company: HiLand & RainyTop
  */
 
-namespace PHP\Study\MagicMethodStudy\CommonValid;
+namespace PHP\Study\MagicMethodStudy\res;
 
 class MyEntity
 {
