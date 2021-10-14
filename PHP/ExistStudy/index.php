@@ -19,6 +19,10 @@ use PHP\Study\ExistStudy\MyClass;
 $myClass = new MyClass();
 
 const MY_CITY = "Qingdao";
+
+/**
+ * 这种语法不再推荐使用了,请使用const语法
+ */
 define("MY_JOB", "IT ENGINEER");
 
 /**

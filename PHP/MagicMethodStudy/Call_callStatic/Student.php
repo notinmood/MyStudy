@@ -8,7 +8,6 @@
  * @company: HiLand & RainyTop
  */
 
-
 namespace PHP\Study\MagicMethodStudy\Call_callStatic;
 
 /**
