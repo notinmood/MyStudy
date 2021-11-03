@@ -29,7 +29,4 @@ class Person
         $this->mJob = $builder->mJob;
         $this->mHabit = $builder->mHabit;
     }
-
-
-
 }
