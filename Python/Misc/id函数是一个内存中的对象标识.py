@@ -9,6 +9,7 @@ if __name__ == '__main__':
 
     yourName = "lisi"
 
+    # 以下打印的结果是相同的
     print(id(myName1))
     print(id(myName2))
 
