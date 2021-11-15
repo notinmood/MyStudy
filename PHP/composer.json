@@ -28,7 +28,8 @@
     "symfony/event-dispatcher": "^5.0",
     "symfony/options-resolver": "^5.0",
     "twbs/bootstrap":"5.1.3",
-    "phpstan/phpstan": "*"
+    "phpstan/phpstan": "*",
+    "vlucas/phpdotenv": "5.4.x-dev"
   },
   "require-dev": {
     "phpunit/phpunit": "9.*"

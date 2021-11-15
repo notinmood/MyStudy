@@ -44,8 +44,8 @@ class ArrayAndObjectAccess implements ArrayAccess
     }
 
     /**
-     * Whether or not an data exists by key
-     * @param string An data key to check for
+     * Whether a data exists by key
+     * @param string A data key to check for
      * @access      public
      * @return boolean
      * @abstracting ArrayAccess
@@ -82,18 +82,6 @@ class ArrayAndObjectAccess implements ArrayAccess
     }
 
     /**
-     * Whether or not an offset exists
-     * @param string An offset to check for
-     * @access      public
-     * @return boolean
-     * @abstracting ArrayAccess
-     */
-    public function offsetExists($offset): bool
-    {
-        return isset($this->data[$offset]);
-    }
-
-    /**
      * Unsets an offset
      * @param string The offset to unset
      * @access      public
@@ -104,6 +92,18 @@ class ArrayAndObjectAccess implements ArrayAccess
         if ($this->offsetExists($offset)) {
             unset($this->data[$offset]);
         }
+    }
+
+    /**
+     * Whether or not an offset exists
+     * @param string An offset to check for
+     * @access      public
+     * @return boolean
+     * @abstracting ArrayAccess
+     */
+    public function offsetExists($offset): bool
+    {
+        return isset($this->data[$offset]);
     }
 
     /**

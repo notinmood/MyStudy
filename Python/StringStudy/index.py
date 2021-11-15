@@ -1,6 +1,15 @@
 from builtins import *
 
-from StringHelper import *
+"""
+调用第三方库
+"""
+# import HilandBasicLibrary.data.StringHelper as sh
+from HilandBasicLibrary.data.StringHelper import StringHelper
+
+"""
+调用本地的库
+"""
+# from StringHelper import *
 
 x = 10
 y = 20
@@ -16,8 +25,8 @@ if __name__ == '__main__':
     print(f"{name}的身高是{height}cm")
 
     print("────────────────────────使用DIY方法────────────────────────")
-    whole = format_string("{name}的身高是{height}", name=name, height=height)
+    whole = StringHelper.format("{name}的身高是{height}", name=name, height=height)
     print(whole)
 
-    whole = format_string("{0}的身高是{1}", name, height)
+    whole = StringHelper.format("{0}的身高是{1}", name, height)
     print(whole)

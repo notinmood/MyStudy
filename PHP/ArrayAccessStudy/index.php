@@ -19,6 +19,10 @@ require "../vendor/autoload.php";
 use PHP\Study\ArrayAccessStudy\ArrayAndObjectAccess;
 
 $target = new ArrayAndObjectAccess();
+
+/**
+ * 实现了 ArrayAccess的类型，即可以使用对象的方式访问，也可以使用数组的方式访问
+ */
 $target->foo = "my foo";
 $target["bar"] = "my bar";
 
