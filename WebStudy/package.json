@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "dependencies": {
-    "axios": "^0.21.3"
+    "axios": "^0.21.3",
+    "basiclibrary.javascript": "^1.0.1"
   },
   "devDependencies": {
     "chai": "^4.3.4",
