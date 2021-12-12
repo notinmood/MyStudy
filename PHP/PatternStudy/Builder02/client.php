@@ -15,7 +15,7 @@ use PHP\Study\PatternStudy\Builder02\PersonBuilder;
 require "../../vendor/autoload.php";
 
 /**
- * 用户非常容易拿到完整状态的对象：
+ * 使用Builder模式的优势：用户非常容易拿到完整状态的对象--
  * 在创建对象前可以给其赋值;但一直到build()的时候,才有完整的对象.
  */
 

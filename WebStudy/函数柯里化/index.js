@@ -4,6 +4,8 @@
 // 并且返回接受余下的参数且返回结果的新函数的技术。
 // 这个技术以逻辑学家 Haskell Curry 命名的。
 
+// 参考 https://www.cnblogs.com/bidong/p/15498133.html
+
 let original = function (a, b, c, d) {
     return a + b + c + d;
 };
