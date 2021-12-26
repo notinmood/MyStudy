@@ -21,3 +21,6 @@ if __name__ == '__main__':
 
     # 不取第0个
     print(my_data[1:])
+
+    # 倒叙取得数据
+    print(my_data[::-1])

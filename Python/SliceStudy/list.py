@@ -7,7 +7,7 @@
  * @company: HiLand & RainyTop
 """
 
-from HilandBasicLibrary.io.ConsoleHelper import *
+from hilandBasicLibrary.environment.consoleHelper import *
 
 if __name__ == '__main__':
     list_data = [1, 3, 5, 7, 9]

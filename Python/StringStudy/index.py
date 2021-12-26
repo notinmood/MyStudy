@@ -3,8 +3,8 @@ from builtins import *
 """
 调用第三方库
 """
-# import HilandBasicLibrary.data.StringHelper as sh
-from HilandBasicLibrary.data.StringHelper import StringHelper
+# import hilandBasicLibrary.data.StringHelper as sh
+from hilandBasicLibrary.data.stringHelper import StringHelper
 
 """
 调用本地的库
@@ -18,6 +18,8 @@ if __name__ == '__main__':
     # 要么都写数字索引，要么都不写；不能有的写有的不写
     print("x,y的值为{},{}".format(x, y))
     print("x,y的值为{0},{1}".format(x, y))
+    print(str.format("x,y的值为{},{}", x, y))
+
     # print("x,y的值为{0},{}".format(x, y))
 
     name = "小明"
