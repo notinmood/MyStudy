@@ -27,11 +27,10 @@ require "../vendor/autoload.php";
 
 use Hiland\Utils\Data\DateHelper;
 use Hiland\Utils\Data\RandHelper;
-use Hiland\Utils\DataModel\CommonModel;
 use Hiland\Utils\DataModel\ModelMate;
-use PHP\Study\ThinkOrmStudy\User;
 use think\facade\Db;
 
+// (new think\facade\Db)->setConfig([
 Db::setConfig([
     // 默认数据连接标识
     'default' => 'mysql',
