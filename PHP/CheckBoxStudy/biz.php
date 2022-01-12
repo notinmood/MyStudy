@@ -12,6 +12,7 @@
 require "../vendor/autoload.php";
 
 use Hiland\Utils\IO\ConsoleHelper;
+use Hiland\Utils\Web\RequestHelper;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 
@@ -26,11 +27,11 @@ $handler = new StreamHandler($logFile, Logger::DEBUG);
 $log->pushHandler($handler);
 
 //9、进行记录
-// if (RequestHelper::isPost()) {
-//     $log->addRecord(Logger::DEBUG, "这是一个post请求!");
-// } else {
-//     $log->addRecord(Logger::DEBUG, "NNN这不是一个post请求!");
-// }
+if (RequestHelper::isPost()) {
+    $log->addRecord(Logger::DEBUG, "这是一个post请求!");
+} else {
+    $log->addRecord(Logger::DEBUG, "NNN这不是一个post请求!");
+}
 
 
 displayPostValue("myID");
