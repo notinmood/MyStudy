@@ -1,4 +1,4 @@
-import "../Utils/StringHelper.js"
+import "../Define/StringHelper.mjs"
 
 //两种调用方式
 let template1 = "我是{0}，今年{1}了.";

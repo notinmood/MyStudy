@@ -34,4 +34,8 @@ String.prototype.reverse = function () {
     return this.split('').reverse().join('');
 }
 
-export default {}
+function sayHello(name) {
+    return "hello " + name;
+}
+
+export default {sayHello};

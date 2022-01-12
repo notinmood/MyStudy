@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "dependencies": {
-    "axios": "^0.21.3",
-    "basiclibrary.javascript": "^1.0.1"
+    "axios": "^0.24.0",
+    "basiclibrary.javascript": "^1.1.0",
+    "faker": "^5.5.3"
   },
   "devDependencies": {
     "chai": "^4.3.4",
