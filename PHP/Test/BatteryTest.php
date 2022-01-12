@@ -10,6 +10,7 @@
 
 namespace PHP\Study\ComposerStudy;
 
+use PHP\Study\PatternStudy\ComposerPattern\Battery;
 use PHPUnit\Framework\TestCase;
 
 class BatteryTest extends TestCase
