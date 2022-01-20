@@ -3,7 +3,8 @@ const path = require('path');
 module.exports = {
     mode: "development", //"production"
     entry: {
-        index: "./index.js"
+        index: "./index.js",
+        main: "./main.js"
     },
     output: {
         filename: "[name].bundle.js", // 输出 index.js 和 utils.js
