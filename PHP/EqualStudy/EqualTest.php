@@ -12,6 +12,11 @@ namespace Hiland\Test\utils;
 
 use PHPUnit\Framework\TestCase;
 
+/**
+ * 数据相等性判断
+ * ────────────────────────
+ * “”，“0”，0，null，false 他们之间 == 都是相等的
+ */
 class EqualTest extends TestCase
 {
     /**
@@ -51,6 +56,10 @@ class EqualTest extends TestCase
         self::assertEquals(false, $actual);
     }
 
+    /**
+     * 数据相等性判断
+     * @return void
+     */
     public function testEqual()
     {
         $a = 1;
@@ -66,6 +75,53 @@ class EqualTest extends TestCase
             $actual = true;
         }
         self::assertEquals(false, $actual);
-    }
 
+        $a = false;
+        $b = "";
+        $actual = false;
+        if ($a == $b) {
+            $actual = true;
+        }
+        self::assertEquals(true, $actual);
+
+        $a = false;
+        $b = "0";
+        $actual = false;
+        if ($a == $b) {
+            $actual = true;
+        }
+        self::assertEquals(true, $actual);
+
+        /**
+         * 单纯用 == 判断的话，false 和 null 是相等的。
+         */
+        $a = false;
+        $b = null;
+        if ($a == $b) {
+            $actual = true;
+        } else {
+            $actual = false;
+        }
+        self::assertEquals(true, $actual);
+
+        /**
+         * 判断是否为 null 的时候，用 is_null 方法
+         */
+        if (is_null($b)) {
+            $actual = true;
+        } else {
+            $actual = false;
+        }
+        self::assertEquals(true, $actual);
+
+        /**
+         * 如果用 is_null 判断的话，false 不是 null
+         */
+        if (is_null($a)) {
+            $actual = true;
+        } else {
+            $actual = false;
+        }
+        self::assertEquals(false, $actual);
+    }
 }
