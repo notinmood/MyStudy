@@ -1,4 +1,7 @@
 import $ from "jquery";
+import {helper} from "basiclibrary.javascript/utils/stringHelper.mjs"
+
+
 
 $(document).ready(function(){
     $('#btnOK').click(function(){
@@ -6,6 +9,8 @@ $(document).ready(function(){
     });
 
     $('button').on("click",function(){
-        alert('hello！') ;
+        let whole ="qingdao city";
+        let result = helper.left(whole,3);
+        alert(result) ;
     });
 });
