@@ -9,7 +9,7 @@
  */
 
 
-namespace PHP\Study\KeyWordStudy;
+namespace PHP\Study\KeyWordStudy\Static_KeyWord;
 
 class StaticBiz
 {

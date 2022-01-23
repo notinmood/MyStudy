@@ -9,19 +9,19 @@
  */
 
 
-namespace PHP\Study\PHPStormTips\res;
+namespace PHP\Study\_res;
 
 class Student
 {
     /**
      * @var string
      */
-    private $name;
+    private string $name;
 
     /**
      * @var int
      */
-    private $age;
+    private int $age;
 
 
     public function __construct($name,$age)
@@ -30,7 +30,8 @@ class Student
         $this->name=$name;
     }
 
-    public function getName(){
+    public function getName(): string
+    {
         return $this->name;
     }
 }
