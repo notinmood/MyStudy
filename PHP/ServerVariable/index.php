@@ -3,9 +3,9 @@
  * @file       --  index.php
  * @time       --  11 -- 12
  * @date       --  2021/10/10
- * @emailto --  9727005@qq.com
- * @creator --  ShanDong Xiedali
- * @company --  HiLand & RainyTop
+ * @emailto    --  9727005@qq.com
+ * @creator    --  ShanDong Xiedali
+ * @company    --  HiLand & RainyTop
  */
 
 require "../vendor/autoload.php";
@@ -21,8 +21,8 @@ echo "显示脚本文件的相对路径和文件名PHP_SELF -- " . $_SERVER["PHP
 echo "显示当前脚本的路径 SCRIPT_NAME -- " . $_SERVER["SCRIPT_NAME"] . " <br>";
 echo "显示当前运行脚本的文档根目录DOCUMENT_ROOT -- " . $_SERVER["DOCUMENT_ROOT"] . " <br>";
 echo "显示当前执行脚本的绝对路径名SCRIPT_FILENAME -- " . $_SERVER["SCRIPT_FILENAME"] . "<br>";
-echo "应用程序的web根目录为 -- " . ServerHelper::getWebRoot() . "<br>";
-echo "应用程序的物理根目录为 -- " . ServerHelper::getPhysicalRoot() . "<br>";
+echo "应用程序的web根目录ServerHelper::getWebRoot() -- " . ServerHelper::getWebRoot() . "<br>";
+echo "应用程序的物理根目录ServerHelper::getPhysicalRoot() -- " . ServerHelper::getPhysicalRoot() . "<br>";
 
 echo "显示服务器使用的CGI脚本规范GATEWAY_INTERFACE -- " . $_SERVER["GATEWAY_INTERFACE"] . " <br>";
 

@@ -24,14 +24,24 @@ class Student
     private int $age;
 
 
-    public function __construct($name,$age)
+    public function __construct($name, $age)
     {
-        $this->age=$age ;
-        $this->name=$name;
+        $this->age  = $age;
+        $this->name = $name;
     }
 
     public function getName(): string
     {
         return $this->name;
+    }
+
+    public function getAge(): int
+    {
+        return $this->age;
+    }
+
+    public static function Walk(): string
+    {
+        return ("we all can walk!");
     }
 }
