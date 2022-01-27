@@ -8,20 +8,21 @@
  * @company: HiLand & RainyTop
  */
 
-namespace PHP\Study\MagicMethodStudy\Call_callStatic;
+namespace PHP\Study\MagicMethodStudy\魔术方法__call_callStatic;
 
 /**
- * @method welcomeName
+ * @method string welcomeName()
+ * @method static string getFoo()
  */
 class Student
 {
     private string $name = "";
-    private int $age = 20;
+    private int    $age  = 20;
 
     public function __construct($name, $age)
     {
         $this->name = $name;
-        $this->age = $age;
+        $this->age  = $age;
     }
 
     public function getMyName(): string
@@ -36,13 +37,12 @@ class Student
 
     public function __call($name, $arguments)
     {
-        echo PHP_EOL . "正在通过魔术方法__call(),调用方法$name" . PHP_EOL;
+        el("正在通过魔术方法 __call(),调用方法 $name");
 
-        if(method_exists($this, $name)){
+        if (method_exists($this, $name)) {
             return call_user_func_array([$this, $name], $arguments);
-        }
-        else{
-            echo "NNN- 方法{$name}不存在的";
+        } else {
+            el("NNN- 方法{$name}不存在的");
         }
     }
 
