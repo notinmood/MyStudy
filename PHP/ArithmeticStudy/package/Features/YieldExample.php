@@ -31,11 +31,10 @@
 
 /**
  * 协程生产器
- *
  * @param     $start
  * @param     $end
  * @param int $step
- * @return \Generator
+ * @return Generator
  */
 $SyncFactory = function ($start, $end, $step = 1) {
     for ($i = $start; $i <= $end; $i += $step) {
@@ -129,9 +128,8 @@ class Task
 
     /**
      * Task constructor.
-     *
      * @param            $taskId
-     * @param \Generator $coroutine
+     * @param Generator  $coroutine
      */
     public function __construct($taskId, Generator $coroutine)
     {
@@ -208,8 +206,7 @@ class Scheduler
 
     /**
      * 创建一个task 开启一个协程
-     *
-     * @param \Generator $coroutine
+     * @param Generator $coroutine
      * @return int
      */
     public function newTask(Generator $coroutine)
@@ -341,7 +338,7 @@ $scheduler->run();
  * @param     $start
  * @param     $limit
  * @param int $step
- * @return \Generator
+ * @return Generator
  */
 function xrange($start, $limit, $step = 1)
 {

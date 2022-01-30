@@ -23,9 +23,9 @@ $target = new ArrayAndObjectAccess();
 /**
  * 实现了 ArrayAccess的类型，即可以使用对象的方式访问，也可以使用数组的方式访问
  */
-$target->foo = "my foo";
+$target->foo   = "my foo";
 $target["bar"] = "my bar";
 
-echo "{$target["foo"]}";
+echo $target["foo"];
 echo PHP_EOL;
-echo "{$target->bar}";
+echo $target->bar;

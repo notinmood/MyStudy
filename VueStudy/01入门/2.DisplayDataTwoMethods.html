@@ -21,16 +21,16 @@
 2、在标签的属性内，使用v-bind:&lt;<i>propertyName</i>&gt;="varData"
 </pre>
 <script type="text/javascript">
-    const displayData = {
-        data() {
+    const vueApp = {
+        data: function () {
             return {
                 "schoolName": "QDU",
-                "address": "No.288, Rd.NingXia,Qingdao City",
+                "address"   : "No.288, Rd.NingXia,Qingdao City",
             };
         },
     };
 
-    Vue.createApp(displayData).mount("#myContainer");
+    Vue.createApp(vueApp).mount("#myContainer");
 </script>
 </body>
 </html>
