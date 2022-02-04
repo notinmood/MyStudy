@@ -1,15 +1,21 @@
 <?php
 /**
- * @file   : 1.array_shift.php
- * @time   : 7:03
- * @date   : 2022/1/31
+ * @file   : 1.数组是值类型.php
+ * @time   : 20:39
+ * @date   : 2022/2/4
  * @mail   : 9727005@qq.com
  * @creator: ShanDong Xiedali
  * @company: HiLand & RainyTop
  */
 
 $a = array("a" => "red", "b" => "green", "c" => "blue");
-echo array_shift($a);
+$b = $a;
+
+echo array_shift($b);
+echo PHP_EOL;
+echo '────────────────────────';
+echo PHP_EOL;
+print_r($b);
 echo PHP_EOL;
 echo '────────────────────────';
 echo PHP_EOL;

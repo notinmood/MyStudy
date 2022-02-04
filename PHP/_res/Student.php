@@ -40,6 +40,11 @@ class Student
         return $this->age;
     }
 
+    public function happyBirthDay()
+    {
+        $this->age = $this->age + 1;
+    }
+
     public static function Walk(): string
     {
         return ("we all can walk!");

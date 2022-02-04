@@ -6,21 +6,26 @@
     <script src="../dist/3.2.18/vue.global.js"></script>
 </head>
 <body>
+<pre>
+    VUE使用
+    1. 使用流程 VCM(Vue-CreateApp-Mount)：在vue上创建app,然后将其挂载到html内
+    2. 其中创建createApp对象的时候，有以下几个常用成员(除了data是方法，其他都是对象)：
+        - data方法，内部返回一个对象，这个对象内定义n个属性，会直接变成app的属性
+        - methods对象，本对象内定义n个方法，可以被本app的其他地方调用
+        - components对象，内部定义n个组件，对应html内的各个代码段
+</pre>
+
 <div id="todo-list-app">
     <ol>
-        <!--
-         现在我们为每个 todo-item 提供 todo 对象
-         todo 对象是变量，即其内容可以是动态的。
-         我们也需要为每个组件提供一个“key”，稍后再
-         作详细解释。
-       -->
         <todo-item
                 v-for="item in groceryList"
                 v-bind:todo="item"
                 v-bind:key="item.id"
         ></todo-item>
     </ol>
+    <input type="button" v-on:click="reverse" value="翻转"/>
 </div>
+
 <script type="text/javascript">
     const todoItem = {
         props   : ['todo'],
@@ -38,13 +43,18 @@
                 ]
             }
         },
+        methods   : {
+            reverse() {
+                this.groceryList = this.groceryList.reverse();
+            },
+        },
         components: {//components 是一个对象
             /**
              * 每一个组件又都是一个独立的对象;
              * 同时因为HTML忽略大小写，因此本组件对应的HTML内的标签要将大写转换成中横线 (-) 和小写字母
              */
-            todoItem:todoItem,
-        }
+            todoItem: todoItem,
+        },
     }
 
     Vue.createApp(TodoList).mount('#todo-list-app');
