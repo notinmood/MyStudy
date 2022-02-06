@@ -39,6 +39,8 @@ if ($cs instanceof $className) {
 /**
  * instanceof 可以判断基类
  */
+
+/** @noinspection all */
 if ($cs instanceof Student) {
     el("YYY当前对象是一个学生");
 } else {
