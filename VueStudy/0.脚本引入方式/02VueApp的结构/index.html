@@ -23,7 +23,9 @@
                 v-bind:key="item.id"
         ></todo-item>
     </ol>
-    <input type="button" v-on:click="reverse" value="翻转"/>
+    <input type="button" v-on:click="reverse" value="翻转"/> <br>
+    项目总数（方法）：{{ getItemCount() }} （调用的时候需要使用()）<br>
+    项目总数（计算属性）：{{ itemCount }}（调用的时候不能使用()）
 </div>
 
 <script type="text/javascript">
@@ -46,6 +48,14 @@
         methods   : {
             reverse() {
                 this.groceryList = this.groceryList.reverse();
+            },
+            getItemCount() {
+                return this.groceryList.length;
+            }
+        },
+        computed  : {
+            itemCount() {
+                return this.groceryList.length;
             },
         },
         components: {//components 是一个对象
