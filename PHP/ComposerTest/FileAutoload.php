@@ -11,7 +11,7 @@
 require "../vendor/autoload.php";
 
 /**
- *测试 composer.json内自动加载php文件,而实现的功能.
+ *测试 composer.json 内自动加载 php 文件，而实现的功能。
  */
 sayHi("zhangsan");
 echo PHP_EOL;
