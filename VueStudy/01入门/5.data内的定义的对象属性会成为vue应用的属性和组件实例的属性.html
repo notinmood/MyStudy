@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../dist/3.2.18/vue.global.js"></script>
+</head>
+<body>
+<pre>
+    data内的定义的对象属性 message 会成为vue应用的属性(本例中的 <p>{{message}}</p>);
+    挂载到HTML上之后，也会成为组件实例的属性(本例中的 console.log(vm.message) )。
+</pre>
+<div id="myDiv">
+    <p>{{message}}</p>
+</div>
+<script type="text/javascript">
+    const VueApp = {
+        data: function () {
+            return {
+                message: 'Hello Vue!',
+            };
+        },
+    };
+
+    let vm = Vue.createApp(VueApp).mount("#myDiv");
+    console.log(vm.message);
+</script>
+</body>
+</html>

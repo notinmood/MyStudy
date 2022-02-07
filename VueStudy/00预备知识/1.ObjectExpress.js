@@ -23,7 +23,7 @@ let student = {
      */
     getAge() {
         return this.age;
-    }
+    },
 };
 
 console.log(student.getName());
