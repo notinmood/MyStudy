@@ -3,7 +3,7 @@
  * @file   : index.php
  * @time   : 18:05
  * @date   : 2022/1/5
- * @emailto: 9727005@qq.com
+ * @mail   : 9727005@qq.com
  * @creator: ShanDong Xiedali
  * @company: HiLand & RainyTop
  */

@@ -3,26 +3,26 @@
  * @file   : Closure00.php
  * @time   : 15:47
  * @date   : 2021/8/12
- * @emailto: 9727005@qq.com
+ * @mail   : 9727005@qq.com
  * @creator: ShanDong Xiedali
  * @company: HiLand & RainyTop
  */
 
 /**
- * bind的第二个参数为null还是onject，取决于第一个闭包是否用到了$this的上下文环境。绑定的对象决定了函数中的$this的取值。
+ * bind的第二个参数为 null 还是 object，取决于第一个闭包是否用到了 $this 的上下文环境。绑定的对象决定了函数中的 $this 的取值。
  */
-class A
+class FooClass
 {
-    public $pfoo = 3;
+    public int $pFoo = 3;
 }
 
 $cc = function () {
-    return $this->pfoo;
+    return $this->pFoo;
 };
 
-$aaa = new A();
-$bbb = new A();
-$bbb->publicFoo = 5;
+$aaa       = new FooClass();
+$bbb       = new FooClass();
+$bbb->pFoo = 5;
 
 //$cc中用到了$this,必须有$this的上下文环境
 $bcl2 = Closure::bind($cc, $aaa);

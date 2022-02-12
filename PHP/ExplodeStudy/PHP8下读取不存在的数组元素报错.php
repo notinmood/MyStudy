@@ -3,7 +3,7 @@
  * @file   : PHP8下读取不存在的数组元素报错.php
  * @time   : 20:16
  * @date   : 2022/1/5
- * @emailto: 9727005@qq.com
+ * @mail   : 9727005@qq.com
  * @creator: ShanDong Xiedali
  * @company: HiLand & RainyTop
  */

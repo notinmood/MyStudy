@@ -3,7 +3,7 @@
  * @file   : CanDisplay.php
  * @time   : 10:36
  * @date   : 2021/9/11
- * @emailto: 9727005@qq.com
+ * @mail   : 9727005@qq.com
  * @creator: ShanDong Xiedali
  * @company: HiLand & RainyTop
  */

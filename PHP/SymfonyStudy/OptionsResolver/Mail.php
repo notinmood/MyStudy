@@ -3,7 +3,7 @@
  * @file   : Mail.php
  * @time   : 12:09
  * @date   : 2021/10/4
- * @emailto: 9727005@qq.com
+ * @mail   : 9727005@qq.com
  * @creator: ShanDong Xiedali
  * @company: HiLand & RainyTop
  */

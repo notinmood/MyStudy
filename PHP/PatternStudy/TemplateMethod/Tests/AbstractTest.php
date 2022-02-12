@@ -3,7 +3,7 @@
  * @file   : AbstractTest.php
  * @time   : 11:13
  * @date   : 2021/9/9
- * @emailto: 9727005@qq.com
+ * @mail   : 9727005@qq.com
  * @creator: ShanDong Xiedali
  * @company: HiLand & RainyTop
  */

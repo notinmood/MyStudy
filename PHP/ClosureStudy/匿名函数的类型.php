@@ -3,7 +3,7 @@
  * @file   : 匿名函数的类型.php
  * @time   : 11:26
  * @date   : 2021/8/12
- * @emailto: 9727005@qq.com
+ * @mail   : 9727005@qq.com
  * @creator: ShanDong Xiedali
  * @company: HiLand & RainyTop
  */

@@ -3,7 +3,7 @@
  * @file   : ArrayMap中的匿名函数作为参数1.1.php
  * @time   : 10:08
  * @date   : 2021/8/12
- * @emailto: 9727005@qq.com
+ * @mail   : 9727005@qq.com
  * @creator: ShanDong Xiedali
  * @company: HiLand & RainyTop
  */

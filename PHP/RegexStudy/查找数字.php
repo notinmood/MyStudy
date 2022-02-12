@@ -3,7 +3,7 @@
  * @file   : 查找数字.php
  * @time   : 8:41
  * @date   : 2021/8/25
- * @emailto: 9727005@qq.com
+ * @mail   : 9727005@qq.com
  * @creator: ShanDong Xiedali
  * @company: HiLand & RainyTop
  */

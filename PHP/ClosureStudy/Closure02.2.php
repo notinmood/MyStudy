@@ -3,17 +3,17 @@
  * @file   : Closure00.php
  * @time   : 15:47
  * @date   : 2021/8/12
- * @emailto: 9727005@qq.com
+ * @mail   : 9727005@qq.com
  * @creator: ShanDong Xiedali
  * @company: HiLand & RainyTop
  */
 
 /**
- * 同文件演示的是,通过第三个参数,将闭包函数注入到类型内部,访问类型的静态成员
+ * 本文件演示的是,通过第三个参数,将闭包函数注入到类型内部,访问类型的静态成员
  */
-class A
+class BarClass
 {
-    private static $sfoo = 1;
+    private static int $sFoo = 100;
 }
 
 /**
@@ -21,7 +21,7 @@ class A
  * @return int
  */
 $cfs = static function () {
-    return A::$sfoo;
+    return BarClass::$sFoo;
 };
 
 /**
@@ -29,20 +29,20 @@ $cfs = static function () {
  * @return int
  */
 $cfe = function () {
-    return A::$sfoo;
+    return BarClass::$sFoo;
 };
 
 
 //这段代码可以正常执行.是因为以下代码把 $cl1 放入A类型内部了.在类型内部调用private的变量当然可以.
-$vcf = Closure::bind($cfs, null, 'A');
+$vcf = Closure::bind($cfs, null, 'BarClass');
 echo $vcf() . PHP_EOL;
 
-$a = new A();
-$vcf = Closure::bind($cfs, null, $a);
+$barObject = new BarClass();
+$vcf       = Closure::bind($cfs, null, $barObject);
 echo $vcf() . PHP_EOL;
 
-$vcf = Closure::bind($cfs, null, new A);
+$vcf = Closure::bind($cfs, null, new BarClass);
 echo $vcf() . PHP_EOL;
 
-$vcf = Closure::bind($cfe, null, A::class);
+$vcf = Closure::bind($cfe, null, BarClass::class);
 echo $vcf() . PHP_EOL;

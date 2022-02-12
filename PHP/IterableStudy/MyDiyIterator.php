@@ -3,7 +3,7 @@
  * @file   : MyDiyIterator.php
  * @time   : 9:14
  * @date   : 2021/10/14
- * @emailto: 9727005@qq.com
+ * @mail   : 9727005@qq.com
  * @creator: ShanDong Xiedali
  * @company: HiLand & RainyTop
  */
