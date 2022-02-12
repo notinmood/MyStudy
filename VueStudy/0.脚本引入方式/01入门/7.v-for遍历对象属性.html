@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../dist/3.2.18/vue.global.js"></script>
+</head>
+<body>
+<div id="myDiv">
+    说明：for aa in(of) AA语法中：<br>
+    如果aa包含1个值，就是AA中元素的value； <br>
+    如果aa包含2个值，就是AA中元素的value和key；<br>
+    如果aa包含3个值，就是AA中元素的value、key和index。<br>
+    ────────────────────────
+    <ul>
+        <li v-for="property of myObject">
+            {{property}}
+        </li>
+    </ul>
+
+    <ul>
+        <li v-for="(value,name,index) of myObject">
+            {{index}}.{{name}}:{{value}}
+        </li>
+    </ul>
+</div>
+<script type="text/javascript">
+    let vueApp = {
+        data() {
+            return {
+                myObject: {
+                    "name": "qingdao",
+                    "key" : "value",
+                    "age" : 20,
+                }
+            };
+        },
+    };
+
+    Vue.createApp(vueApp).mount("#myDiv");
+</script>
+</body>
+</html>
