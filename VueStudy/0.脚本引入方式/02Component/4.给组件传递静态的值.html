@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../dist/3.2.18/vue.global.js"></script>
+</head>
+<body>
+<div id="blog-post-div" class="demo">
+    <blog-post title="My journey with Vue"></blog-post>
+    <blog-post title="Blogging with Vue"></blog-post>
+    <blog-post title="Why Vue is so fun"></blog-post>
+
+</div>
+
+<script type="text/javascript">
+    let vueApp = {
+        components: {
+            "blog-post": {
+                props   : ["title"],
+                template: `<h4>{{ title }}</h4>`,
+            },
+        },
+    };
+
+    Vue.createApp(vueApp).mount("#blog-post-div");
+</script>
+</body>
+</html>

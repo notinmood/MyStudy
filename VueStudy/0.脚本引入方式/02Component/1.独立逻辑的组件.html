@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../dist/3.2.18/vue.global.js"></script>
+</head>
+<body>
+<div id="components-demo">
+    <button-counter></button-counter>
+</div>
+<script type="text/javascript">
+    const vueApp = {
+        components: {
+            'button-counter': {
+                data    : function () {
+                    return {
+                        "count": 0,
+                    };
+                },
+                template: `
+                  <button @click="count++">
+                  You clicked {{ count }} times.
+                  </button>`,
+            },
+
+        }
+    };
+    Vue.createApp(vueApp).mount("#components-demo");
+</script>
+
+</body>
+</html>
