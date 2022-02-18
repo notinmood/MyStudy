@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../dist/3.2.18/vue.global.js"></script>
+</head>
+<body>
+<div id="blog-posts-events-demo" class="demo">
+    <div :style="{ fontSize: postFontSize + 'em' }">
+        <blog-post
+                v-for="post in posts"
+                :key="post.id"
+                :title="post.title"
+                @enlarge-text="postFontSize += 0.1"
+        ></blog-post>
+    </div>
+</div>
+<script type="text/javascript">
+    const app = Vue.createApp({
+                                  data() {
+                                      return {
+                                          posts       : [
+                                              {id: 1, title: 'My journey with Vue'},
+                                              {id: 2, title: 'Blogging with Vue'},
+                                              {id: 3, title: 'Why Vue is so fun'}
+                                          ],
+                                          postFontSize: 1
+                                      }
+                                  }
+                              });
+
+    app.component('blog-post', {
+        props   : ['title'],
+        template: `
+          <div class="blog-post">
+          <h4>{{ title }}</h4>
+          <button @click="$emit('enlargeText')">
+            Enlarge text
+          </button>
+          </div>
+        `
+    });
+
+    app.mount('#blog-posts-events-demo')
+</script>
+</body>
+</html>

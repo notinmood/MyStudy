@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<h1>Font Awesome 图标的使用</h1>
+<h2>1. 基本使用</h2>
+你可以通过设置CSS前缀fa和图标的具体名称，来把Font Awesome 图标放在任意位置。Font Awesome 被设计为用于行内元素（我们喜欢用更简短的&lt;i&gt;标签，它的语义更加精准）。
+<br>
+<i aria-hidden="true" class="fa fa-female"></i>
+<br>
+<h2>2. 控制图标大小</h2>
+为了增加图标大小相对于它们的容器, 使用 fa-lg (33% 递增), fa-2x, fa-3x, fa-4x, 或 fa-5x classes.
+<br>
+<i class="fa fa-camera-retro fa-lg"></i> fa-lg
+<i class="fa fa-camera-retro fa-2x"></i> fa-2x
+<i class="fa fa-camera-retro fa-3x"></i> fa-3x
+<i class="fa fa-camera-retro fa-4x"></i> fa-4x
+<i class="fa fa-camera-retro fa-5x"></i> fa-5x
+<br>
+<h2>3. 旋转和翻转</h2>
+若要对图标进行任意旋转和翻转, 可以使用 fa-rotate-* and fa-flip-* 类.
+<br>
+<i class="fa fa-shield"></i> normal<br>
+<i class="fa fa-shield fa-rotate-90"></i> fa-rotate-90<br>
+<i class="fa fa-shield fa-rotate-180"></i> fa-rotate-180<br>
+<i class="fa fa-shield fa-rotate-270"></i> fa-rotate-270<br>
+<i class="fa fa-shield fa-flip-horizontal"></i> fa-flip-horizontal<br>
+<i class="fa fa-shield fa-flip-vertical"></i> fa-flip-vertical
+
+<h2>4. 图标的叠加</h2>
+如果想要将多个图标组合起来，使用fa-stack类，作为父容器，fa-stack-1x作为正常比例的图标，fa-stack-2x作为大一些的图标。还可以使用fa-inverse类来切换图标颜色。您可以在父容器中 通过添加 larger
+icon 类来控制整体大小。
+<br>
+<span class="fa-stack">
+  <i class="fa fa-square-o fa-stack-2x"></i>
+  <i class="fa fa-twitter fa-stack-1x"></i>
+</span>
+fa-twitter on fa-square-o<br>
+
+
+<span class="fa-stack">
+  <i class="fa fa-square fa-stack-2x"></i>
+  <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
+</span>
+fa-terminal on fa-square<br>
+
+<h2>5. 引用效果</h2>
+使用 fa-border 和 fa-pull-right 或 fa-pull-left 可以轻易构造出引用的特殊效果。
+<br>
+<i aria-hidden="true" class="fa fa-quote-left fa-3x fa-pull-left fa-border"></i>
+...独坐在路边街角 冷风吹醒，默默地伴着我的孤影，只想将结他紧抱，诉出辛酸，就在这刻想起往事，心中一股冲劲勇闯，抛开那现实没有顾虑，仿佛身边拥有一切，看似与别人筑起隔膜。...独坐在路边街角
+冷风吹醒，默默地伴着我的孤影，只想将结他紧抱，诉出辛酸，就在这刻想起往事，心中一股冲劲勇闯，抛开那现实没有顾虑，仿佛身边拥有一切，看似与别人筑起隔膜。...独坐在路边街角
+冷风吹醒，默默地伴着我的孤影，只想将结他紧抱，诉出辛酸，就在这刻想起往事，心中一股冲劲勇闯，抛开那现实没有顾虑，仿佛身边拥有一切，看似与别人筑起隔膜。...独坐在路边街角
+冷风吹醒，默默地伴着我的孤影，只想将结他紧抱，诉出辛酸，就在这刻想起往事，心中一股冲劲勇闯，抛开那现实没有顾虑，仿佛身边拥有一切，看似与别人筑起隔膜。
+</body>
+</html>
