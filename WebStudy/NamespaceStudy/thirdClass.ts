@@ -1,15 +1,16 @@
 //不期望该命名空间导出，不加export
 export namespace MyNameSpace {
     export var ArgInOtherFile: string = "hah";
-    export function getName():string{
+
+    export function getName(): string {
         return "I am China!";
     }
 }
 
 //期望该命名空间导出，加export
 export namespace YourNameSpace {
-    export function printHello(): void {
-        console.log("Hello world!")
+    export function printHello(): string {
+        return "Hello world!";
     }
 }
 

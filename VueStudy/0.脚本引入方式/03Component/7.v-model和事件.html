@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../dist/3.2.18/vue.global.js"></script>
+    <style>
+        .demo {
+            font-family: sans-serif;
+            border: 1px solid #eee;
+            border-radius: 2px;
+            padding: 20px 30px;
+            margin-top: 1em;
+            margin-bottom: 40px;
+            user-select: none;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+<div id="v-model-example" class="demo">
+    展示：
+    <p>First name: {{ fName }}</p>
+    <p>Last name: {{ lName }}</p>
+    设置：<br>
+    <user-name-component
+            v-model:first-name="fName"
+            v-model:last-name="lName"
+    ></user-name-component>
+</div>
+<script type="text/javascript">
+    const UserNameComponent = {
+        props   : {
+            firstName: String,
+            lastName : String
+        },
+        template: `
+          <input
+              type="text"
+              :value="firstName"
+              @input="$emit('update:firstName', $event.target.value)">
+          <br>
+          <input
+              type="text"
+              :value="lastName"
+              @change="$emit('update:lastName', $event.target.value)">
+        `
+    };
+
+    const vueApp = {
+        components: {
+            UserNameComponent,
+        },
+        data() {
+            return {
+                fName: 'John',
+                lName : 'Doe',
+            };
+        },
+    };
+
+    Vue.createApp(vueApp).mount('#v-model-example')
+</script>
+</body>
+</html>
