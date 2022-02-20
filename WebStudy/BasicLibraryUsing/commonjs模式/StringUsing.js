@@ -1,4 +1,4 @@
-const sh = require("basiclibrary.javascript/utils/stringHelper");
+const sh = require("basiclibrary.javascript/data/stringHelper");
 
 let result = "";
 result = sh.getStringBeforeSeparator("i am a Chinese!", "Chi");

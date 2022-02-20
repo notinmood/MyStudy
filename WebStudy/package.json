@@ -4,12 +4,12 @@
   "type": "module",
   "dependencies": {
     "axios": "^0.24.0",
-    "basiclibrary.javascript": "^1.1.8",
+    "basiclibrary.javascript": "^1.2.0",
     "faker": "^5.5.3"
   },
   "devDependencies": {
     "chai": "^4.3.4",
-    "mocha": "^9.1.2",
+    "mocha": "^9.2.1",
     "ts-node": "^10.5.0",
     "typescript": "^4.5.5"
   }

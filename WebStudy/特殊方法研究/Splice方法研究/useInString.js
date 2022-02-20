@@ -3,7 +3,7 @@
  * 使用 BasicLibrary.JavaScript 内的 splice 方法实现此功能。
  */
 
-import StringHelper from "basiclibrary.javascript/utils/stringHelper.js";
+import StringHelper from "basiclibrary.javascript/data/stringHelper.js";
 
 
 const originalString = "i love China!";
