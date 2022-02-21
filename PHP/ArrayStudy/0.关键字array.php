@@ -16,12 +16,18 @@
 
 /**
  * 1. 作为方法名称使用
+ * (函数 array 和 Array 是一样的，因为传统的 PHP 内各成员是不区分大小写的)
  */
-$myArray = array(1,2,6,9);
+$myArray = array(1, 2, 6, 9);
+// @formatter:off
+$myArray = Array(1, 2, 6, 9);
+// @formatter:on
 
 /**
  * 2. 作为类型名称使用
  */
 $myType = gettype($myArray);
+$myType = getType($myArray);
 var_dump($myType);
 //--返回的结果为 "array"
+
