@@ -7,7 +7,5 @@ class Site {
     getName(): string {
         return ("helle,Mr." + this.name);
     }
-
-
 }
 
