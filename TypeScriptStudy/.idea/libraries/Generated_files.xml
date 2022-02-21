@@ -3,12 +3,14 @@
     <properties>
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/aa/Hello.js" />
+        <item url="file://$PROJECT_DIR$/aa/Site.js" />
         <item url="file://$PROJECT_DIR$/helloworld.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/aa/Hello.js" />
       <root url="file://$PROJECT_DIR$/helloworld.js" />
+      <root url="file://$PROJECT_DIR$/00.入门/Hello.js" />
+      <root url="file://$PROJECT_DIR$/00.入门/Student.js" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

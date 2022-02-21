@@ -1,4 +1,4 @@
-class Site {
+class Student {
     constructor(name) {
         this.name = "xie ran";
         this.name = name;
@@ -6,5 +6,6 @@ class Site {
     getName() {
         return ("helle,Mr." + this.name);
     }
+    ;
 }
-//# sourceMappingURL=Site.js.map
+//# sourceMappingURL=Student.js.map

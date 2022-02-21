@@ -1,4 +1,4 @@
-class Site {
+class Student {
     constructor(name:string) {
         this.name= name;
     }
@@ -6,6 +6,6 @@ class Site {
 
     getName(): string {
         return ("helle,Mr." + this.name);
-    }
+    };
 }
 
