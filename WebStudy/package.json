@@ -4,7 +4,7 @@
   "type": "module",
   "dependencies": {
     "axios": "^0.24.0",
-    "basiclibrary.javascript": "^1.2.0",
+    "basiclibrary.javascript": "^1.2.1",
     "faker": "^5.5.3"
   },
   "devDependencies": {
