@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../dist/3.2.18/vue.global.js"></script>
+</head>
+<body>
+<div id="myContainer">
+    SchoolName:{{schoolName}}
+</div>
+<pre>
+════════════════════════
+vueApp中data成员的说明
+────────────────────────
+1. data 成员必须是一个返回对象的函数（即函数的内部 return 出一个含有各种属性的object）
+2. data 成员不能是一个值为object的属性。
+在vue2.0 下 vueApp 内的 data 确实可用用对象属性的；但在 component 内的 data 只能是方法。
+这是因为，vueApp 定义的是“对象”，肯定是唯一的；但组件定义的是“类型”，他可能会实例化为多个组件对象，
+    如果组件的 data 定义成对象，那么这所有的组件实例就会共享一个 data 对象；
+    如果组件的 data 定义成方法（让方法内部 return 出对象），那么每个组件实例都对应单独的 return 出的对象。
+
+在vue3.0 下，为了统一 vueApp 和组件，就把它们的data都定义为了 方法。
+
+</pre>
+<script type="text/javascript">
+    const vueApp = {
+        // 1. data 成员必须是一个返回对象的函数
+        data: function () {
+            return {
+                "schoolName": "QDU",
+                "address"   : "No.288, Rd.NingXia,Qingdao City",
+            };
+        },
+
+        // // 2. data 成员不能是一个值为object的属性。
+        // data: {
+        //     "schoolName": "QDU",
+        //     "address"   : "No.288, Rd.NingXia,Qingdao City",
+        // },
+    };
+
+    Vue.createApp(vueApp).mount("#myContainer");
+</script>
+</body>
+</html>
