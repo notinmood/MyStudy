@@ -1,5 +1,5 @@
 /**
- * @file   : index.js
+ * @file   : 1.通过字面量方式定义.js
  * @time   : 10:17
  * @date   : 2022/2/8
  * @mail   : 9727005@qq.com
