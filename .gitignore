@@ -14,3 +14,7 @@ node_modules
 dist
 /PHP/composer.lock
 /WebPackStudy/联合babel使用/package-lock.json
+/PHP/Composer版本控制/client1/vendor
+/PHP/Composer版本控制/client2/vendor
+/PHP/Composer版本控制/client3/vendor
+/PHP/Composer版本控制/client4/vendor
