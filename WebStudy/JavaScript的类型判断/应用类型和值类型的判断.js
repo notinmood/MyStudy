@@ -1,5 +1,5 @@
 /**
- * @file   : index.js
+ * @file   : 应用类型和值类型的判断.js
  * @time   : 21:16
  * @date   : 2022/2/27
  * @mail   : 9727005@qq.com
