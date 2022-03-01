@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../dist/3.2.18/vue.global.js"></script>
+</head>
+<body>
+    <pre>
+        以下代码无法运行成功。因为 vue.global.js 内未提供一个 export 对象。
+        如果测试 ref 功能，请使用 vue-cli 的方式。
+    </pre>
+    <script type="module">
+        import {ref} from "../dist/3.2.18/vue.global.js";
+
+        const counter = ref(0);
+        console.log(counter);
+        console.log(counter.value);
+    </script>
+</body>
+</html>
