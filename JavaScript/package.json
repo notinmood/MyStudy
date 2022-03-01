@@ -1,0 +1,19 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.26.0",
+    "basiclibrary.javascript": "^1.2.2"
+  },
+  "devDependencies": {
+    "mocha": "^9.2.1",
+    "chai": "^4.3.6"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "MIT"
+}

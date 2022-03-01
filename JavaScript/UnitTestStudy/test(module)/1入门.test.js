@@ -13,20 +13,8 @@ import {expect} from "chai";
 
 
 describe('expect', function () {
-    it('4 + 5应该等于9', function () {
+    it('4+5应该等于9', function () {
         expect(4 + 5).to.be.equal(9);
-    });
-
-    it("加法", function () {
-        expect(1 + 1).to.equal(2);
-    });
-
-    it("乘法", function () {
-        expect(2 * 7).be.equal(14);
-    });
-
-    it("减法", function () {
-        expect(6 - 6).equal(0);
     });
 });
 
