@@ -15,11 +15,9 @@
 const aa = "AA";
 
 let fa = function doSomething() {
-
 };
 
 function fb() {
-
 };
 
 /**
@@ -56,3 +54,12 @@ console.log("标准写法 2 的结果");
 console.log(objectA2);
 console.log("简写方式的结果");
 console.log(objectB);
+
+// //--output--
+// 标准写法 1 的结果
+// { aa: 'AA', fa: [Function: doSomething], fb: [Function: fb] }
+// 标准写法 2 的结果
+// { aa: 'AA', fa: [Function: doSomething], fb: [Function: fb] }
+// 简写方式的结果
+// { aa: 'AA', fa: [Function: doSomething], fb: [Function: fb], fbb: [Function: fb]}
+
