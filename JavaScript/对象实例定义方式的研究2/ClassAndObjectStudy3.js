@@ -1,6 +1,5 @@
 /**
  * 通过 {}的方式直接生成对象实例
- * @type {{setName: p.setName, getName: (function(): string), name: string, age: number}}
  */
 
 let p =  {
@@ -15,7 +14,11 @@ let p =  {
 }
 console.log(p.name);
 console.log(p.age);
-console.log(p.getName())
+console.log(p.getName());
+
+// +--------------------------------------------------------------------------
+// |::说明·| 
+// +--------------------------------------------------------------------------
 
 
 
