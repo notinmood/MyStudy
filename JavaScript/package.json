@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "axios": "^0.26.0",
-    "basiclibrary.javascript": "^1.2.2"
+    "basiclibrary.javascript": "^1.2.3"
   },
   "devDependencies": {
     "mocha": "^9.2.1",

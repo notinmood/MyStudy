@@ -9,8 +9,23 @@
  */
 
 $a = array("a" => "red", "b" => "green", "c" => "blue");
-echo array_shift($a);
+$b = array_shift($a);
+
+echo "弹出的元素为：" . $b;
 echo PHP_EOL;
 echo '────────────────────────';
 echo PHP_EOL;
+echo "弹出元素后原数组为：" . PHP_EOL;
 print_r($a);
+
+/**
+ * --output--
+ * 弹出的元素为：red
+ * ────────────────────────
+ * 弹出元素后原数组为：
+ * Array
+ * (
+ * [b] => green
+ * [c] => blue
+ * )
+ */
