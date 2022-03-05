@@ -17,6 +17,12 @@ var_dump($a);
 var_dump($b);
 
 /**
+ * --output--
+ * int(4)
+ * int(3)
+ */
+
+/**
  * 快速交互变量在 Python 内更简单：
  * a,b= b,a
  * (根本不需要借助 [] )
