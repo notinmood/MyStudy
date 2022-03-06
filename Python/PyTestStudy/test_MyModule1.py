@@ -23,18 +23,18 @@ session：每个session只运行一次(本文件没有演示session)
 # 通过scope="function"(或者默认不指定具体值) 定义每个function都会使用的"固定设置"
 @pytest.fixture()
 def setup_function():
-    print("i am in setup_function")
+    print("I am in setup_function")
 
 
 # 通过scope="class" 定义在同一个class内，仅仅会调用一次的"固定设置"
 @pytest.fixture(scope="class")
 def setup_class():
-    print("i am in setup_class")
+    print("I am in setup_class")
 
 
 @pytest.fixture(scope="module")
 def setup_module():
-    print("i am in setup_module")
+    print("I am in setup_module")
 
 
 class TestMyClass:
@@ -44,10 +44,10 @@ class TestMyClass:
     """
 
     def test_f_foo(self, setup_function):
-        print("i am in test_f_foo")
+        print("I am in test_f_foo")
 
     def test_f_bar(self, setup_function):
-        print("i am in test_f_bar")
+        print("I am in test_f_bar")
 
     """
     以下两个方法 test_c_foo 和 test_c_bar，测试的时候分别调用 setup_class
@@ -55,10 +55,10 @@ class TestMyClass:
     """
 
     def test_c_foo(self, setup_class):
-        print("i am in test_c_foo")
+        print("I am in test_c_foo")
 
     def test_c_bar(self, setup_class):
-        print("i am in test_c_bar")
+        print("I am in test_c_bar")
 
     """
     以下代码(test_m_foo)连同 TestYourClass 内的 test_m_bar 演示同一个模块(同一个模块就是同一个文件)内分别调用 setup_module
@@ -66,14 +66,14 @@ class TestMyClass:
     """
 
     def test_m_foo(self, setup_module):
-        print("i am in {0} {1}".format(__class__, __name__))
+        print("I am in {0} {1}".format(__class__, __name__))
 
     """
     以下代码演示，一个被测方法(test_c_bar)可以调用多个"固定设置"(setup_class, setup_function)
     """
 
     def test_c_bar(self, setup_class, setup_function):
-        print("i am in test_c_bar")
+        print("I am in test_c_bar")
 
 
 class TestYourClass:
@@ -83,4 +83,4 @@ class TestYourClass:
     """
 
     def test_m_bar(self, setup_module):
-        print("i am in {0} {1}".format(__class__, __name__))
+        print("I am in {0} {1}".format(__class__, __name__))

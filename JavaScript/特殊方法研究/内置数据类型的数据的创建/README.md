@@ -31,7 +31,7 @@ JavaScript 内置数据类型数据信息的创建有 2种方式：
    console.log(typeof myDate2); //object
    `````````
    
-4. ES6的新数据类型(Symbol),仅支持普通函数方式，不支持构造函数方式
+4. ES6的新数据类型(Symbol),仅支持普通函数方式，不支持构造函数方式。Symbol 是为一个不支持 new 构造函数的内置数据类型。
 ```javascript
 let mySymbol = Symbol();
 console.log(mySymbol); //Symbol()
