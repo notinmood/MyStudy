@@ -14,7 +14,7 @@ for (const myObjectKey in myObject) {
 }
 
 /**
- * 因为对象 myObject 没有实现可变量的接口，因此 for of 无法使用
+ * 因为对象 myObject 没有实现可遍历的接口，因此 for of 无法使用；
  */
 // for (const myObjectElement of myObject) {
 //     console.log(myObjectElement);

@@ -1,6 +1,6 @@
 # 说明
 
-Vue的事件内包含一个默认的事件参数 $event(大家经常简写为”e“)。
+Vue的事件内包含一个默认的事件参数 $event(大家经常简写为”e“)。$event内包含一些列参数，其中最重要的是 $event.target (即事件源)
 
 ## 事件源属性 $event.target 和 $event.currentTarget
 
