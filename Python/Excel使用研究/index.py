@@ -53,6 +53,7 @@ def operate_excel():
             '''
             print(my_sheet.range("A1").value)  # 单个值信息 '姓名'
             print(my_sheet.range("A1", "A2").value)  # 一维数组 ['姓名', '张三']
+            print(my_sheet.range("A1", "B1").value)  # 一维数组 ['姓名', '年龄']
 
             print(my_sheet.range("A1", "B2").value)  # 二维数组 [['姓名', '年龄'], ['张三', 20.0]]
             print(my_sheet.range("A1:B2").value)  # 二维数组 [['姓名', '年龄'], ['张三', 20.0]]
