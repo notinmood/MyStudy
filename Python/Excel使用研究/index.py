@@ -71,10 +71,32 @@ def operate_excel():
             """
             2.1 按照 range 写入
             """
+
+            """
+            2.1.1 当个数值的写入
+            """
             my_data = datetime.datetime.now()
             my_sheet.range("G5").value = my_data
             print(my_data)
             print(my_sheet.range("G5").value)
+
+            """
+            2.1.2 同一行内写入和读取 都是一维数组            
+            """
+            my_sheet.range("G8:H8").value = ["g8", "h8"]
+            print(my_sheet.range("G8:H8").value)  # ['g8', 'h8']
+
+            """
+            2.1.3 跨行内写入的是二维数值；读取的是一维数组。（请特别注意）         
+            """
+            my_sheet.range("G6:G7").value = [["G6"], ["G7"]]
+            print(my_sheet.range("G6:G7").value)  # ['G6', 'G7']
+
+            """
+            2.1.4 多行多列的读写
+            """
+            my_sheet.range("G9:H10").value = [['g9', 'h9'], ['g10', 'h10']]
+            print(my_sheet.range("G9:H10").value)  # [['g9', 'h9'], ['g10', 'h10']]
 
             """
             2.2 按照 cell 写入
