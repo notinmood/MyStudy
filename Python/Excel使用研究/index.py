@@ -99,6 +99,12 @@ def operate_excel():
             print(my_sheet.range("G9:H10").value)  # [['g9', 'h9'], ['g10', 'h10']]
 
             """
+            2.1.00 仅仅指定开始位置，xlwings 自动推断出一个范围进行写入
+            """
+            my_sheet.range("G13").value = [['g13', 'h13'], ['g14', 'h14']]
+            print(my_sheet.range("G13:H14").value)
+
+            """
             2.2 按照 cell 写入
             """
             my_sheet.cells("5", "H").value = my_data
@@ -106,6 +112,7 @@ def operate_excel():
     else:
         print("NN")
 
+    my_book.save()
     my_book.close()
 
 
