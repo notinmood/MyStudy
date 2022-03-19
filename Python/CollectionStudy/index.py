@@ -11,6 +11,6 @@ from CollectionStudy.StudentClass import *
 
 
 if __name__ == '__main__':
-    sc = StudentClass("中华小学五年级十班")
+    sc = StudentClass("中华小学五年级10班")
     print(sc)
     print(sc.display())

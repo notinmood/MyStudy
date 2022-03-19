@@ -26,6 +26,21 @@ def compile_with_findall(content, pattern):
     display_result(result)
 
 
+def only_match(content, pattern):
+    result = re.match(pattern, content)
+    display_result(result)
+
+
+def only_search(content, pattern):
+    result = re.search(pattern, content)
+    display_result(result)
+
+
+def only_findall(content, pattern):
+    result = re.findall(pattern, content)
+    display_result(result)
+
+
 def display_result(calculated_result):
     print(calculated_result)
     print(type(calculated_result))
@@ -39,23 +54,7 @@ def display_result(calculated_result):
     else:
         print('NNN没有匹配成功')
 
-
-def only_match(content, pattern):
-    result = re.match(pattern, content)
-
-    display_result(result)
-
-
-def only_search(content, pattern):
-    result = re.search(pattern, content)
-
-    display_result(result)
-
-
-def only_findall(content, pattern):
-    result = re.findall(pattern, content)
-
-    display_result(result)
+    print("─────────────────────────────────────")
 
 
 if __name__ == '__main__':
@@ -65,27 +64,21 @@ if __name__ == '__main__':
     print('以下是调用compile和match配合的结果')
     compile_with_match(_content, _pattern)
 
-    print("────────────────────────")
-    print('以下是调用compile和search配合的结果')
-    compile_with_search(_content, _pattern)
-
-    print("────────────────────────")
-    print('以下是调用compile和findall配合的结果')
-    compile_with_findall(_content, _pattern)
-
-    print("────────────────────────")
     print('以下是单独调用match的结果')
     only_match(_content, _pattern)
 
-    print("────────────────────────")
+    print('以下是调用compile和search配合的结果')
+    compile_with_search(_content, _pattern)
+
     print('以下是单独调用search的结果')
     only_search(_content, _pattern)
 
-    print("────────────────────────")
+    print('以下是调用compile和findall配合的结果')
+    compile_with_findall(_content, _pattern)
+
     print('以下是单独调用findall的结果')
     only_findall(_content, _pattern)
 
-    print("────────────────────────")
     _pattern = r'\w*o\w*'
     print('以下是单独调用match的结果')
     only_match(_content, _pattern)
