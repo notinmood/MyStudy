@@ -39,6 +39,7 @@ console.log(receiver.age);  // 1
  */
 let receiver1 = {
     name: 'hi',
-}
+};
+
 Reflect.set(exam, 'info', 1, receiver1);
-console.log(receiver.age) // 1
+console.log(receiver.age); // 1
