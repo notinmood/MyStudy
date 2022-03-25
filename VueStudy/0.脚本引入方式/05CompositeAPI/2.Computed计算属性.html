@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../dist/3.2.18/vue.global.js"></script>
+</head>
+<body>
+<div id="myDiv">
+    姓：<input type="text" v-model="user.firstName"/> <br>
+    名：<input type="text" v-model="user.lastName"> <br>
+
+    用户姓名信息：<span>{{fullNameCalculated}}</span>
+</div>
+<script type="text/javascript">
+    // import {computed} from "../dist/3.2.18/vue.global";
+    const {computed} = Vue;
+
+    let vueApp = {
+        data   : function () {
+            return {
+                "key": "value",
+            };
+        },
+        methods: {
+            "funcName": function () {
+
+            },
+        },
+        setup  : function () {
+            const user = reactive({
+                                      firstName: "",
+                                      lastName : "",
+                                  });
+            let fullNameCalculated = "";
+            computed(() => {
+                fullNameCalculated = user.firstName + "-" + user.lastName;
+            });
+
+            return {
+                user,
+                fullNameCalculated,
+            };
+        },
+    };
+    Vue.createApp(vueApp).mount("#myDiv");
+</script>
+
+</body>
+</html>
