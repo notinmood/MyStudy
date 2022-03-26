@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../dist/3.2.18/vue.global.js"></script>
+</head>
+<body>
+<div id="myDiv">
+    <input type="text" v-model="inputData"/> <br>
+    转换后的小写为：<span>{{lowerData}}</span> <br>
+    转换后的大写为：<span>{{upperData}}</span>
+</div>
+<script type="text/javascript">
+    let vueApp = {
+        data    : function () {
+            return {
+                "inputData": "",
+            };
+        },
+        methods : {
+            "funcName": function () {
+
+            },
+        },
+        computed: {
+            lowerData: function () {
+                return this.inputData.toLowerCase();
+            },
+            upperData: function () {
+                return this.inputData.toUpperCase();
+            },
+        },
+    };
+    Vue.createApp(vueApp).mount("#myDiv");
+</script>
+</body>
+</html>

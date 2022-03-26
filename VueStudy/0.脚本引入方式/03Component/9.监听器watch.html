@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../dist/3.2.18/vue.global.js"></script>
+</head>
+<body>
+<div id="watch-example">
+    <p>
+        Ask a yes/no question:
+        <input v-model="question"/>
+    </p>
+    <p>{{answer}}</p>
+    <p>{{statusMessage}}</p>
+</div>
+<!-- 因为 AJAX 库和通用工具的生态已经相当丰富，Vue 核心代码没有重复 -->
+<!-- 提供这些功能以保持精简。这也可以让你自由选择自己更熟悉的工具。 -->
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<script>
+    Vue.createApp(
+        {
+            data() {
+                return {
+                    question     : '',
+                    answer       : '提出问题请以?结尾.',
+                    statusMessage: "",
+                }
+            },
+            watch  : {
+                // +--------------------------------------------------------------------------
+                // |::说明·| 监控那个属性值，就用这个属性名称作为方法名称
+                // +--------------------------------------------------------------------------
+                /**
+                 * 每当 question 发生变化时，该函数将会执行
+                 * @param newValue
+                 * @param oldValue
+                 */
+                question(newValue, oldValue) {
+                    if (newValue.indexOf('?') > -1) {
+                        this.getAnswer()
+                    }
+                },
+                answer(newValue, oldValue) {
+                    this.statusMessage=`新内容为${newValue}`
+                }
+
+            },
+            methods: {
+                getAnswer() {
+                    this.answer = 'Thinking...'
+                    axios
+                        .get('https://yesno.wtf/api')
+                        .then(response => {
+                            this.answer = response.data.answer
+                        })
+                        .catch(error => {
+                            this.answer = 'Error! Could not reach the API. ' + error
+                        })
+                }
+            }
+        }).mount('#watch-example')
+</script>
+</body>
+</html>
