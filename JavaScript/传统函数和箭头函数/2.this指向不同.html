@@ -23,11 +23,16 @@
             // |::说明·| 通过这种方式定义的方法，里面的this 也是指向全局的。
             // +--------------------------------------------------------------------------
             let getData = function (){
-                console.log("--in Counter 的成员方法(get)内==");
+                console.log("--in Counter 的成员方法(getData)内==");
                 console.log(this);
             };
 
+            /**
+             *
+             */
             this.showData= function (){
+                console.log("--in Counter 的成员方法(showData)内==");
+                console.log(this);
                 getData();
             }
         }
@@ -45,22 +50,22 @@
     </script>
 
     <script type="text/javascript">
-        function Counter() {
+        function Counter() {//M
             this.num = 0;
             console.log("==in Counter=============")
-            console.log(this)
+            console.log(this)//N
 
-            setTimeout(() => {
+            setTimeout(() => {//W
                 console.log("==in setTimeout 箭头函数=============")
-                console.log(this);
+                console.log(this);//X
             }, 1000);
         }
 
-        let c = new Counter();
+        let c = new Counter();//Y
 
-        // 第 23 行定义的 Counter 方法，因为在第32行被 new 出来，因此第 23 行实际定义的是一个类型 Counter。在第32行的时候，被实例化为对象c。
-        // 因此第 25 行中的 this 是指对象 c（他的类型是 Counter）；同时第 28 行的 this 是指向 c 对象，
-        // 因为 27 行是一个箭头函数，箭头函数是 c 对象内的一般语句。
+        // 第 M 行定义的 Counter 方法，因为在第 Y 行被 new 出来，因此第 M 行实际定义的是一个类型 Counter。在第 Y 行的时候，被实例化为对象 c。
+        // 因此第 N 行中的 this 是指对象 c（他的类型是 Counter）；同时第 X 行的 this 是指向 c 对象，
+        // 因为 W 行是一个箭头函数，箭头函数是 c 对象内的一般语句。
         // 其实道理也非常好理解，箭头函数虽然名称叫做箭头函数，其实他的真实名称应该为兰姆达表达式（lambda express），表达式就是普通语句嘛。
     </script>
 </head>
