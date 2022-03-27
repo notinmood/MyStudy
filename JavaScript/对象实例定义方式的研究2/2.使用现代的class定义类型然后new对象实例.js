@@ -2,6 +2,12 @@
  * 用ES6的方式，定义类型、类型成员；以及调用方式。
  */
 class Person {
+    /**
+     * 直接定义属性成员
+     * @type {string}
+     */
+    school = "beijing";
+
     //定义构造函数的时候，使用关键字constructor
     constructor(name, age) {
         this.name = name;
@@ -18,6 +24,10 @@ class Person {
     setName = function (name) {
         this.name = name;
     }
+
+    setSchool= function (value){
+        this.school = value;
+    }
 }
 
 // 给类型定义方法，也可以通过prototype的方式。即将类型的方法定义在类的原型上。
@@ -32,6 +42,12 @@ Person.prototype.getAge = function () {
 let p = new Person("zhangsan", 20);
 console.log(p.name);
 console.log(p.getAge());
+p.setName("李四");
 console.log(p.getName());
+
+console.log(p.school);
+p.setSchool("qingdao")
+console.log(p.school);
+
 
 

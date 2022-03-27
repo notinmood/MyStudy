@@ -8,11 +8,19 @@
  */
 
 class Student {
-    constructor(name, age) {
-        this.age = age;
-        this.name = name;
+    school = "qingdao";
+
+    constructor(nameInput, ageInput) {
+        this.age = ageInput;
+        this.name = nameInput;
+    };
+
+    display = function () {
+        return `姓名为${this.name}；年龄为${this.age};学校为${this.school}`;
     }
 }
 
 let student = new Student("zhangsan", 20);
 console.log(`姓名${student.name}，年龄${student.age}`);
+student.school= "中华小学";
+console.log(student.display());

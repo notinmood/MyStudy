@@ -14,7 +14,7 @@
 
 const aa = "AA";
 
-let fa = function doSomething() {
+let fa = function () {
 };
 
 function fb() {

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function Counter() { //A
+            this.num = 0;
+            console.log("==in Counter=============")
+            console.log(this)//C
+
+            setTimeout(function add() { //E
+                console.log("==in setTimeout 传统函数=============")
+                console.log(this);//D
+            }, 1000);
+
+            this.display = function () {
+                console.log("--in Counter 的成员方法(display)内==");
+                console.log(this);
+            };
+
+            // +--------------------------------------------------------------------------
+            // |::说明·| 通过这种方式定义的方法，里面的this 也是指向全局的。
+            // +--------------------------------------------------------------------------
+            let getData = function (){
+                console.log("--in Counter 的成员方法(get)内==");
+                console.log(this);
+            };
+
+            this.showData= function (){
+                getData();
+            }
+        }
+
+        let b = new Counter(); //B
+        b.display();
+        b.showData();
+
+
+        //// 说明
+        // A 处定义的 Counter 函数，因为在 B 处被 new 出来，因此 A 处实际定义的是一个类型 Counter。
+        // 在 B 的时候，被实例化为对象 b。因此 C 中的 this 是指对象 b（他的类型是 Counter）；
+        // 但 D 处的 this 是指全局的 window 对象，因为 E 处所在的 add 是一个普通函数，
+        // 而不属于 new 的实例对象的成员（普通函数里面的 this 都指向到全局的 window 对象）。
+    </script>
+
+    <script type="text/javascript">
+        function Counter() {
+            this.num = 0;
+            console.log("==in Counter=============")
+            console.log(this)
+
+            setTimeout(() => {
+                console.log("==in setTimeout 箭头函数=============")
+                console.log(this);
+            }, 1000);
+        }
+
+        let c = new Counter();
+
+        // 第 23 行定义的 Counter 方法，因为在第32行被 new 出来，因此第 23 行实际定义的是一个类型 Counter。在第32行的时候，被实例化为对象c。
+        // 因此第 25 行中的 this 是指对象 c（他的类型是 Counter）；同时第 28 行的 this 是指向 c 对象，
+        // 因为 27 行是一个箭头函数，箭头函数是 c 对象内的一般语句。
+        // 其实道理也非常好理解，箭头函数虽然名称叫做箭头函数，其实他的真实名称应该为兰姆达表达式（lambda express），表达式就是普通语句嘛。
+    </script>
+</head>
+<body>
+
+</body>
+</html>
