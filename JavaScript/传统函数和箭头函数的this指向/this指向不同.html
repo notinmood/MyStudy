@@ -52,11 +52,11 @@
     <script type="text/javascript">
         function Counter() {//M
             this.num = 0;
-            console.log("==in Counter=============")
+            console.log("==2 in Counter=============")
             console.log(this)//N
 
             setTimeout(() => {//W
-                console.log("==in setTimeout 箭头函数=============")
+                console.log("==2 in setTimeout 箭头函数=============")
                 console.log(this);//X
             }, 1000);
         }

@@ -18,3 +18,7 @@ dist
 /PHP/Composer版本控制/client2/vendor
 /PHP/Composer版本控制/client3/vendor
 /PHP/Composer版本控制/client4/vendor
+*.pyc
+/Python/构造函数与析构函数/__pycache__
+/Python/FastAPIStudy/__pycache__
+/Python/MagicFunctionStudy/__pycache__

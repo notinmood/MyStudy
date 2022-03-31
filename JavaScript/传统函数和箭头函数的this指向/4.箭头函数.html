@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    const age = 10;
+
+    const person = {
+        age: 12,
+        say() {
+            const f = () => {
+                console.log("我是在类型方法里面，又定义的一层箭头函数！");
+                console.log(this)// {"age": 12}
+            };
+            f();
+        }
+    };
+    person.say();// {"age": 12}
+
+    console.log('─────────────────────────────────────');
+    /**
+     * 对象字面量对象运行速度更快，因为它们可以在解析的时候被优化——
+     * 它们不需要"作用域解析"！（即：通过字面量定义的对象的大括号不构成作用域）
+     * @type {{that: student, sayArrow: student.sayArrow, say: student.say, age: number}}
+     */
+    const student = {
+        age     : 12,
+        that    : this,
+        say     : function () {
+            console.log("我是通过普通函数定义的类型方法");
+            console.log(this)// {age: 12, that: Window, say: ƒ, sayArrow: ƒ}
+        },
+        sayArrow: () => {
+            console.log("我是直接用箭头函数定义的类型方法");
+            console.log(this)// Window{...}
+        }
+    };
+    student.say()// {age: 12, that: Window, say: ƒ, sayArrow: ƒ}
+    student.sayArrow()// Window{...}
+
+    class Worker {
+        name = "value";
+
+        say() {
+            console.log(this);//Worker{name: 'value', sayArrow: ƒ}
+        }
+
+        sayArrow = () => {
+            console.log(this);//Worker{name: 'value', sayArrow: ƒ}
+        };
+    }
+
+    const worker = new Worker();
+    worker.say();//Worker{name: 'value', sayArrow: ƒ}
+    worker.sayArrow();//Worker{name: 'value', sayArrow: ƒ}
+
+</script>
+</body>
+</html>

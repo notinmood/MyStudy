@@ -12,11 +12,11 @@
 
 
     用户姓名信息(Computed)：<span>{{fullNameComputed}}</span> <br>
-    用户姓名信息(Watch)：<span>{{fullNameWatch}}</span> <br>
+    用户姓名信息(Watch)：<span>{{fullNameWatched}}</span> <br>
+    用户姓名信息(WatchEffect)：<span>{{fullNameWatchEffect}}</span> <br>
 </div>
 <script type="text/javascript">
-    // import {computed} from "../dist/3.2.18/vue.global";
-    const {reactive, computed, watch, ref} = Vue;
+    const {reactive, computed, watch, watchEffect, ref} = Vue;
 
     let vueApp = {
         data   : function () {
@@ -46,20 +46,30 @@
             // +--------------------------------------------------------------------------
             // |::说明·| 监视方法
             // +--------------------------------------------------------------------------
-            let fullNameWatch = ref("");
+            let fullNameWatched = ref("");
             watch(user, (val) => {
-                fullNameWatch.value = val.firstName + "-" + val.lastName;
+                fullNameWatched.value = val.firstName + "-" + val.lastName;
             }, {deep: true, immediate: true});
+
+            // +--------------------------------------------------------------------------
+            // |::说明·| watchEffect 监视
+            // +--------------------------------------------------------------------------
+            let fullNameWatchEffect = ref("");
+            watchEffect(() => {
+                fullNameWatchEffect.value = user.firstName + ">" + user.lastName;
+            });
 
             return {
                 user,
                 fullNameComputed,
-                fullNameWatch,
+                fullNameWatched,
+                fullNameWatchEffect,
             };
         },
     };
     Vue.createApp(vueApp).mount("#myDiv");
 </script>
+
 
 </body>
 </html>
