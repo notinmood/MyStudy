@@ -16,10 +16,7 @@ let student = {
     }
 };
 
-const {
-          name, age, sayMe
-      }
-          = student;
+const {name, age, sayMe} = student;
 
 // 经过解构的变量 name,age 可以直接使用
 console.log(name);
