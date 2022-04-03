@@ -7,8 +7,12 @@ console.log(average(2,3,4));
 const getColonTimeFromDate = date => date.toTimeString().slice(0, 8);
 console.log(getColonTimeFromDate(new Date()));
 
-const student={
-    
-};
+console.log();
 
+// +--------------------------------------------------------------------------
+// |::说明·| 
+// +--------------------------------------------------------------------------
 
+//#region 
+
+//#endregion
