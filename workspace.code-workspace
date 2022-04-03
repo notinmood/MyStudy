@@ -1,13 +1,13 @@
 {
 	"folders": [
 		{
-			"path": "VueStudy"
-		},
-		{
 			"path": "JavaScript"
 		},
 		{
 			"path": "Python"
+		},
+		{
+			"path": "VueStudy\\1.本地类库方式\\Vue.Study.JS"
 		}
 	],
 	"settings": {}

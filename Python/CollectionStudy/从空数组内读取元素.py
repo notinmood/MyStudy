@@ -7,6 +7,10 @@
  * @company: HiLand & RainyTop
 """
 
+from hilandBasicLibrary.data.listHelper import ListHelper
+from hilandBasicLibrary.data.stringHelper import StringHelper
+
+
 my_list = []
 
 # +--------------------------------------------------------------------------
@@ -15,5 +19,9 @@ my_list = []
 
 # print(my_list[0])
 
+# item0 = my_list.__getitem__(0)
+# print(item0)
 
+
+print ('something')
 

@@ -1,10 +1,8 @@
-<template>
-
-</template>
+<template></template>
 
 <script>
 // +--------------------------------------------------------------------------
-// |::说明·| 
+// |::说明·|
 // +--------------------------------------------------------------------------
 export default {
   name: "",
@@ -12,5 +10,7 @@ export default {
 </script>
 
 <style scoped>
-
+.box {
+  color: aliceblue;
+}
 </style>
