@@ -1,6 +1,6 @@
 class Student {
-    constructor(name:string) {
-        this.name= name;
+    constructor(name: string) {
+        this.name = name;
     }
     name = "xie ran";
 

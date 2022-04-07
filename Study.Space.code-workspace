@@ -8,7 +8,15 @@
 		},
 		{
 			"path": "VueStudy\\1.本地类库方式\\Vue.Study.JS"
+		},
+		{
+			"path": "TypeScriptStudy"
+		},
+		{
+			"path": "EchartsVue3.Study"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"vetur.validation.template": false
+	}
 }

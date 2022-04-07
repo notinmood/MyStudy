@@ -9,8 +9,8 @@
 import dotenv
 
 """
-使用python-dotenv模塊，讀取.env環境配置.
-使用之前，請先安裝python-dotenv模塊
+使用 python-dotenv 模塊，讀取.env環境配置.
+使用之前，請先安裝 python-dotenv 模塊
 """
 
 if __name__ == '__main__':
@@ -18,4 +18,4 @@ if __name__ == '__main__':
     print(result)
     if result:
         print(result["ROOT_URL"])
-        print(result["aaa"])
+        # print(result["aaa"])
