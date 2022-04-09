@@ -1,5 +1,5 @@
 {
-  "name": "echartsvue3.study",
+  "name": "echarts.vue3.study",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@types/echarts": "^4.9.13",
     "core-js": "^3.6.5",
     "echarts": "^5.3.2",
     "vue": "^3.0.0",
@@ -47,18 +48,18 @@
     "parserOptions": {
       "ecmaVersion": 2020
     },
-    "rules": {},
-    "overrides": [
-      {
-        "files": [
-          "**/__tests__/*.{j,t}s?(x)",
-          "**/tests/unit/**/*.spec.{j,t}s?(x)"
-        ],
-        "env": {
-          "mocha": true
-        }
+    "rules": {
+      "no-console": "off"
+    },
+    "overrides": [{
+      "files": [
+        "**/__tests__/*.{j,t}s?(x)",
+        "**/tests/unit/**/*.spec.{j,t}s?(x)"
+      ],
+      "env": {
+        "mocha": true
       }
-    ]
+    }]
   },
   "browserslist": [
     "> 1%",

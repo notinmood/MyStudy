@@ -1,15 +1,23 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <ec00></ec00>
+  ─────────────────────────────────────<br />
+  <ec03></ec03>
+  ─────────────────────────────────────<br />
+  <ec01></ec01>
+  ─────────────────────────────────────<br />
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import HelloWorld from './components/HelloWorld.vue';
+import ec01 from './components/ec01.vue';
+import ec00 from './components/ec00AutoTip.vue';
+import ec03 from './components/ec03refs.vue';
 
 @Options({
   components: {
-    HelloWorld,
+    ec01,
+    ec00,
+    ec03,
   },
 })
 export default class App extends Vue {}

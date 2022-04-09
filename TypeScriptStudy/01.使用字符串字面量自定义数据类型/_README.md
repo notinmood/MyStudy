@@ -1,0 +1,3 @@
+# 说明
+
+通过将TypeScript自动转换为JavaScript后的文件，也可以发现JavaScript本身不支持自定义字符串字面量数据类型。
