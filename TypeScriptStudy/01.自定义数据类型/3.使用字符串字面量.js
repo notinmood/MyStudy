@@ -14,4 +14,3 @@ var myYY;
 myYY = "foo"; // 这三个值就可以任意取了。
 myYY = "moo"; // 这三个值就可以任意取了。
 myYY = "bar"; // 这三个值就可以任意取了。
-//# sourceMappingURL=3.%E4%BD%BF%E7%94%A8%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AD%97%E9%9D%A2%E9%87%8F.js.map

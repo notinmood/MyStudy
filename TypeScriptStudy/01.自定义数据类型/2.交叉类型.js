@@ -16,4 +16,3 @@ var result = combine(human, bird);
 myName = result;
 myName.display();
 myName.fly();
-//# sourceMappingURL=2.%E4%BA%A4%E5%8F%89%E7%B1%BB%E5%9E%8B.js.map

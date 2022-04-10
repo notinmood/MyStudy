@@ -9,4 +9,3 @@ var Human = /** @class */ (function () {
     };
     return Human;
 }());
-//# sourceMappingURL=Human.js.map

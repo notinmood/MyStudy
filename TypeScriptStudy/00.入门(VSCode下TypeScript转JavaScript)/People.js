@@ -11,4 +11,3 @@ var People = /** @class */ (function () {
     };
     return People;
 }());
-//# sourceMappingURL=People.js.map

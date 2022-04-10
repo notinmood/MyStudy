@@ -9,4 +9,3 @@ var Student = /** @class */ (function () {
     ;
     return Student;
 }());
-//# sourceMappingURL=Student.js.map

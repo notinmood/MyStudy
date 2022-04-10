@@ -9,4 +9,3 @@ var Bird = /** @class */ (function () {
     };
     return Bird;
 }());
-//# sourceMappingURL=Bird.js.map
