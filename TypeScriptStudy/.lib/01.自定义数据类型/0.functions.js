@@ -1,3 +1,4 @@
+"use strict";
 // /*
 //  * @Author       : Shandong Xiedali
 //  * @Mail         : 9727005@qq.com
@@ -10,16 +11,13 @@
 //  */
 // function combine<T, U>(first: T, second: U): T & U {
 //     let result = <T & U>({} as unknown);
-
 //     for (let id in first) {
 //         (<any>result)[id] = (<any>first)[id];
 //     }
-
 //     for (let id in second) {
 //         if (!result.hasOwnProperty(id)) {
 //             (<any>result)[id] = (<any>second)[id];
 //         }
 //     }
-
 //     return result;
 // }

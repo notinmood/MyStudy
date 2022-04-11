@@ -1,3 +1,4 @@
+"use strict";
 var some;
 some = {
     fly: function () {

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,10 +14,22 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+/*
+ * @Author       : Shandong Xiedali
+ * @Mail         : 9727005@qq.com
+ * @Date         : 2022-04-07 10:46:10
+ * @LastEditors  : Shandong Xiedali
+ * @LastEditTime : 2022-04-11 20:56:54
+ * @FilePath     : Engineer.ts
+ * @Description  :
+ * Copyright (c) 2022 by Hiland & RainyTop, All Rights Reserved.
+ */
 var Engineer = /** @class */ (function (_super) {
     __extends(Engineer, _super);
     function Engineer() {
-        return _super !== null && _super.apply(this, arguments) || this;
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.workerPosition = "";
+        return _this;
     }
     return Engineer;
 }(People));

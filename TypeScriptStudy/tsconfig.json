@@ -1,8 +1,12 @@
 {
   "compilerOptions": {
+    "strict": true,
     "module": "commonjs",
     "target": "es5",
-    "sourceMap": false
+    "sourceMap": false,
+    "listFiles": true,
+    "outDir": "./.lib",
+    "forceConsistentCasingInFileNames": true
   },
   "exclude": [
     "node_modules"
