@@ -1,3 +1,13 @@
+<!--
+ * @Author       : Shandong Xiedali
+ * @Mail         : 9727005@qq.com
+ * @Date         : 2022-04-08 07:45:36
+ * @LastEditors  : Shandong Xiedali
+ * @LastEditTime : 2022-04-12 09:40:09
+ * @FilePath     : ec01入门.vue
+ * @Description  :
+ * Copyright (c) 2022 by Hiland & RainyTop, All Rights Reserved.
+-->
 <template>
   <h1>ECharts ABC</h1>
   <div ref="myDiv" id="myDiv" class="default"></div>

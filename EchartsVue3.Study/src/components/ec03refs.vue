@@ -1,6 +1,17 @@
+<!--
+ * @Author       : Shandong Xiedali
+ * @Mail         : 9727005@qq.com
+ * @Date         : 2022-04-09 10:33:15
+ * @LastEditors  : Shandong Xiedali
+ * @LastEditTime : 2022-04-12 09:34:58
+ * @FilePath     : ec03refs.vue
+ * @Description  :
+ * Copyright (c) 2022 by Hiland & RainyTop, All Rights Reserved.
+-->
 <template>
+这里是 this.$refs 的使用演示：
   <div ref="myDiv">ec03</div>
-  <span ref="mySpan"></span>
+  <span ref="mySpan"></span> <br>
 </template>
 <script lang="ts">
 // import * as ec from 'echarts';
