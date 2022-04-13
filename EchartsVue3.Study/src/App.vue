@@ -3,14 +3,12 @@
  * @Mail         : 9727005@qq.com
  * @Date         : 2022-04-08 07:04:08
  * @LastEditors  : Shandong Xiedali
- * @LastEditTime : 2022-04-13 08:21:48
+ * @LastEditTime : 2022-04-13 09:22:25
  * @FilePath     : App.vue
  * @Description  :
  * Copyright (c) 2022 by Hiland & RainyTop, All Rights Reserved.
 -->
 <template>
-  <ec02></ec02>
-  ─────────────────────────────────────<br />
   <ec00></ec00>
   ─────────────────────────────────────<br />
   <ec03></ec03>
@@ -25,7 +23,6 @@ import * as echarts from 'echarts';
 
 import ec00 from './components/ec00AutoTip.vue';
 import ec01 from './components/ec01入门.vue';
-import ec02 from './components/ec02.从父容器传递echarts.vue';
 import ec03 from './components/ec03refs.vue';
 
 // 通过 provide/inject 机制传递数据。
