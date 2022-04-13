@@ -1,47 +1,47 @@
 {
-  "name": "echarts.vue3.study",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "s": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+  "name"           : "echarts.vue3.study",
+  "version"        : "0.1.0",
+  "private"        : true,
+  "scripts"        : {
+    "serve"    : "vue-cli-service serve",
+    "s"        : "vue-cli-service serve",
+    "build"    : "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint"     : "vue-cli-service lint"
   },
-  "dependencies": {
-    "@types/echarts": "^4.9.13",
-    "core-js": "^3.6.5",
-    "echarts": "^5.3.2",
-    "vue": "^3.0.0",
+  "dependencies"   : {
+    "@types/echarts"     : "^4.9.13",
+    "core-js"            : "^3.6.5",
+    "echarts"            : "^5.3.2",
+    "vue"                : "^3.0.0",
     "vue-class-component": "^8.0.0-0"
   },
   "devDependencies": {
-    "@types/chai": "^4.2.11",
-    "@types/mocha": "^5.2.4",
+    "@types/chai"                     : "^4.2.11",
+    "@types/mocha"                    : "^5.2.4",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
-    "@typescript-eslint/parser": "^4.18.0",
-    "@vue/cli-plugin-babel": "~4.5.15",
-    "@vue/cli-plugin-eslint": "~4.5.15",
-    "@vue/cli-plugin-typescript": "~4.5.15",
-    "@vue/cli-plugin-unit-mocha": "~4.5.15",
-    "@vue/cli-service": "~4.5.15",
-    "@vue/compiler-sfc": "^3.0.0",
-    "@vue/eslint-config-airbnb": "^5.0.2",
-    "@vue/eslint-config-typescript": "^7.0.0",
-    "@vue/test-utils": "^2.0.0-0",
-    "chai": "^4.1.2",
-    "eslint": "^6.7.2",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-vue": "^7.0.0",
-    "typescript": "~4.1.5"
+    "@typescript-eslint/parser"       : "^4.18.0",
+    "@vue/cli-plugin-babel"           : "~4.5.15",
+    "@vue/cli-plugin-eslint"          : "~4.5.15",
+    "@vue/cli-plugin-typescript"      : "~4.5.15",
+    "@vue/cli-plugin-unit-mocha"      : "~4.5.15",
+    "@vue/cli-service"                : "~4.5.15",
+    "@vue/compiler-sfc"               : "^3.0.0",
+    "@vue/eslint-config-airbnb"       : "^5.0.2",
+    "@vue/eslint-config-typescript"   : "^7.0.0",
+    "@vue/test-utils"                 : "^2.0.0-0",
+    "chai"                            : "^4.1.2",
+    "eslint"                          : "^6.7.2",
+    "eslint-plugin-import"            : "^2.20.2",
+    "eslint-plugin-vue"               : "^7.0.0",
+    "typescript"                      : "~4.1.5"
   },
-  "eslintConfig": {
-    "root": true,
-    "env": {
+  "eslintConfig"   : {
+    "root"         : true,
+    "env"          : {
       "node": true
     },
-    "extends": [
+    "extends"      : [
       "plugin:vue/vue3-essential",
       "@vue/airbnb",
       "@vue/typescript/recommended"
@@ -49,21 +49,27 @@
     "parserOptions": {
       "ecmaVersion": 2020
     },
-    "rules": {
-      "no-console": "off",
-      "class-methods-use-this": "off"
+    "rules"        : {
+      "no-console"            : "off",
+      "class-methods-use-this": "off",
+      "quotes"                : [1, "double"],
+      "no-multi-spaces"       : "off",
+      "key-spacing"           : 0,
+      "object-curly-spacing"  : 0
     },
-    "overrides": [{
-      "files": [
-        "**/__tests__/*.{j,t}s?(x)",
-        "**/tests/unit/**/*.spec.{j,t}s?(x)"
-      ],
-      "env": {
-        "mocha": true
+    "overrides"    : [
+      {
+        "files": [
+          "**/__tests__/*.{j,t}s?(x)",
+          "**/tests/unit/**/*.spec.{j,t}s?(x)"
+        ],
+        "env"  : {
+          "mocha": true
+        }
       }
-    }]
+    ]
   },
-  "browserslist": [
+  "browserslist"   : [
     "> 1%",
     "last 2 versions",
     "not dead"

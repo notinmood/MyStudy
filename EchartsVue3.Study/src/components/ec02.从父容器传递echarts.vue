@@ -14,7 +14,7 @@
   <div id="myDiv"></div>
 </template>
 <script setup lang="ts">
-import { inject, onMounted } from 'vue';
+import {inject, onMounted} from 'vue';
 
 const ec = inject('echarts');
 

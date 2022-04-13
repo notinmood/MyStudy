@@ -1,13 +1,3 @@
-<!--
- * @Author       : Shandong Xiedali
- * @Mail         : 9727005@qq.com
- * @Date         : 2022-04-08 07:45:36
- * @LastEditors  : Shandong Xiedali
- * @LastEditTime : 2022-04-12 09:40:09
- * @FilePath     : ec01入门.vue
- * @Description  :
- * Copyright (c) 2022 by Hiland & RainyTop, All Rights Reserved.
--->
 <template>
   <h1>ECharts ABC</h1>
   <div ref="myDiv" id="myDiv" class="default"></div>
@@ -17,23 +7,8 @@ import * as ec from 'echarts';
 
 export default {
   mounted(): void {
-    // this.$echarts.init(this.$refs.myDiv);
-    // ec.init(this.$refs.myDiv);
     const dom = document.getElementById('myDiv') as HTMLElement;
     const myChart = ec.init(dom);
-
-    // // 注册必须的组件
-    // ec.use([
-    //   ec.TitleComponent,
-    //   ec.TooltipComponent,
-    //   ec.GridComponent,
-    //   ec.DatasetComponent,
-    //   ec.TransformComponent,
-    //   ec.BarChart,
-    //   ec.LabelLayout,
-    //   ec.UniversalTransition,
-    //   ec.CanvasRenderer,
-    // ]);
 
     // 指定图表的配置项和数据
     const option = {
