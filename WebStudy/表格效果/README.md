@@ -1,3 +1,22 @@
 # 说明
 
-aa.html 没有完成。 来源于以下页面的表格。 https://ts.xcatliu.com/engineering/lint.html
+> 以下表格样式来源于 https://blog.csdn.net/weixin_51417950/article/details/115319013
+
+1. 默认表格(default table)
+
+![](res/1.默认表格(default table).png)
+
+2. 加边框的表格(Bordered Table)
+
+![](res/2.加边框的表格(Bordered Table).png)
+
+3. 只有水平边框的表格(Table with Horizontal Borders)
+
+![](res/3.只有水平边框的表格(Table with Horizontal Borders).png)
+
+4. 条纹表格(Striped Table)
+
+![](res/4.条纹表格(Striped Table).png)
+
+5. aa.html 没有完成。 来源于以下页面的表格。 https://ts.xcatliu.com/engineering/lint.html
+
