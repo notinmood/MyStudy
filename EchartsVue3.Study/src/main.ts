@@ -8,12 +8,13 @@
  * @Description  :
  * Copyright (c) 2022 by Hiland & RainyTop, All Rights Reserved.
  */
-import { createApp } from "vue";
+import {createApp}  from "vue";
 import * as echarts from "echarts";
 
 // import App from './App.vue';
 // import App from "./Container1.vue";
-import App from "./Container2.vue";
+import App          from "./Container2.vue";
+// import App          from "./EChartsComponentUsing.vue";
 
 const app = createApp(App);
 

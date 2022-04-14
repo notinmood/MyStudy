@@ -10,15 +10,15 @@
 -->
 <template>
   <ec00></ec00>
-  ─────────────────────────────────────<br />
+  ─────────────────────────────────────<br/>
   <ec03></ec03>
-  ─────────────────────────────────────<br />
+  ─────────────────────────────────────<br/>
   <ec01></ec01>
-  ─────────────────────────────────────<br />
+  ─────────────────────────────────────<br/>
 </template>
 
 <script setup lang="ts">
-import { provide } from 'vue';
+import {provide}    from 'vue';
 import * as echarts from 'echarts';
 
 import ec00 from './components/ec00AutoTip.vue';

@@ -14,7 +14,7 @@
 </template>
 <script lang="ts">
 import * as echarts from 'echarts';
-import { Vue } from 'vue-class-component';
+import {Vue}        from 'vue-class-component';
 
 export default class Home extends Vue {
   mounted(): void {
