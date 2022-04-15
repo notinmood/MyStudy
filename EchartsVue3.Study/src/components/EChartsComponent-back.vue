@@ -2,11 +2,14 @@
   <div :class="className" :style="{height:height,width:width}"/>
 </template>
 
-<script lang="ts">
+<script>
 import * as echarts from "echarts";
+// import {debounce} from "@/utlis/index.ts";
+
+// echarts theme
+// require("echarts/theme/macarons");
 
 const animationDuration = 6000;
-const aa: echarts.EChartsOption = {};
 export default {
   props: {
     className: {
@@ -23,8 +26,9 @@ export default {
     },
     // 数据源
     echartsData: {
-      type   : Object,
-      default: () => ({}),
+      type: Object,
+      // eslint-disable-next-line vue/require-valid-default-prop
+      default: {},
     },
   },
   data() {

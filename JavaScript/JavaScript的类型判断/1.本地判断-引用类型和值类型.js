@@ -14,34 +14,26 @@ function isReferenceType(value) {
     return value instanceof Object;
 }
 
-console.log(isReferenceType(123));
+console.log(isReferenceType(123));//false
+console.log(isReferenceType(true));//false
+console.log(isReferenceType("123"));//false
+console.log(isReferenceType(undefined));//false
 
-console.log(isReferenceType(true));
-
-console.log(isReferenceType("123"));
-
-console.log(isReferenceType(undefined));
-
+console.log("─────────────────────────────────────");
 
 console.log(isReferenceType(function doSomething() {
-}));
+}));//true
+console.log(isReferenceType(new Date()));//true
+console.log(isReferenceType({}));//true
+console.log(isReferenceType([]));//true
 
-console.log(isReferenceType(new Date()));
+console.log('─────────────────────────────────────');
 
-console.log(isReferenceType({}));
-
-console.log(isReferenceType([]));
-
-console.log(isReferenceType(Number(123)));
+console.log(isReferenceType(Number(123)));//false
 // noinspection all
-console.log(isReferenceType(new Number(123)));
+console.log(isReferenceType(new Number(123)));//true
 
+console.log('─────────────────────────────────────');
 
-// @formatter:off
-let a =   123;
-// @formatter:on
-
-
-console.log(typeof null);
-console.log(isReferenceType(null));
-
+console.log(typeof null);//object
+console.log(isReferenceType(null));//true

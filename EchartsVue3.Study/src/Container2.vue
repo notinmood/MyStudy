@@ -10,16 +10,16 @@
 -->
 <template>
   <div>
-    <ec02></ec02>
+    <ecc></ecc>
   </div>
 </template>
 <script lang="ts" setup>
-import {provide}    from 'vue';
-import * as echarts from 'echarts';
+import {provide}    from "vue";
+import * as echarts from "echarts";
 
-import ec02 from "./components/ec02.从父容器传递echarts.vue";
+import ecc from "./components/ec05Rose.vue";
 
 // 通过 provide/inject 机制传递数据。
-provide('echarts', echarts);
+provide("echarts", echarts);
 </script>
 <style lang="scss" scoped></style>

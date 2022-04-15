@@ -13,8 +13,8 @@ import * as echarts from "echarts";
 
 // import App from './App.vue';
 // import App from "./Container1.vue";
-import App          from "./Container2.vue";
 // import App          from "./EChartsComponentUsing.vue";
+import App          from "./Container2.vue";
 
 const app = createApp(App);
 
