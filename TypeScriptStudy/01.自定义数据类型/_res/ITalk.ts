@@ -8,6 +8,6 @@
  * @Description  : 
  * Copyright (c) 2022 by Hiland & RainyTop, All Rights Reserved. 
  */
-interface ITalk {
+export interface ITalk {
     talk(): void;
 }

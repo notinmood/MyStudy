@@ -1,12 +1,12 @@
 "use strict";
-var Student = /** @class */ (function () {
-    function Student(name) {
+class Student {
+    constructor(name) {
         this.name = "xie ran";
         this.name = name;
     }
-    Student.prototype.getName = function () {
+    getName() {
         return ("helle,Mr." + this.name);
-    };
+    }
     ;
-    return Student;
-}());
+}
+//# sourceMappingURL=Student.js.map

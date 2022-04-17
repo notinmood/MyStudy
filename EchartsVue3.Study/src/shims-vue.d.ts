@@ -1,3 +1,4 @@
+// 1. 使用TypeScript的情形
 /* eslint-disable */
 declare module '*.vue' {
     import type {DefineComponent} from 'vue'
@@ -5,7 +6,7 @@ declare module '*.vue' {
     export default component
 }
 
-
+// 2. 使用JavaScript的情形
 // declare module '*.vue' {//declare  ambient module(  :   module  )
 //   import Vue from 'vue'
 //   export default Vue

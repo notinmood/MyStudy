@@ -1,4 +1,6 @@
 "use strict";
 /// <reference path="../_res/Student.ts">
-var student = new TSS._res.Student("zhangsan", 20);
-student.getAge();
+let student = new TSS._res.Student("zhangsan", 20);
+const age = student.getAge();
+console.log(age);
+//# sourceMappingURL=index.js.map

@@ -10,13 +10,14 @@
  * Copyright (c) 2022 by Hiland & RainyTop, All Rights Reserved.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var bl = require("basiclibrary.ts/lib/index");
-var whole = "qingdao city";
-var separator = " ";
-var result = bl.StringHelper.getContentBeforeSeparator(whole, separator);
+const bl = require("basiclibrary.ts/lib/index");
+const whole = "qingdao city";
+const separator = " ";
+const result = bl.StringHelper.getContentBeforeSeparator(whole, separator);
 console.log(result);
-var objectA = { a: 'AA', b: 'BB', };
-var objectB = { a: '@@', c: 'CC', };
-var objectC = bl.ObjectHelper.combine(objectA, objectB);
+const objectA = { a: 'AA', b: 'BB', };
+const objectB = { a: '@@', c: 'CC', };
+const objectC = bl.ObjectHelper.combine(objectA, objectB);
 console.log(objectC);
 // bl.StringHelper.getContentAfterSeparator(whole,separator);
+//# sourceMappingURL=index.js.map

@@ -1,12 +1,13 @@
 "use strict";
-var Human = /** @class */ (function () {
-    function Human() {
-    }
-    Human.prototype.talk = function () {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Human = void 0;
+class Human {
+    talk() {
         console.log("human talk");
-    };
-    Human.prototype.display = function () {
-        console.log("我是一个 Human。");
-    };
-    return Human;
-}());
+    }
+    display() {
+        console.log("I am Human.");
+    }
+}
+exports.Human = Human;
+//# sourceMappingURL=Human.js.map

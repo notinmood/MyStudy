@@ -3,9 +3,10 @@
 // |::说明·| 使用 | 定义一个一个新的类型
 // +--------------------------------------------------------------------------
 // 方法1. 直接使用 | 为变量定义两个可选的类型。
-var value00;
+let value00;
 value00 = 'value';
 value00 = 123;
-var valueAA;
+let valueAA;
 valueAA = 'value';
 valueAA = 123;
+//# sourceMappingURL=1.%E8%81%94%E5%90%88%E7%B1%BB%E5%9E%8B.js.map
