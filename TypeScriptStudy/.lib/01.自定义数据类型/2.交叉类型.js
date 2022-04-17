@@ -13,25 +13,25 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // +--------------------------------------------------------------------------
 // |::说明·| 使用 & 定义数据类型
 // +--------------------------------------------------------------------------
-const blts = require("basiclibrary.ts/lib/index");
-const Bird_1 = require("./_res/Bird");
-const Human_1 = require("./_res/Human");
-let some;
+var blts = require("basiclibrary.ts/lib/index");
+var Bird_1 = require("./_res/Bird");
+var Human_1 = require("./_res/Human");
+var some;
 some = {
-    fly() {
+    fly: function () {
         console.log("I can fly!");
     },
-    talk() {
+    talk: function () {
         console.log("I can talk!");
     },
 };
 some.fly();
 some.talk();
-let myName;
-let human = new Human_1.Human();
-let bird = new Bird_1.Bird();
-let result = blts.ObjectHelper.combine(human, bird);
+console.log('。。。这是分隔符。。。');
+var myName;
+var human = new Human_1.Human();
+var bird = new Bird_1.Bird();
+var result = blts.ObjectHelper.combine(human, bird);
 myName = result;
 myName.display();
 myName.fly();
-//# sourceMappingURL=2.%E4%BA%A4%E5%8F%89%E7%B1%BB%E5%9E%8B.js.map

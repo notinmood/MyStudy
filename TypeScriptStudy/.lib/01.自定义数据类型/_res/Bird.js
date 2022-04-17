@@ -11,13 +11,15 @@ exports.Bird = void 0;
  * @Description  :
  * Copyright (c) 2022 by Hiland & RainyTop, All Rights Reserved.
  */
-class Bird {
-    fly() {
+var Bird = /** @class */ (function () {
+    function Bird() {
+    }
+    Bird.prototype.fly = function () {
         console.log("bird fly");
-    }
-    display() {
+    };
+    Bird.prototype.display = function () {
         console.log("我是一个 Bird。");
-    }
-}
+    };
+    return Bird;
+}());
 exports.Bird = Bird;
-//# sourceMappingURL=Bird.js.map

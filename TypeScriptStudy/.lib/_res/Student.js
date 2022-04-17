@@ -6,8 +6,8 @@ var TSS;
 (function (TSS) {
     var _res;
     (function (_res) {
-        class Student {
-            constructor(name, age) {
+        var Student = /** @class */ (function () {
+            function Student(name, age) {
                 this.name = name;
                 this.age = age;
             }
@@ -15,21 +15,21 @@ var TSS;
              * 获取学生的姓名
              * @returns
              */
-            getName() {
+            Student.prototype.getName = function () {
                 return this.name;
-            }
-            getAge() {
+            };
+            Student.prototype.getAge = function () {
                 return this.age;
-            }
+            };
             /**
              * 讲话
              * @returns
              */
-            static talk() {
+            Student.talk = function () {
                 return "hello,我是一个学生！";
-            }
-        }
+            };
+            return Student;
+        }());
         _res.Student = Student;
     })(_res = TSS._res || (TSS._res = {}));
 })(TSS || (TSS = {}));
-//# sourceMappingURL=Student.js.map

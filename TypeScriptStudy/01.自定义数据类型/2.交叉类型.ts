@@ -33,6 +33,7 @@ some = {
 some.fly();
 some.talk();
 
+console.log('。。。这是分隔符。。。');
 
 type typeBB = Human & Bird;
 let myName: typeBB;
