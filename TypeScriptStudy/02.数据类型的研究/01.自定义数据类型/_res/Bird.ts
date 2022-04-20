@@ -5,8 +5,8 @@
  * @LastEditors  : Shandong Xiedali
  * @LastEditTime : 2022-04-17 18:05:11
  * @FilePath     : Bird.ts
- * @Description  : 
- * Copyright (c) 2022 by Hiland & RainyTop, All Rights Reserved. 
+ * @Description  :
+ * Copyright (c) 2022 by Hiland & RainyTop, All Rights Reserved.
  */
 export class Bird {
     fly() {
