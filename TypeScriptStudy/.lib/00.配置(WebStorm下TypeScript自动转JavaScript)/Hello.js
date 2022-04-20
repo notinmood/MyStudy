@@ -1,4 +1,4 @@
 "use strict";
-var a = "Hello world";
-var b = "I like this game！";
-console.log(a + b);
+var aaa = "Hello world";
+var bbb = "I like this game！";
+console.log(aaa + bbb);

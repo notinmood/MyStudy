@@ -1,6 +1,6 @@
-/// <reference path="../_res/Student.ts">
+/// <reference path="../_res/Employee.ts">
 
-let student = new TSS._res.Student("zhangsan", 20);
-const age= student.getAge();
+let e = new TSS._res.Employee("zhangsan", 20);
+const age= e.getAge();
 console.log(age);
 
