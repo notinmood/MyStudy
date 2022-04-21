@@ -1,15 +1,23 @@
 {
-  "compilerOptions": {
-    "strict": true,
-    "module": "commonjs",
-    "target": "es5",
-    "sourceMap": false,
-    "listFiles": false,
-    "outDir": "./.lib",
-    "forceConsistentCasingInFileNames": true,
-    "lib": ["dom", "es5", "scripthost", "es2015.symbol"]
-  },
-  "exclude": [
-    "node_modules"
-  ]
+    //配置的更多信息 https://www.tslang.cn/docs/handbook/compiler-options.html
+    "compilerOptions": {
+        //strict: 这个设置为true,就代表严格执行ts语法，要严格按照ts语法来编写。
+        "strict"                          : true,
+        //removeComments: 这个配置意思就是编译后不输出注释
+        "removeComments"                  : true,
+        //noImplicitAny: true-不允许你不注解 any 类型（即必须明确对any类型进行注解）
+        //               false-允许不注意 any 类型;
+        "noImplicitAny"                   : false,
+        "module"                          : "commonjs",
+        "target"                          : "es5",
+        "sourceMap"                       : false,
+        "listFiles"                       : false,
+        "outDir"                          : "./.lib",
+        "forceConsistentCasingInFileNames": true,
+        //lib: 编译过程中需要引入的库文件的列表
+        "lib"                             : ["dom", "es5", "scripthost", "es2015.symbol"]
+    },
+    "exclude"        : [
+        "node_modules"
+    ]
 }
