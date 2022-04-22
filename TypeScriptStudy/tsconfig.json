@@ -8,7 +8,12 @@
         //noImplicitAny: true-不允许你不注解 any 类型（即必须明确对any类型进行注解）
         //               false-允许不注意 any 类型;
         "noImplicitAny"                   : false,
-        "module"                          : "commonjs",
+        //可以根据不同的 module 选项来把 TypeScript 编译成不同的 JavaScript 模块类型，这有一些你可以忽略的东西：
+        //AMD：不要使用它，它仅能在浏览器工作；
+        //SystemJS：这是一个好的实验，已经被 ES 模块替代；
+        //ES 模块：它并没有准备好。
+        //使用 module: commonjs 选项来替代这些模式，将会是一个好的主意。
+        "module"                          : "CommonJS",
         "target"                          : "es5",
         "sourceMap"                       : false,
         "listFiles"                       : false,
