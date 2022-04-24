@@ -4,7 +4,7 @@
         //strict: 这个设置为true,就代表严格执行ts语法，要严格按照ts语法来编写。
         "strict"                          : true,
         //removeComments: 这个配置意思就是编译后不输出注释
-        "removeComments"                  : true,
+        "removeComments"                  : false,
         //noImplicitAny: true-不允许你不注解 any 类型（即必须明确对any类型进行注解）
         //               false-允许不注意 any 类型;
         "noImplicitAny"                   : false,
