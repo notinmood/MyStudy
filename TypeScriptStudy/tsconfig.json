@@ -1,5 +1,7 @@
 {
-    //"include"：定义希望被编译文件所在的目录,默认值：["**/*"] 其中：**表示任意目录，*表示任意文件
+    /* 通过 extends 属性实现配置复用，即一个配置文件可以继承另一个文件的配置属性。 */
+    // "extends":"path/to/other tsconfig.json"
+    // "include"：定义希望被编译文件所在的目录,默认值：["**/*"] 其中：**表示任意目录，*表示任意文件
     "include"        : ["**/*"],
     //"exclude": 定义需要排除在外的目录,默认值：[“node_modules”, “bower_components”, “jspm_packages”]
     "exclude"        : [
@@ -10,6 +12,8 @@
         /* ══════════════════════════ 编译过程 ══════════════════════════ */
         /* "listFiles":是否在 tsc 编译的时候，显示编译的文件列表信息 */
         "listFiles"                       : false,
+        /* "listEmittedFiles"：是否在 tsc 编译的时候,显示打印输出文件列表信息 */
+        "listEmittedFiles"                : false,
         // "stripInternal": true,                            /* Disable emitting declarations that have `@internal` in their JSDoc comments. */
         // "noEmitHelpers": true,                            /* Disable generating custom helper functions like `__extends` in compiled output. */
         // "noEmitOnError": true,                            /* Disable emitting files if any type checking errors are reported. */
@@ -19,9 +23,9 @@
         /* Interop Constraints */
         // "isolatedModules": true,                          /* Ensure that each file can be safely transpiled without relying on other imports. */
         // "allowSyntheticDefaultImports": true,             /* Allow 'import x from y' when a module doesn't have a default export. */
-
+        /* "incremental": 是否启用增量编译。第⼀次编译之后会⽣成⼀个存储编译信息的⽂件，第⼆次编译会在第⼀次的基础上进⾏增量编译，可以提⾼编译的速度*/
+        "incremental"                     : true,
         /* ══════════════════════════ Projects ══════════════════════════ */
-        // "incremental": true,                              /* Enable incremental compilation */
         // "composite": true,                                /* Enable constraints that allow a TypeScript project to be used with project references. */
         // "tsBuildInfoFile": "./",                          /* Specify the folder for .tsbuildinfo incremental compilation files. */
         // "disableSourceOfProjectReferenceRedirect": true,  /* Disable preferring source files instead of declaration files when referencing composite projects */
@@ -56,6 +60,8 @@
         // "rootDir": "./",                                  /* Specify the root folder within your source files. */
         // "moduleResolution": "node",                       /* Specify how TypeScript looks up a file from a given module specifier. */
         // "baseUrl": "./",                                  /* Specify the base directory to resolve non-relative module names. */
+        /* "paths": 路径映射，相对于 baseUrl。比如使用 jq 时不想使用默认版本，而需要手动指定版本，
+        可进行如下配置。"jquery": ["node_modules/jquery/dist/jquery.min.js"]*/
         // "paths": {},                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
         // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
         // "typeRoots": [],                                  /* Specify multiple folders that act like `./node_modules/@types`. */
@@ -79,7 +85,7 @@
         "sourceMap"                       : true,
         /* "outDir"：编译后文件的所在目录。默认情况下，编译后的js文件会和ts文件位于相同的目录，设置outDir后可以改变编译后文件的位置*/
         "outDir"                          : "./.lib",
-        /* "removeComments": 这个配置意思就是编译后不输出注释*/
+        /* "removeComments": 这个配置意思就是编译后移除注释内容 */
         "removeComments"                  : false,
         // "noEmit": true,                                   /* Disable emitting files from a compilation. */
         // "importHelpers": true,                            /* Allow importing helper functions from tslib once per project, instead of including them per-file. */
@@ -112,10 +118,10 @@
         /* Ensure that casing is correct in imports. */
 
         /* ══════════════════════════ Type Checking ══════════════════════════ */
-        //strict: 这个设置为true,就代表严格执行ts语法，要严格按照ts语法来编写。
+        /* "strict": 这个设置为true,就代表严格执行ts语法，要严格按照ts语法来编写。启用所有的严格检查，默认值为true，设置后相当于开启了所有的严格检查。 */
         "strict"                          : true,
         /* Enable all strict type-checking options. */
-        /* noImplicitAny: 对any类型的支持情况
+        /* noImplicitAny: 禁止隐式的any类型
         true-不允许你不注解 any 类型（即必须明确对any类型进行注解）
         false-允许不注意 any 类型;
         */
