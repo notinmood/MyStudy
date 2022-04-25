@@ -7,6 +7,5 @@
  * @company: HiLand & RainyTop
  */
 
-
 let myVal;
 export default myVal = "qingdao";

@@ -5,9 +5,12 @@
  * @LastEditors  : Shandong Xiedali
  * @LastEditTime : 2022-04-11 20:38:35
  * @FilePath     : using.ts
- * @Description  : 
- * Copyright (c) 2022 by Hiland & RainyTop, All Rights Reserved. 
+ * @Description  :
+ * Copyright (c) 2022 by Hiland & RainyTop, All Rights Reserved.
  */
 
 
-//测试导入的情况
+import * as bl from "basiclibrary.ts/lib/index";
+
+const myValue= bl.ObjectHelper.combine({a: true}, {b: 123});
+console.log(myValue);

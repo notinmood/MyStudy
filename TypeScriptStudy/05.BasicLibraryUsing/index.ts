@@ -5,8 +5,8 @@
  * @LastEditors  : Shandong Xiedali
  * @LastEditTime : 2022-04-11 20:46:46
  * @FilePath     : index.ts
- * @Description  : 
- * Copyright (c) 2022 by Hiland & RainyTop, All Rights Reserved. 
+ * @Description  :
+ * Copyright (c) 2022 by Hiland & RainyTop, All Rights Reserved.
  */
 
 import * as bl from 'basiclibrary.ts/lib/index';
@@ -22,4 +22,3 @@ const objectC = bl.ObjectHelper.combine(objectA, objectB);
 console.log(objectC);
 
 // bl.StringHelper.getContentAfterSeparator(whole,separator);
-

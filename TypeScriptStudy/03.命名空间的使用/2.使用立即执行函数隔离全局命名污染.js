@@ -7,7 +7,13 @@
  * @company: HiLand & RainyTop
  */
 
+/**
+ * 这里 void 0 就是 undefined;其实写 void 123，void "abc"
+ * 都一样返回 undefined，大家之所以用 void 0，是因为其代码最少。
+ */
 let Utility = void 0;
+
+// Utility = undefined;
 
 /**
  * 这是一个 IIFE 函数原型
