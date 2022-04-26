@@ -14,7 +14,7 @@
 // +--------------------------------------------------------------------------
 
 // 以下两种声明是一样。
-declare var jQuery: (selector: string) => any;
-// declare function jQuery(selector: string): any;
+declare var wQuery: (selector: string) => any;
+// declare function wQuery(selector: string): any;
 
-jQuery('#foo');
+wQuery('#foo');

@@ -4,7 +4,7 @@
 
 const sym = Symbol();
 
-let obj = {
+export let obj = {
     [sym]: "value",
     xx   : "abc",
 };
