@@ -7,16 +7,16 @@
  * @company: HiLand & RainyTop
  */
 
-//定义一个数据类型 C，它是一个对象，里面的 a 为 string 类型，里面的 b 是一个可选值，为 number 类型
-type C = { a: string, b?: number }
+export namespace MyNameSpace {
+    //定义一个数据类型 C，它是一个对象，里面的 a 为 string 类型，里面的 b 是一个可选值，为 number 类型
+    type C = { a: string, b?: number }
 
 //这时候 a 就是 string 类型，b 就是 number 类型
-function f({a, b}: C): void {
-    console.log(a);
-    console.log(b);
+    function f({a, b}: C): void {
+        console.log(a);
+        console.log(b);
+    }
+
+    const p: C = {a: "qingdao", b: 2009};
+    f(p);
 }
-
-const p: C = {a: "qingdao", b: 2009};
-f(p);
-
-

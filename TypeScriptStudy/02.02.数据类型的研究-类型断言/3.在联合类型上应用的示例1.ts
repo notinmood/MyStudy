@@ -33,5 +33,3 @@ function getLength(something: string | number): number {
 
 const result = getLength(123);
 console.log(result);
-
-

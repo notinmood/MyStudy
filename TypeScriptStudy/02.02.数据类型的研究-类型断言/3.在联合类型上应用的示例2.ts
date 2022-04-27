@@ -73,5 +73,3 @@ console.log(swim2(animal));
 console.log('─────────────────────────────────────');
 animal = new Fish();
 console.log(swim2(animal));
-
-

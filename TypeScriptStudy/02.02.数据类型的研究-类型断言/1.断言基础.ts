@@ -1,6 +1,6 @@
-import { Human }   from '../../00.res/Human';
-import { Worker }  from '../../00.res/Worker';
-import { ICanEat } from '../../00.res/ICanEat';
+import { Human }   from '../00.res/Human';
+import { Worker }  from '../00.res/Worker';
+import { ICanEat } from '../00.res/ICanEat';
 
 let worker = new Worker("zhangsan", "HR");
 console.log(worker);
