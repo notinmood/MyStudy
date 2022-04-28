@@ -3,16 +3,16 @@ import {Human} from './Human';
 // |::说明·| 通过模块构造类型的例子
 // +--------------------------------------------------------------------------
 
-export class Worker extends Human {
-    workType: string;
+export class President extends Human {
+    nation: string;
 
-    constructor(name: string, workType: string) {
+    constructor(name: string, nation: string) {
         super();
         this.name = name;
-        this.workType = workType;
+        this.nation = nation;
     }
 
-    work(): void {
-        console.log(`我是一个${this.workType},我正在工作！`);
+    say(): void {
+        console.log(`我是${this.nation}的总统${this.name}！`);
     }
 }

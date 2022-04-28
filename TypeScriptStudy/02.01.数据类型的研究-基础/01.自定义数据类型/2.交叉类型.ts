@@ -18,6 +18,9 @@ import {Human}   from './_res/Human';
 import {IFly}    from './_res/IFly';
 import {ITalk}   from './_res/ITalk';
 
+/**
+ * 通过 type 什么的 标的信息，虽然可以看做一个新的数据类型，但他本质是 其他既有数据类型的别名。
+ */
 type typeWW = IFly & ITalk;
 let some: typeWW;
 
