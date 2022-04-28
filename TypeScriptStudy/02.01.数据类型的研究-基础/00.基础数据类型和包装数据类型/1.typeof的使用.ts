@@ -23,3 +23,5 @@ console.log(typeof _key); //object
 
 _key= new Worker("zhangsan","HR");
 console.log(typeof _key); //object
+
+// 更多 typeof 的使用参见 99.特殊符号研究\7.关键字typeof
