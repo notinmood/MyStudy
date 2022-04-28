@@ -1,0 +1,21 @@
+# 裸类型NakedType和包裹类型WrappedType
+
+## 概念
+
+比如一个 string 字符串“qingdao”，他可以单独使用，也可以在其他类型里面使用（比如array[string]）。
+
+* 单独使用“qingdao”的时候，他就是一个字符串裸类型。
+* 把他放在 array["qingdao","beijing"] 里面使用的时候，这个字符串 string 就是被包裹的类型。
+
+## 在泛型中的表示方法
+
+* 用一个独立的 T 就表示裸类型
+* 用带方括号的 [T] 就表示包裹类型
+
+```typescript
+// 裸类型参数,没有被任何其他类型包裹，即T
+type NakedType<T> = T extends boolean ? "YES" : "NO"
+// 类型参数被包裹的在元组内，即[T]
+type WrappedType<T> = [T] extends [boolean] ? "YES" : "NO";
+```
+
