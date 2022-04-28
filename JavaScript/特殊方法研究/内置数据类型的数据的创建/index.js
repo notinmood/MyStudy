@@ -12,8 +12,8 @@
  */
 
 let myArray1 = Array();
-console.log(myArray1);
-console.log(typeof myArray1);
+console.log(myArray1); //[]
+console.log(typeof myArray1);//object
 
 let myArray2 = new Array();
 console.log(myArray2);
