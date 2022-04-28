@@ -36,7 +36,7 @@
         /* "target"：设置ts代码编译的目标版本。可选值：ES3（默认）、ES5、ES6/ES2015、ES7/ES2016、ES2017、ES2018、ES2019、ES2020、ESNext*/
         "target"                          : "es5",
         /* "lib": 编译过程中需要引入的库文件的列表，即指定代码运行时所包含的库（宿主环境）（在浏览器就不需要dom了，在node.js之中就要安装dom） */
-        "lib"                             : ["dom", "es5", "scripthost", "ES2015.Symbol","ES2015.Iterable"],
+        "lib"                             : ["dom", "es5", "scripthost", "ES2015.Symbol", "ES2015.Iterable"],
         // "jsx": "preserve",                                /* Specify what JSX code is generated. */
         // "experimentalDecorators": true,                   /* Enable experimental support for TC39 stage 2 draft decorators. */
         // "emitDecoratorMetadata": true,                    /* Emit design-type metadata for decorated declarations in source files. */
@@ -65,10 +65,10 @@
         // "paths": {},                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
         // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
         // "typeRoots": [],                                  /* Specify multiple folders that act like `./node_modules/@types`. */
-        /* "types"：默认是不开启了，不开启的话，安装了@types/*** 的各种库都可以使用；
+        /* "types"：默认是不开启了（默认是注释掉的），不开启的话，安装了@types/*** 的各种库都可以使用；
         但如果如果"types": [jquery]，那么就只允许使用 jquery 的 @types 包，即使这个人安装了另一个声明文件，
         比如 @types/node，它的全局变量（例如 process）也不会泄漏到你的代码中。*/
-        // "types": [],                                      /* Specify type package names to be included without being referenced in a source file. */
+        // "types": ["axios"],                               /* Specify type package names to be included without being referenced in a source file. */
         // "allowUmdGlobalAccess": true,                     /* Allow accessing UMD globals from modules. */
         // "resolveJsonModule": true,                        /* Enable importing .json files */
         // "noResolve": true,                                /* Disallow `import`s, `require`s or `<reference>`s from expanding the number of files TypeScript should add to a project. */
