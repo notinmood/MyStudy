@@ -65,6 +65,9 @@
         // "paths": {},                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
         // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
         // "typeRoots": [],                                  /* Specify multiple folders that act like `./node_modules/@types`. */
+        /* "types"：默认是不开启了，不开启的话，安装了@types/*** 的各种库都可以使用；
+        但如果如果"types": [jquery]，那么就只允许使用 jquery 的 @types 包，即使这个人安装了另一个声明文件，
+        比如 @types/node，它的全局变量（例如 process）也不会泄漏到你的代码中。*/
         // "types": [],                                      /* Specify type package names to be included without being referenced in a source file. */
         // "allowUmdGlobalAccess": true,                     /* Allow accessing UMD globals from modules. */
         // "resolveJsonModule": true,                        /* Enable importing .json files */
