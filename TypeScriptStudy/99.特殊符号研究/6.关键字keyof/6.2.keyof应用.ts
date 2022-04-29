@@ -38,11 +38,13 @@ export namespace MyNameSpace {
     targetValue = service.getPersonData1("name");
     console.log(targetValue);
 
-    // // 以下代码编译期无法得到错误；但运行期是会出现 undefined 的
-    // targetValue = service.getPersonData1("city");
-    // console.log(targetValue);
+    // // 以下代码编译期正确；但运行期是会出现 undefined 的
+    targetValue = service.getPersonData1("city");
+    console.log(targetValue);
 
-    targetValue =service.getPersonData2("name");
+    console.log("─分割线─────────────────");
+
+    targetValue = service.getPersonData2("name");
     console.log(targetValue);
 
     // // 以下代码在编译期就会出现错误，从而保证了代码的质量。
