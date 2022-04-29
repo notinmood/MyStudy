@@ -8,6 +8,7 @@
  */
 
 export namespace MyNameSpace {
+    // 1. 通过类型+new() 构建的实例
     interface Human {
         name: string;
         age: number;
@@ -21,5 +22,24 @@ export namespace MyNameSpace {
     console.log('--typeof someVar 可以赋值给 type 的变量然后再定义变量使用；但不能打印，打印出来就只显示 object 了。--');
     console.log(typeof sem); //object
 
+    //2. 字面量实例
+    const someObject = {
+        obj: {
+            one: 1
+        },
+        arr: [1, 2, 4],
+        num: 1
+    }
+    type myType = typeof someObject
+    //{
+    // obj: {
+    // one: number;
+    // };
+    // arr: number[];
+    // num: number;
+    //}
 
+    // 但打印出来，就是 object
+    console.log("但打印出来，就是 object");
+    console.log(typeof someObject);//object
 }
