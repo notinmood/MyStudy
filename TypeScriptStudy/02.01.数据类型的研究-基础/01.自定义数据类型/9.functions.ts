@@ -5,8 +5,8 @@
 //  * @LastEditors  : Shandong Xiedali
 //  * @LastEditTime : 2022-04-11 20:55:09
 //  * @FilePath     : 0.functions.ts
-//  * @Description  : 
-//  * Copyright (c) 2022 by Hiland & RainyTop, All Rights Reserved. 
+//  * @Description  :
+//  * Copyright (c) 2022 by Hiland & RainyTop, All Rights Reserved.
 //  */
 // function combine<T, U>(first: T, second: U): T & U {
 //     let result = <T & U>({} as unknown);
@@ -23,3 +23,5 @@
 
 //     return result;
 // }
+
+// TODO:xiedali@2022/4/29

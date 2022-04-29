@@ -1,5 +1,5 @@
 /**
- * @file   : 2.使用立即执行函数隔离全局命名污染.ts
+ * @file   : 2.使用立即执行函数 IIFE 隔离全局命名污染.ts
  * @time   : 10:12
  * @date   : 2022/4/24
  * @mail   : 9727005@qq.com
@@ -10,6 +10,8 @@
 /**
  * 这里 void 0 就是 undefined;其实写 void 123，void "abc"
  * 都一样返回 undefined，大家之所以用 void 0，是因为其代码最少。
+ * 但之所以不直接使用 undefined，是因为 undefined 不是关键字，
+ * 其可能在其他地方被重新定义，而失去本来的意义。
  */
 let Utility = void 0;
 
