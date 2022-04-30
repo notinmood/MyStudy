@@ -1,4 +1,4 @@
-# 裸类型NakedType和包裹类型WrappedType
+# 裸类型 NakedType 和包裹类型 WrappedType
 
 ## 概念
 
