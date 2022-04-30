@@ -18,4 +18,12 @@ export namespace MyNameSpace {
     if (typeof data_s == "string") {
 
     }
+
+    /**
+     * == 后面的字符串字面量类型只能是“string”、“number”等确定的几个值。以下代码会抛出错误。
+     * TS2367: This condition will always return 'false' since the types '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"' and '"abc"' have no overlap.
+     */
+    // if (typeof data_s == "abc") {
+    //
+    // }
 }
