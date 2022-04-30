@@ -24,3 +24,21 @@ let boo: never = (() => {
 
 // 以下代码就会报错
 // let foo: never = 123; // Error: number 类型不能赋值给 never 类型
+
+
+console.log("──vs. void──────────────────────");
+
+let voidFunc1: void = (() => {
+})();
+
+let voidFunc2: void = (() => {
+    return void 0;
+})();
+
+let voidFunc3: void = (() => {
+    return undefined;
+})();
+
+// function voidFunc4(): void {
+//     return null;
+// }
