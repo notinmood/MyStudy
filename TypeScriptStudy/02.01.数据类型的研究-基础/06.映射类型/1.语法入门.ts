@@ -22,6 +22,10 @@ export namespace MyNameSpace {
         },
         num: 2
     }
+
+    /**
+     * 使用类型映射语法定义新类型
+     */
     type getType<T> = {
         [K in keyof T]: T[K]
     }
