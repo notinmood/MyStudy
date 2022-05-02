@@ -34,6 +34,13 @@ export namespace MyNameSpace {
     type instance1 = getType<typeof someData>;//{obj: {one: number}, num: number}
     type instance2 = typeof someData;//{obj: {one: number}, num: number}
 
+    /**
+     * 但使用映射的方式，可以对类型进行约束
+     */
+    type getTypeGen<T extends { num: number }> = { [K in keyof T]: T[K] };
+    type instance3 = getTypeGen<typeof someData>;// {obj: {one: number}, num: number}
+
+
     // 2. 能够对 T[K] 作一些处理。
     //比如使用 extends 对类型进行判定和转换
     type getTypeX<T> = {
