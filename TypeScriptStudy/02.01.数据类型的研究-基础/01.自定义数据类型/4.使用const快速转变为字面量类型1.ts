@@ -16,8 +16,8 @@ export namespace MyNameSpace {
     // +--------------------------------------------------------------------------
 
     // 以下3种情况，再进行 typeof 获取类型的时候，得到的都是字面量类型。
-    let data1 = 1 as const;
-    // const data1 = 1;
+    // let data1 = 1 as const;
+    const data1 = 1;
     // const data1 = 1 as const;
 
     type type1 = typeof data1;

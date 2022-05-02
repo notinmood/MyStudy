@@ -35,7 +35,7 @@ export namespace MyNameSpace {
     type instance2 = typeof someData;//{obj: {one: number}, num: number}
 
     /**
-     * 但使用映射的方式，可以对类型进行约束
+     * 但使用映射的方式，可以提前一步对类型进行约束
      */
     type getTypeGen<T extends { num: number }> = { [K in keyof T]: T[K] };
     type instance3 = getTypeGen<typeof someData>;// {obj: {one: number}, num: number}
