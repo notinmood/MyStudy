@@ -33,4 +33,9 @@ export namespace MyNameSpace {
     type Pick<T, K extends keyof T> = {
         [P in K]: T[P]
     }
+
+    /**
+     * Obtain the return type of function type
+     */
+    type ReturnType<T extends (...args: any) => any> = T extends (...args: any) => infer R ? R : any
 }
