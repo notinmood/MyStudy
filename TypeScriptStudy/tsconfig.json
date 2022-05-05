@@ -34,7 +34,7 @@
 
         /* ══════════════════════════ Language and Environment ══════════════════════════ */
         /* "target"：设置ts代码编译的目标版本。可选值：ES3（默认）、ES5、ES6/ES2015、ES7/ES2016、ES2017、ES2018、ES2019、ES2020、ESNext*/
-        "target"                          : "es5",
+        "target"                          : "ES5",
         /* "lib": 编译过程中需要引入的库文件的列表，即指定代码运行时所包含的库（宿主环境）（在浏览器就不需要dom了，在node.js之中就要安装dom） */
         "lib"                             : ["dom", "es5", "scripthost", "ES2015.Symbol", "ES2015.Iterable"],
         // "jsx": "preserve",                                /* Specify what JSX code is generated. */
@@ -93,7 +93,12 @@
         // "noEmit": true,                                   /* Disable emitting files from a compilation. */
         // "importHelpers": true,                            /* Allow importing helper functions from tslib once per project, instead of including them per-file. */
         // "importsNotUsedAsValues": "remove",               /* Specify emit/checking behavior for imports that are only used for types */
-        // "downlevelIteration": true,                       /* Emit more compliant, but verbose and less performant JavaScript for iteration. */
+        /**
+        "downlevelIteration"：如果target为es5的时候，把这个选项打开，可以允许在普通集合对象上调用迭代器；
+        当如如果 target为es6到时候，忽略这个选项，集合类型也是可以使用迭代器的。
+        */
+        "downlevelIteration"              : true,
+        /* Emit more compliant, but verbose and less performant JavaScript for iteration. */
         // "sourceRoot": "",                                 /* Specify the root path for debuggers to find the reference source code. */
         // "mapRoot": "",                                    /* Specify the location where debugger should locate map files instead of generated locations. */
         // "inlineSourceMap": true,                          /* Include sourcemap files inside the emitted JavaScript. */
