@@ -9,7 +9,8 @@
 
 
 /**
- * infer 用于复合条件里的泛型中
+ * infer 一般用于 T 为 function 的泛型中；
+ * 用于延时推断函数的参数或者返回值的类型。
  */
 
 export namespace M {

@@ -38,4 +38,11 @@ export namespace MyNameSpace {
      * Obtain the return type of function type
      */
     type ReturnType<T extends (...args: any) => any> = T extends (...args: any) => infer R ? R : any
+
+    // 获取构造函数参数类型
+    type ConstructorParameters<T extends new (...args: any[]) => any> = T extends new (...args: infer P) => any ? P : never;
+
+    // 获取返回实例类型
+    type InstanceType<T extends new (...args: any[]) => any> = T extends new (...args: any[]) => infer R ? R : any;
+
 }
