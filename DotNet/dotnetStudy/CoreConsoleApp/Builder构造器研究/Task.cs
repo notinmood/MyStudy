@@ -4,6 +4,7 @@ using System.Text;
 
 namespace CoreConsoleApp.BuilderStudy
 {
+    
     // https://www.cnblogs.com/javastack/p/14704723.html
     public class Task
     {

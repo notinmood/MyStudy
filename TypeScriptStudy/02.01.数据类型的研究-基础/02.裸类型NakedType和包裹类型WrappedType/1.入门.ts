@@ -20,7 +20,7 @@ type NakedType<T> = T extends boolean ? "YES" : "NO"
 // 只有元组 cc 才满足条件，能返回 "YES"
 type WrappedType<T> = [T] extends [boolean] ? "YES" : "NO";
 
-// 1. 裸类型在实例化时会自动分发成联合类型，这就是分布式。
+// 1. 裸类型在实例化时会自动分发成联合类型，这就是可分配条件类型。
 // 例如，T extends U ? X : Y使用类型参数A | B | C 实例化 T 的时候，
 // 解析为 (A extends U ? X : Y) | (B extends U ? X : Y) | (C extends U ? X : Y)
 type isDistributed = NakedType<number | boolean>;

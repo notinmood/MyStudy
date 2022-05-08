@@ -38,7 +38,9 @@
         /* "lib": 编译过程中需要引入的库文件的列表，即指定代码运行时所包含的库（宿主环境）（在浏览器就不需要dom了，在node.js之中就要安装dom） */
         "lib"                             : ["dom", "es5", "scripthost", "ES2015.Symbol", "ES2015.Iterable"],
         // "jsx": "preserve",                                /* Specify what JSX code is generated. */
+        /* "experimentalDecorators":是否启用装饰器语法 */
         // "experimentalDecorators": true,                   /* Enable experimental support for TC39 stage 2 draft decorators. */
+        /* "emitDecoratorMetadata": 是否为装饰器提供元数据的支持*/
         // "emitDecoratorMetadata": true,                    /* Emit design-type metadata for decorated declarations in source files. */
         // "jsxFactory": "",                                 /* Specify the JSX factory function used when targeting React JSX emit, e.g. 'React.createElement' or 'h' */
         // "jsxFragmentFactory": "",                         /* Specify the JSX Fragment reference used for fragments when targeting React JSX emit e.g. 'React.Fragment' or 'Fragment'. */
@@ -79,7 +81,7 @@
         // "maxNodeModuleJsDepth": 1,                        /* Specify the maximum folder depth used for checking JavaScript files from `node_modules`. Only applicable with `allowJs`. */
 
         /* ══════════════════════════ Emit ══════════════════════════ */
-        /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
+        /* "declaration"：生成相应的 '.d.ts' 文件。Generate .d.ts files from TypeScript and JavaScript files in your project. */
         "declaration"                     : true,
         // "declarationMap": true,                           /* Create sourcemaps for d.ts files. */
         // "emitDeclarationOnly": true,                      /* Only output d.ts files and not JavaScript files. */
