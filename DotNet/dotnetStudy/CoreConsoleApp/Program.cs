@@ -1,4 +1,5 @@
 ﻿using System;
+using CoreConsoleApp.协变和逆变研究;
 
 namespace CoreConsoleApp
 {
@@ -7,6 +8,8 @@ namespace CoreConsoleApp
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+
+            Client.index();
         }
     }
 }
