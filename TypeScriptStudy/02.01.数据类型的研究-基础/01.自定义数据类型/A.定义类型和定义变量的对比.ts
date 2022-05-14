@@ -14,16 +14,16 @@
 export namespace MyNameSpace {
     //1. 先定义函数类型，再定义函数，最后执行函数。
     type myType = (string, number) => string;
-    const myVar: myType = (x: string, y: number): string => {
+    const myFunc1: myType = (x: string, y: number): string => {
         return `hello,${x} ${y.toString()}`;
     }
 
-    const result: string = myVar("qingdao", 1908);
+    const result: string = myFunc1("qingdao", 1908);
     console.log(result);
 
     //2. 直接定义函数和执行函数
-    const myFunc = (input: string | number) => {
+    const myFunc2 = (input: string | number) => {
         return `输入的信息为${input.toString()}`;
     }
-    console.log(myFunc(123));
+    console.log(myFunc2(123));
 }

@@ -46,7 +46,7 @@ export namespace MyNameSpace {
         // 会报错：Property 'swim' does not exist on type 'Bird | Fish'
         // pet.swim();
 
-        //2. 使用之前先判断
+        //2. 使用之前先判断方法是否存在
         if ((pet as Bird).fly) {
             (pet as Bird).fly();
         } else if ((pet as Fish).swim) {
