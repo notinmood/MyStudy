@@ -9,13 +9,14 @@
  * Copyright (c) 2022 by Hiland & RainyTop, All Rights Reserved.
 -->
 <template>
-  <div>
-    <ecc></ecc>
-  </div>
+    <div>
+        <ecc></ecc>
+    </div>
 </template>
 <script lang="ts" setup>
 import {provide}    from "vue";
 import * as echarts from "echarts";
+// import * as core    from "echarts/core";
 
 import ecc from "./components/ec05Rose.vue";
 

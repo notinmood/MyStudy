@@ -18,7 +18,7 @@ import App          from "./Container2.vue";
 
 const app = createApp(App);
 
-// 1. 可以通过全局属性传递 信息给各个子组件。但不建议这么做，因为子组件使用setup机制的时候，是没有 this 关键字的。
+// 1. 可以通过全局属性传递信息给各个子组件。但不建议这么做，因为子组件使用 setup 机制的时候，是没有 this 关键字的。
 app.config.globalProperties.$echarts = echarts;
 
 // 2. 建议通过 provide/inject 机制传递数据。//provide('echarts', echarts);
