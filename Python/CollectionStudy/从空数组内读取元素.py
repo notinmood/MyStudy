@@ -7,8 +7,8 @@
  * @company: HiLand & RainyTop
 """
 
-from hilandBasicLibrary.data.listHelper import ListHelper
-from hilandBasicLibrary.data.stringHelper import StringHelper
+from BasicLibrary.data.listHelper import ListHelper
+from BasicLibrary.data.stringHelper import StringHelper
 
 
 my_list = []

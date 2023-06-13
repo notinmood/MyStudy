@@ -6,7 +6,7 @@
  * @creator: ShanDong Xiedali
  * @company: HiLand & RainyTop
 """
-from hilandBasicLibrary.data.stringHelper import StringHelper
+from BasicLibrary.data.stringHelper import StringHelper
 
 
 class StudentClass(object):

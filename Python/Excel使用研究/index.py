@@ -9,12 +9,18 @@
 import datetime
 
 import xlwings
-from hilandBasicLibrary import ObjectHelper
+from BasicLibrary import ObjectHelper
 from xlwings import Sheet
+from _projectHelper import ProjectHelper
+from BasicLibrary.data.stringHelper import StringHelper
+from BasicLibrary.io.pathHelper import PathHelper
 
 
 def operate_excel():
-    file_full_name = r"E:\myworkspace\MyStudy\Python\Excel使用研究\_res\myExcel.xlsx"
+    root = ProjectHelper.get_root_physical_path()
+    file_name = r"Excel使用研究\_res\myExcel.xlsx"
+    # file_full_name = r"E:\myworkspace\MyStudy\Python\Excel使用研究\_res\myExcel.xlsx"
+    file_full_name = PathHelper.combine(root, file_name)
     """
     两种打开 Excel 文件的方式，推荐使用第一种。因为第二种容易出现 文件正被占用无法使用的问题。
     """

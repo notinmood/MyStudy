@@ -7,7 +7,7 @@
  * @company: HiLand & RainyTop
 """
 
-from hilandBasicLibrary.data.stringHelper import *
+from BasicLibrary.data.stringHelper import *
 
 if __name__ == '__main__':
     original = "My name is {0},my age is {1}."
