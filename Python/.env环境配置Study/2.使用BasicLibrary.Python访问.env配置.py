@@ -7,7 +7,7 @@
  * @company: HiLand & RainyTop
 """
 
-from hilandBasicLibrary.configHelper import ConfigHelper
+from BasicLibrary.configHelper import ConfigHelper
 
 if __name__ == '__main__':
     s = ConfigHelper.get_item("", "ROOT_URL")

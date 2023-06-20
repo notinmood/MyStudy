@@ -6,7 +6,7 @@
  * @creator: ShanDong Xiedali
  * @company: HiLand & RainyTop
 """
-from hilandBasicLibrary.data.StringHelper import StringHelper
+
 from random import Random
 
 if __name__ == '__main__':
