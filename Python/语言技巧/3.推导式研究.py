@@ -6,6 +6,7 @@
  * @creator: ShanDong Xiedali
  * @company: HiLand & RainyTop
 """
+from BasicLibrary.data.stringHelper import StringHelper
 
 # +--------------------------------------------------------------------------
 # |::::说明::::| Python里面有个很棒的语法糖（syntactic sugar），它就是 list comprehension，
@@ -18,8 +19,14 @@
 my_list = [x ** 2 for x in range(10)]
 print(my_list)  # [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 
+my_list = [_item * 2 for _item in range(10)]
+print(my_list)  # [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+
 my_list = [x * x for x in range(10) if x % 2 == 0]
 print(my_list)  # [0, 4, 16, 36, 64]
+
+my_list = [_item for _item in "qingdao city"]
+print(my_list)  # ["q", "i", "n", "g", "d", "a", "o", " ", "c", "i", "t", "y"]
 
 my_list = [(x, y) for x in range(5) for y in range(4)]
 print(my_list)  # [(0, 0), ..., (4, 2), (4, 3)] 等共包含20个元素
@@ -30,6 +37,9 @@ print(my_list)  # [(0, 0), ..., (4, 2), (4, 3)] 等共包含20个元素
 chars = {w for w in "Qingdao City"}
 print(chars)  # {'o', ..., 'y', 'a'} 因为set的特性，具体的元素顺序每次不一样
 
+chars = {StringHelper.upper_all_chars(_item) for _item in "Beijing City"}
+print(chars)  # {'J', 'E', 'C', 'I', ' ', 'G', 'N', 'Y', 'B', 'T'} 因为set的特性，具体的元素顺序每次不一样
+
 """
 3. dict 字典推导式
 """
@@ -37,5 +47,8 @@ my_dict = {"A": "a",
            "B": "b",
            "C": "c"}
 
-my_dict = {k: my_dict[k] * 2 for k in my_dict}
-print(my_dict)  # {'A': 'aa', 'B': 'bb', 'C': 'cc'}
+my_display = {k: my_dict[k] * 2 for k in my_dict}
+print(my_display)  # {'A': 'aa', 'B': 'bb', 'C': 'cc'}
+
+my_display = {_item: my_dict[_item] for _item in my_dict}
+print(my_display)
