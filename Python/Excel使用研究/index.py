@@ -10,10 +10,10 @@ import datetime
 
 import xlwings
 from BasicLibrary import ObjectHelper
-from xlwings import Sheet
-from _projectHelper import ProjectHelper
-from BasicLibrary.data.stringHelper import StringHelper
 from BasicLibrary.io.pathHelper import PathHelper
+from xlwings import Sheet
+
+from _projectHelper import ProjectHelper
 
 
 def operate_excel():

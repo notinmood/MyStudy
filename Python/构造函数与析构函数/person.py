@@ -22,9 +22,33 @@ class Person:
         """
         print('我走了')
 
-    def eat(self):
+    def __enter__(self):
+        """
+
+        :return:
+        """
+        print('__enter__里面')
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        """
+        :return:
+        """
+        print('__exit__里面')
+        self.__del__()
+
+
+    # noinspection PyMethodMayBeStatic
+    def eat(self) -> object:
+        """
+
+        :rtype: object
+        :return:
+        """
         print('吃饭')
+
+    pass
 
     @staticmethod
     def some_thing():
-        print("some ting")
+        print("some thing")
