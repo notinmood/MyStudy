@@ -6,10 +6,11 @@
  * @creator: ShanDong Xiedali
  * @company: HiLand & RainyTop
 """
-import pywencai
+
+from pywencai import get
 
 
 if __name__ == '__main__':
-    res = pywencai.get(query='人气排行榜前10名；涨停；行业', loop=True)
+    res = get(query='人气排行榜前10名；涨停；行业', loop=True)
     print(res)
 pass
