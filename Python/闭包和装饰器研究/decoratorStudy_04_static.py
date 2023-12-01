@@ -11,11 +11,12 @@ class XiaoMing:
 
 
 if __name__ == '__main__':
+    # 1. 静态方法即可以在类型上调用
     XiaoMing.say_hello()
-    # 实例化调用也是同样的效果
-    # 有点多此一举
+    # 2. 也可以在实例上调用。都是同样的效果。
     xm = XiaoMing()
     xm.say_hello()
+
 
 # output----
 # 同学你好

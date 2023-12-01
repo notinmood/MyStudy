@@ -18,7 +18,7 @@ class XiaoMing:
 
 if __name__ == '__main__':
     xm = XiaoMing()
-    # 对一个方法使用了 @property装饰器，就可以直接用属性的方式调用了，而不用安装方法的方式（最后要加一个括号）
+    # 对一个方法使用了 @property装饰器，就可以直接用属性的方式调用了，而不用按照方法的方式使用（最后要加一个括号这种方法调用的方式）
     print(xm.full_name)
     # 传统方法的调用，最后要加一个括号
     print(xm.get_full_name())
