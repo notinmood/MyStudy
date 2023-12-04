@@ -10,7 +10,6 @@
 from BasicLibrary.data.listHelper import ListHelper
 from BasicLibrary.data.stringHelper import StringHelper
 
-
 my_list = []
 
 # +--------------------------------------------------------------------------
@@ -23,5 +22,4 @@ my_list = []
 # print(item0)
 
 
-print ('something')
-
+print('something')

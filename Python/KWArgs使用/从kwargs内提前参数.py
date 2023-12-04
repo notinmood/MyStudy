@@ -20,6 +20,12 @@ def get_data(**kwargs):
     print("获取到的信息为：")
 
     print(retry)
+    print(cookie)
+    print(sleep)
+    print(question)
+    print(log)
+    print(query_type)
+    print(request_params)
 
 
 pass

@@ -7,11 +7,9 @@
  * @company: HiLand & RainyTop
 """
 
-
 if __name__ == '__main__':
-
     # 1. list 列表内元素是有序排放的
-    my_list =[_item for _item in "qingdao city"]
+    my_list = [_item for _item in "qingdao city"]
     print(my_list)  # ["q", "i", "n", "g", "d", "a", "o", " ", "c", "i", "t", "y"]
 
     # 2. set 集合内元素是无序排放的

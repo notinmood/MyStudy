@@ -7,7 +7,7 @@
  * @company: HiLand & RainyTop
 """
 
-from CollectionStudy.StudentClass import *
+from CollectionStudy.studentClass import StudentClass
 
 
 if __name__ == '__main__':

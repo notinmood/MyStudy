@@ -12,6 +12,10 @@ from BasicLibrary.data.stringHelper import StringHelper
 # |::::说明::::| Python里面有个很棒的语法糖（syntactic sugar），它就是 list comprehension，
 # 有人把它翻译成“列表推导式”，也有人翻译成“列表解析式”。名字听上去很难理解，但是看它的语法就很清晰了。
 # 虽然名字叫做 list comprehension，但是这个语法同样适用于dict、set等这一系列可迭代（iterable）数据结构。
+#  列表推导式（list comprehension）是一种快速生成列表的语法，它以非常简洁的代码实现列表的创建，大体步骤如下：
+#  1. 创建一个集合（比如range(10)）
+#  2. 使用for in 遍历这个集合，每次返回一个元素（比如x）
+#  3. 将返回的元素（比如x）或进行处理后的元素（比如x*2）置入一个 [] 列表中，这就形成了 list 推导式。
 # +--------------------------------------------------------------------------
 """
 1. list 列表推导式
