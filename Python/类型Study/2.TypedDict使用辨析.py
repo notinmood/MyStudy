@@ -29,7 +29,7 @@ if __name__ == '__main__':
     User = TypedDict('User', {"name": str, "age": int, "sex": str})
     print(User)
 
-    # 使用强类型字典的时候，可以直接使用key引用，不需要字符串形式
+    # 使用强类型字典创建完成类型的时候，可以直接使用key引用，不需要字符串形式
     User.name = 'shandong'
     User.age = 25
     User.sex = 'male'
@@ -38,15 +38,14 @@ if __name__ == '__main__':
     print(User.age)
 
     print("──mm───────────────────────────────────")
+    # 以下代码会在静态检测的时候，出现警告；但运行时不会出错。
     mm = User(name='shandong', age=25, sex2='male')
     print(mm)
 
+    # 以下代码会在静态检测的时候，出现警告；但运行时不会出错。
     ww = User()
     print(ww)
 
-    # zhangsan = user(name='zhangsan', age=25, sex='male')
-    # zhangsan.sex = 'female'
-    # print(zhangsan)
     print("──分割线───────────────────────────────────")
     lisi: User = {'name': 'lisi', 'age': 25, 'sex': 'male'}
     print(lisi)
@@ -54,12 +53,18 @@ if __name__ == '__main__':
     # print(lisi.name)
     print("──分割线───────────────────────────────────")
     print(MyUser)
+    # 以下代码会在静态检测的时候，出现警告；但运行时不会出错。
     wangwu: MyUser = {'name': 'wangwu', 'age': 25, 'sex4': 'male'}
     print(wangwu)
 
     # print(MyUser.name)
     print("──分割线───────────────────────────────────")
     zhao = MyUser(**{"name": "zhaoliu", "age": 25, "sex": "male"})
-    # zhao.name = 'zhao'
+
+    print(zhao)
+
+    # # 以下代码会在运行时报错。因为 TypedDict 创建的不是强类型对象，不具有命名属性
+    # print(zhao.name)
+    # print(zhao.age)
 
     pass

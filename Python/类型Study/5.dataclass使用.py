@@ -8,6 +8,10 @@
 """
 from dataclasses import dataclass, field
 
+"""
+▌参考资料：https://blog.csdn.net/xq151750111/article/details/127072870?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0-127072870-blog-119545119.235^v39^pc_relevant_3m_sort_dl_base2&spm=1001.2101.3001.4242.1&utm_relevant_index=3
+"""
+
 
 # 使用@dataclass定义的数据类
 @dataclass
@@ -31,7 +35,7 @@ class Animal(object):
 pass
 
 if __name__ == '__main__':
-    p = Person('ShanDong', 23, 'A')
+    p = Person('ShanDong', 'A', 23)
     print(p)
     print(p.name)
     print(p.age)
@@ -46,5 +50,5 @@ if __name__ == '__main__':
     print(Person.age)
 
     print(Animal.name)
-    # 如果在定义的时候没有初始化，则不能访问
+    # # 如果在定义的时候没有初始化，则不能访问
     # print(Animal.age)
