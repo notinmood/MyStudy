@@ -16,9 +16,9 @@ from pprint import pprint
  而pprint()采用分行打印输出，所以对于数据结构比较复杂、数据长度较长的数据，
  适合采用pprint()打印方式。当然，一般情况多数采用print()。
 """
-
-data = ("test", [1, 2, 3, 'test', 4, 5], "This is a string!",
-        {'age': 23, 'gender': 'F'})
-print(data)
-print("════════════════════════")
-pprint(data)
+if __name__ == '__main__':
+    data = ("test", [1, 2, 3, 'test', 4, 5], "This is a string!",
+            {'age': 23, 'gender': 'F'})
+    print(data)
+    print("════════════════════════")
+    pprint(data)
