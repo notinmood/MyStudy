@@ -10,7 +10,7 @@ from BasicLibrary.data.stringHelper import StringHelper
 
 
 class PsUtil(object):
-    layer_path_seperator = "/"
+    layer_path_seperator = "//"
 
     @classmethod
     def find_layer(cls, layers, layer_code):
@@ -18,7 +18,7 @@ class PsUtil(object):
         根据图层名称遍历（包括嵌套图层）各图层查找目标图层
         :param layers:
         :param layer_code:图层的名字name（字符串）或者图层的索引号index（数字），
-                           1. 如果为字符串，可以包含图层路径，如：layer1/layer2/layer3；也可以是仅仅图层的名字（系统会自动迭代查找）。
+                           1. 如果为字符串，可以包含用双斜线分割的图层路径，如：layer1//layer2//layer3；也可以是仅仅图层的名字（系统会自动迭代查找）。
                            2. 如果为数字，则表示图层的索引号，从0开始。
         :return:
         """

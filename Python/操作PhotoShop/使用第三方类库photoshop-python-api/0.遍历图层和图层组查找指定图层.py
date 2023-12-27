@@ -21,33 +21,34 @@ if __name__ == '__main__':
 
     _layers = doc.layers
     # 1. 按照图层索引查找指定的图层
-    _found_layer = PsUtil.find_layer(_layers, 0)
+    _layer_code = 0
+    _found_layer = PsUtil.find_layer(_layers, _layer_code)
 
     if _found_layer:
         print(f"找到指定图层: {_found_layer.name}")
     else:
-        print(f"未找到指定图层: {_layer_name}")
+        print(f"未找到指定图层: {_layer_code}")
     pass
 
     # 2. 按照给定的图层名称查找指定的图层（系统会自动遍历各个图层组，查找到第一个符合条件名称的图层）
-    _layer_name = '图层 6'  # 替换为你要查找的图层名称
-    _found_layer = PsUtil.find_layer(_layers, _layer_name)
+    _layer_code = '图层 6'  # 替换为你要查找的图层名称
+    _found_layer = PsUtil.find_layer(_layers, _layer_code)
 
     if _found_layer:
         print(f"找到指定图层: {_found_layer.name}")
     else:
-        print(f"未找到指定图层: {_layer_name}")
+        print(f"未找到指定图层: {_layer_code}")
     pass
 
     # 3. 按照给定的图层名称路径查找指定的图层
-    _layer_name = 'MyGroup1/图层 5'
-    _found_layer = PsUtil.find_layer(_layers, _layer_name)
+    _layer_code = 'MyGroup1//图层 5'
+    _found_layer = PsUtil.find_layer(_layers, _layer_code)
 
     if _found_layer:
         print(f"找到指定图层: {_found_layer.name}")
     else:
-        print(f"未找到指定图层: {_layer_name}")
+        print(f"未找到指定图层: {_layer_code}")
     pass
 
     # 关闭图片文件
-    # doc.close()
+    doc.close()
