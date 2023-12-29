@@ -37,7 +37,6 @@ class Person:
         print('__exit__里面')
         self.__del__()
 
-
     # noinspection PyMethodMayBeStatic
     def eat(self) -> object:
         """
