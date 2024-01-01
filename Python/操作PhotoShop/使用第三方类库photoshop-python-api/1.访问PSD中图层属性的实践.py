@@ -36,7 +36,7 @@ if __name__ == '__main__':
 
     # 获取所有图层
     layers = doc.layers
-
+    # 获取第一个图层
     layer = layers[0]
 
     print('layer.name:', layer.name)
