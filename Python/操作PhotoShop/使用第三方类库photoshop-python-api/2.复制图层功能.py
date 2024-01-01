@@ -25,8 +25,23 @@ if __name__ == '__main__':
         doc = app.open(res_full_name)
 
         my_layer = PhotoShopHelper.find_layer(doc.layers, "落款")
-        new_layer = my_layer.duplicate()
-        new_layer.name = "落款-百度"
+
+        if my_layer:
+            my_layer.visible = False
+
+            new_layer = my_layer.duplicate()
+            new_layer.visible = True
+            new_layer.name = "落款-百度"
+
+            wechat_layer = PhotoShopHelper.find_layer(new_layer.layers,"公众号：文句之美 拷贝")
+            if wechat_layer:
+                wechat_layer.visible = True
+
+                # 同时设置图层的name和textItem.contents可以使二者分别展示不同信息
+                wechat_layer.name = ">公众号：文句之美"
+                wechat_layer.textItem.contents = ">>百家号：故事里的人生智慧"
+            pass
+        pass
 
         # # 暂时不关闭，开发人员可以直接查看是否复制图层成功
         # doc.close()
