@@ -1,5 +1,3 @@
-from builtins import *
-
 
 def create_generator():
     _list = range(3)
