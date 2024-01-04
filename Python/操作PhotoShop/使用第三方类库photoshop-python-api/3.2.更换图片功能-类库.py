@@ -10,7 +10,7 @@ from BasicLibrary.biz.adobe.photoShopHelper import PhotoShopHelper
 from BasicLibrary.io.fileShadowUsing import FileShadowUsing
 from BasicLibrary.io.pathHelper import PathHelper
 from BasicLibrary.projectHelper import ProjectHelper
-
+from photoshop import Session
 
 if __name__ == '__main__':
     project_root = ProjectHelper.get_root_physical_path()
@@ -19,5 +19,11 @@ if __name__ == '__main__':
     new_pic_full_name = PathHelper.combine(project_root, local_path, "red_100x200.png")
 
     with FileShadowUsing(psd_file_full_name) as shadow_file_full_name:
-        PhotoShopHelper.replace_image(shadow_file_full_name, "green_130x260", new_pic_full_name,False)
+        with Session(shadow_file_full_name, action="open") as ps:
+            app = ps.app
+            doc = ps.app.activeDocument
+
+            PhotoShopHelper.replace_image(app, doc, "green_130x260", new_pic_full_name)
+        pass
+
     pass

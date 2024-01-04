@@ -24,7 +24,7 @@ if __name__ == '__main__':
         # 打开指定的图片文件
         doc = app.open(res_full_name)
 
-        my_layer = PhotoShopHelper.find_layer(doc.layers, "落款")
+        my_layer = PhotoShopHelper.find_layer(doc, "签名1")
 
         if my_layer:
             my_layer.visible = False
@@ -33,7 +33,7 @@ if __name__ == '__main__':
             new_layer.visible = True
             new_layer.name = "落款-百度"
 
-            wechat_layer = PhotoShopHelper.find_layer(new_layer.layers, "公众号：文句之美 拷贝")
+            wechat_layer = PhotoShopHelper.find_layer(doc, "公众号：文句之美 拷贝")
             if wechat_layer:
                 wechat_layer.visible = True
 

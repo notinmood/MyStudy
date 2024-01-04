@@ -6,6 +6,7 @@
  * @creator: ShanDong Xiedali
  * @company: HiLand & RainyTop
 """
+from BasicLibrary.biz.adobe.photoShopHelper import PhotoShopHelper
 from BasicLibrary.io.fileShadowUsing import FileShadowUsing
 from BasicLibrary.io.pathHelper import PathHelper
 from photoshop import Session
@@ -26,7 +27,7 @@ if __name__ == '__main__':
             layers = doc.layers
 
             print("1. 给普通图层锁定位置")
-            my_layer = PsUtil.find_layer(layers, 0)
+            my_layer = PhotoShopHelper.find_layer(doc, 0)
             PsUtil.display_layer_property(my_layer)
             my_layer.positionLocked = True
             PsUtil.display_layer_property(my_layer)
@@ -34,7 +35,7 @@ if __name__ == '__main__':
             print("──分割线───────────────────────────────────")
 
             print("2. 展示给锁定位置的图层解锁")
-            my_layer = PsUtil.find_layer(layers, "签名1//公众号：文句之美")
+            my_layer = PhotoShopHelper.find_layer(doc, "签名1//公众号：文句之美")
             PsUtil.display_layer_property(my_layer)
             my_layer.positionLocked = False
             PsUtil.display_layer_property(my_layer)
@@ -42,7 +43,7 @@ if __name__ == '__main__':
             print("──分割线───────────────────────────────────")
 
             print("3. 展示给锁定像素的图层解锁")
-            my_layer = PsUtil.find_layer(layers, "签名1//getqrcode-文句之美-灰色")
+            my_layer = PhotoShopHelper.find_layer(doc, "签名1//getqrcode-文句之美-灰色")
             PsUtil.display_layer_property(my_layer)
             my_layer.pixelsLocked = False
             PsUtil.display_layer_property(my_layer)
@@ -55,7 +56,7 @@ if __name__ == '__main__':
             # ---------------------------------------------------------------------------
             # 可以发现，通过父图层锁定子图层后，仅仅在子图层上执行解锁操作是无效的。
             # +--------------------------------------------------------------------------
-            my_layer = PsUtil.find_layer(layers, "签名2//公众号：文句之美")
+            my_layer = PhotoShopHelper.find_layer(doc, "签名2//公众号：文句之美")
             PsUtil.display_layer_property(my_layer)
             my_layer.positionLocked = False
             PsUtil.display_layer_property(my_layer)
@@ -63,9 +64,9 @@ if __name__ == '__main__':
             print("──分割线───────────────────────────────────")
 
             print("5. 展示展示被父图层锁定的子图层的循环解锁")
-            my_layer = PsUtil.find_layer(layers, "签名2//公众号：文句之美")
+            my_layer = PhotoShopHelper.find_layer(doc, "签名2//公众号：文句之美")
             PsUtil.display_layer_property(my_layer)
-            PsUtil.release_lock(layers, "签名2//公众号：文句之美")
+            PhotoShopHelper.unlock(doc, "签名2//公众号：文句之美")
             PsUtil.display_layer_property(my_layer)
 
         pass

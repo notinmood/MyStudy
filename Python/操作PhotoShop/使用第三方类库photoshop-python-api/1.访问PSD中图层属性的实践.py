@@ -11,6 +11,7 @@ from BasicLibrary.data.randomHelper import RandomHelper
 from BasicLibrary.enums import RandomEnum
 from BasicLibrary.io.fileHelper import FileHelper
 from BasicLibrary.io.pathHelper import PathHelper
+from BasicLibrary.biz.adobe.photoShopHelper import PhotoShopHelper
 
 from _utils.psUtil import PsUtil
 
@@ -47,29 +48,29 @@ if __name__ == '__main__':
 
     # 2. 展示锁定位置的图层属性
     print("2. 展示锁定位置的图层属性")
-    my_layer = PsUtil.find_layer(layers, "签名1//公众号：文句之美")
+    my_layer = PhotoShopHelper.find_layer(doc, "签名1//公众号：文句之美")
     PsUtil.display_layer_property(my_layer)
 
     # 3. 展示锁定像素的图层属性信息
     print("3. 展示锁定像素的图层属性信息")
-    my_layer = PsUtil.find_layer(layers, "签名1//getqrcode-文句之美-灰色")
+    my_layer = PhotoShopHelper.find_layer(doc, "签名1//getqrcode-文句之美-灰色")
     PsUtil.display_layer_property(my_layer)
 
     # 4. 展示被父图层全锁定的子图层的各种锁定属性
     print("4. 展示被父图层全锁定的子图层的各种锁定属性")
-    my_layer = PsUtil.find_layer(layers, "签名2//公众号：文句之美")
+    my_layer = PhotoShopHelper.find_layer(doc, "签名2//公众号：文句之美")
     PsUtil.display_layer_property(my_layer)
 
     # 5. 展示既有自己锁定位置， 又有被父图层全锁定的子图层的各种锁定属性信息
     print("5. 展示既有自己锁定位置， 又有被父图层全锁定的子图层的各种锁定属性信息")
-    my_layer = PsUtil.find_layer(layers, "签名3//公众号：文句之美")
+    my_layer = PhotoShopHelper.find_layer(doc, "签名3//公众号：文句之美")
     PsUtil.display_layer_property(my_layer)
 
     # 查找被嵌套的图层
     print("──分割线───────────────────────────────────")
     print("查找被嵌套的图层")
     _layer_name = '/2028/10/11/'
-    layer_nested = PsUtil.find_layer(layers, _layer_name)
+    layer_nested = PhotoShopHelper.find_layer(doc, _layer_name)
     if layer_nested is None:
         print('未找到图层')
     else:

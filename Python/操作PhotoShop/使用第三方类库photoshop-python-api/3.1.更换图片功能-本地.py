@@ -21,7 +21,7 @@ if __name__ == '__main__':
     with FileShadowUsing(psd_file_full_name) as _res:
         with Session(_res, action="open") as ps:
             # 查找并设置活动图层
-            target_layer = PhotoShopHelper.find_layer(ps.active_document.layers, "green_130x260")
+            target_layer = PhotoShopHelper.find_layer(ps.active_document, "green_130x260")
             ps.active_document.activeLayer = target_layer
 
             active_layer = ps.active_document.activeLayer
