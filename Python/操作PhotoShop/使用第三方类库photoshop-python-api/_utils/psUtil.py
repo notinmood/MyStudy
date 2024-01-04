@@ -122,5 +122,65 @@ class PsUtil(object):
 
     pass
 
+    @classmethod
+    def release_lock(cls, layers, layer_code, layer_path_seperator="//"):
+        layer_matched = cls.find_layer(layers, layer_code, layer_path_seperator)
+
+        def release_lock_recursive(layer):
+            if layer:
+                try:
+                    layer.positionLocked = False
+                except:
+                    pass
+                pass
+
+                try:
+                    layer.pixelsLocked = False
+                except:
+                    pass
+                pass
+
+                try:
+                    layer.transparentPixelsLocked = False
+                except:
+                    pass
+                pass
+
+                try:
+                    layer.allLocked = False
+                except:
+                    pass
+                pass
+            pass
+
+            try:
+                if layer.parent:
+                    release_lock_recursive(layer.parent)
+                pass
+            except:
+                pass
+            pass
+
+        pass
+
+        release_lock_recursive(layer_matched)
+
+    pass
+
+    @classmethod
+    def display_layer_property(cls, layer):
+        if layer:
+            print('layer.name:', layer.name)
+            print('layer.visible:', layer.visible)
+            print('layer.isBackgroundLayer:', layer.isBackgroundLayer)
+            print('layer.positionLocked:', layer.positionLocked)
+            print('layer.pixelsLocked:', layer.pixelsLocked)
+            print('layer.transparentPixelsLocked:', layer.transparentPixelsLocked)
+            print('layer.allLocked:', layer.allLocked)
+        else:
+            print('layer is None')
+
+    pass
+
 
 pass
