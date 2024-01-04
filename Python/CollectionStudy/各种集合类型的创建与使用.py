@@ -33,3 +33,13 @@ my_tuple = (1, 2)
 print(my_tuple)
 # 以下方法不存在
 # my_tuple.add(1)
+
+my_dict["a"] = "a"
+my_dict[0] = "33"
+my_dict["wps"] = "金山"
+my_dict["office"] = "微软"
+
+# 新版的Python对dict进行了改进，他内部是有序的：各个item按照置入的顺序前后排列
+print(my_dict)
+## --output---------------------------
+# {1: 1, 2: 2, 'a': 'a', 0: '33', 'wps': '金山', 'office': '微软'}

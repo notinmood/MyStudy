@@ -6,8 +6,21 @@
  * @creator: ShanDong Xiedali
  * @company: HiLand & RainyTop
 """
-from BasicLibrary.data.stringHelper import StringHelper
+from os import PathLike
 
+from BasicLibrary.data.stringHelper import StringHelper
+from BasicLibrary.io.fileHelper import FileHelper
+from photoshop import Session
+from photoshop.api import ActionDescriptor
+
+
+# +--------------------------------------------------------------------------
+# |::::TIPS::::| 本代码的使用说明
+# ---------------------------------------------------------------------------
+# 1. 本代码是Photoshop脚本开发的基础代码，可以用于快速开发Photoshop脚本
+# 2. 代码中包含了一些常用的函数和类，可以用于处理Photoshop脚本开发中的常见问题
+# 3. 本文件中经过验证的功能，要迁移至`BasicLibrary.PY`中，为其他项目共用
+# +--------------------------------------------------------------------------
 
 class PsUtil(object):
     @classmethod
@@ -50,6 +63,8 @@ class PsUtil(object):
 
         return None
 
+    pass
+
     @classmethod
     def __find_layer_by_path(cls, layers, layer_path, layer_path_seperator="//"):
         def find_layer_recursive(_layers, path):
@@ -66,6 +81,44 @@ class PsUtil(object):
             return None
 
         return find_layer_recursive(layers, layer_path.split(layer_path_seperator))
+
+    pass
+
+    @classmethod
+    def replace_image(cls, psd_full_name: PathLike, layer_code: str, new_image_full_name: PathLike,
+                      is_auto_close: bool = True):
+        if not FileHelper.is_file(new_image_full_name):
+            return
+        pass
+
+        if not FileHelper.is_file(psd_full_name):
+            return
+        pass
+
+        with Session(psd_full_name, action="open") as ps:
+            app = ps.app
+            document = ps.active_document
+
+            # 查找并设置活动图层
+            layer_matched = cls.find_layer(document.layers, layer_code)
+            if not layer_matched:
+                return
+            pass
+
+            document.activeLayer = layer_matched
+            replace_contents = app.stringIDToTypeID("placedLayerReplaceContents")
+            id_null = app.charIDToTypeID("null")
+            action_descriptor = ActionDescriptor()
+            action_descriptor.putPath(id_null, new_image_full_name)
+            app.executeAction(replace_contents, action_descriptor)
+
+            document.save()
+
+            if is_auto_close:
+                document.close()
+                ps.close()
+            pass
+        pass
 
     pass
 

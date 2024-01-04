@@ -1,5 +1,7 @@
-from playwright.sync_api import Playwright, sync_playwright, expect
 import subprocess
+
+from playwright.sync_api import Playwright, sync_playwright
+
 
 # TODO:xiedali@2024/01/02 本case仍然有问题，需要进一步fix
 

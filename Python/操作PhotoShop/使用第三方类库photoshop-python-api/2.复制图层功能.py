@@ -33,7 +33,7 @@ if __name__ == '__main__':
             new_layer.visible = True
             new_layer.name = "落款-百度"
 
-            wechat_layer = PhotoShopHelper.find_layer(new_layer.layers,"公众号：文句之美 拷贝")
+            wechat_layer = PhotoShopHelper.find_layer(new_layer.layers, "公众号：文句之美 拷贝")
             if wechat_layer:
                 wechat_layer.visible = True
 

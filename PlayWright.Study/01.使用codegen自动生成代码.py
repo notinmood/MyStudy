@@ -10,7 +10,7 @@ from playwright.sync_api import Playwright, sync_playwright, expect
 
 """
 操作方法：
-1. 在windows命令行，输入代码`codegen`,系统会自动启动对浏览器操作动作转代码的工作。
+1. 在windows命令行，输入代码`playwright codegen`,系统会自动启动对浏览器操作动作转代码的工作。
 2. 此时，系统会自动打开新浏览器，我们在新浏览器的各种操作，pw会自动生成代码。
 3. 将生成的代码复制到当前文件，就可以运行复现刚才的手工操作过程。
 """
