@@ -8,18 +8,14 @@
 """
 
 from BasicLibrary.data.listHelper import ListHelper
-from BasicLibrary.data.stringHelper import StringHelper
 
 my_list = []
 
-# +--------------------------------------------------------------------------
-# |::说明·| 使用[]的方式进行索引读取的时候，指定的元素不存在就会抛出异常
-# +--------------------------------------------------------------------------
-
+# 1. 使用[]的方式进行索引读取的时候，指定的元素不存在就会抛出异常
 # print(my_list[0])
-
 # item0 = my_list.__getitem__(0)
 # print(item0)
 
-
-print('something')
+# 2. 使用ListHelper.get()方法进行索引读取的时候，指定的元素不存在就会返回None
+item0 = ListHelper.get(my_list, 0)
+print(item0)

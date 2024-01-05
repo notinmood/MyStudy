@@ -14,5 +14,7 @@ class MyClass(object):
 
     """
 
+    # 以下是为了消除ide的警告而做的cheating
+    # noinspection all
     def say_hello(self):
         print('in myClass say hello')

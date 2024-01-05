@@ -19,3 +19,6 @@ if __name__ == '__main__':
     if result:
         print(result["ROOT_URL"])
         # print(result["aaa"])
+    pass
+
+
