@@ -11,6 +11,12 @@ from BasicLibrary.data.dateTimeHelper import DateTimeHelper
 
 from _utils.locatorHelper import LocatorHelper
 
+# +--------------------------------------------------------------------------
+# |::::TIPS::::| 说明
+# ---------------------------------------------------------------------------
+# 使用Playwright的debug模式启动浏览器，并连接到已经手动打开的浏览器。具体步骤请参看“02a.调用本地浏览器-半自动”
+# +--------------------------------------------------------------------------
+
 
 def run(playwright: Playwright) -> None:
     # 启动浏览器的debug模式
@@ -33,20 +39,13 @@ def run(playwright: Playwright) -> None:
     page_publishing.keyboard.type("\n我们是中国人的自豪！")
     page_publishing.keyboard.type(f"\n - 山东解大劦@{DateTimeHelper.get_string()}")
 
-    # 上传图片
-    page_publishing.locator('#edui33_body > div.edui-box.edui-icon.edui-default').click()
-    element_upload = page_publishing.locator('div.uploader-inner div')
-    # element_upload.click()
+    # 上传第1幅图片
     my_image_file_full_name = r'Z:\BD素材同步\BillFish素材库\RMRB.人民日报\00.Published\202312\百度文史\20231201\00.人民日报-金句文摘1080-810.Cover.jpg'
+    upload_image(page_publishing, my_image_file_full_name)
 
-    # element_upload.set_input_files(my_image_file_full_name)
-
-    with page_publishing.expect_file_chooser() as fc_info:
-        element_upload.click()
-        file_chooser = fc_info.value
-        file_chooser.set_files(my_image_file_full_name)
-
-    page_publishing.locator('.cheetah-modal-footer button:nth-child(2)').click()
+    # 上传第2幅图片
+    my_image_file_full_name = r'Z:\BD素材同步\BillFish素材库\RMRB.人民日报\00.Published\202312\百度文史\20231201\7ba503dca7264256ac4d5b896af11e48~tplv-tt-origin-asy25aS05p2hQOS4jeiusuS5kOW3suadjg==.image.jpg'
+    upload_image(page_publishing, my_image_file_full_name)
 
     # 保存草稿
     my_locator = page_publishing.locator('div.editor-component-operator div:nth-child(5) button')
@@ -64,6 +63,23 @@ def run(playwright: Playwright) -> None:
     # # 关闭浏览器
     # context.close()
     # browser.close()
+
+
+def upload_image(page_using, image_full_name):
+    # 上传图片
+    page_using.locator('#edui33_body > div.edui-box.edui-icon.edui-default').click()
+    element_upload = page_using.locator('div.uploader-inner div')
+    my_image_file_full_name = image_full_name
+
+    with page_using.expect_file_chooser() as fc_info:
+        element_upload.click()
+        file_chooser = fc_info.value
+        file_chooser.set_files(my_image_file_full_name)
+    pass
+    # 在上传图片的弹出窗口，点击“确定”，将百家号会将图片插入到编辑器中
+    page_using.wait_for_selector('div.image-wrapper')
+    page_using.locator('.cheetah-modal-footer button:nth-child(2)').click()
+    page_using.keyboard.press("Enter")
 
 
 if __name__ == '__main__':
