@@ -7,5 +7,6 @@
  * @company: HiLand & RainyTop
 """
 
-# TODO:xiedali@2023/12/11
+# TODO:xiedali@2023/12/11 添加 filter、map和functools中reduce函数的研究
+
 
