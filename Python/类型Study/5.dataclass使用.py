@@ -17,7 +17,7 @@ from dataclasses import dataclass, field
 @dataclass
 class Person(object):
     # 这种定义方式实际上是为类型定义了静态属性，
-    # 然后通过装饰器@dataclass对其进行了“二次加工”，使其成为了对象的实例属性
+    # 然后装饰器@dataclass自动对其进行了“二次加工”，使其成为了对象的实例属性
     name: str
     grade: str
     age: int = field(default=18)
@@ -35,7 +35,8 @@ class Animal(object):
 pass
 
 if __name__ == '__main__':
-    p = Person('ShanDong', 'A', 23)
+    p = Person('ShanDong', 'A', 23)  # 定义方法A
+    p = Person(name='ShanDong', grade='A', age=23)  # 定义方法B
     print(p)
     print(p.name)
     print(p.age)
