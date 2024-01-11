@@ -16,13 +16,13 @@ from BasicLibrary.projectHelper import ProjectHelper
 from UmiOCR使用.returnResult import ReturnResult
 
 
-def ocr_image(image_full_name: str) -> str:
+def ocr_image(image_file_full_name: str) -> str:
     """
     调用本地Umi-ORC软件的API接口
-    :param image_full_name:
+    :param image_file_full_name:
     :return:
     """
-    with open(image_full_name, "rb") as image_file:
+    with open(image_file_full_name, "rb") as image_file:
         image_data = base64.b64encode(image_file.read()).decode('utf-8')
     pass
 

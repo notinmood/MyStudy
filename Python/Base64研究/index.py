@@ -13,9 +13,13 @@ from BasicLibrary.projectHelper import ProjectHelper
 
 if __name__ == '__main__':
     print(base64.b64encode(b'binary\x00string'))
+    # 以下是为了消除ide的警告而做的cheating
+    # noinspection all
     print(base64.b64decode(b'YmluZ3M='))
     print(base64.urlsafe_b64encode(b'i\xb7\x1d\xfb\xac\x42\xd5\x02\xb1\x80\x09'))
     print(base64.urlsafe_b64decode('abcd--__'))
+    # 以下是为了消除ide的警告而做的cheating
+    # noinspection all
     # base64.b64encode(b'binary\x00string')
 
     print("──分割线───────────────────────────────────")
