@@ -23,7 +23,6 @@ if __name__ == '__main__':
             doc = ps.app.activeDocument
 
             my_layer = PhotoShopHelper.find_layer(doc, "TextDemo")
-            # my_layer = doc.layers[1]
             my_layer.textItem.size = 30
         pass
 
