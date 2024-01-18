@@ -33,25 +33,10 @@ def outer_func_wrapper(fn):
 
 pass
 
-# # 带参数的装饰器
-# def outer_func_with_args(arg1, arg2):
-#     def inner_func_with_args(fn):
-#         print(f"我是outer内的逻辑{arg1},{arg2}")
-#
-#         def wrapper(*args, **kwargs):
-#             return fn(*args, **kwargs)
-#
-#         return wrapper
-#
-#     return inner_func_with_args
-#
-#
-# pass
-
-
 if __name__ == '__main__':
     foo = outer_func_wrapper(inner_func)
     foo(5, 7)
 
+    #  直接返回内部函数的方式更好，其参数的性质没有改变
     bar = outer_func_directly(inner_func)
-    bar(6, 9)
+    bar(a=5, b=9)

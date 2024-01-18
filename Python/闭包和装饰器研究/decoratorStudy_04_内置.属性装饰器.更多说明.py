@@ -28,5 +28,10 @@ if __name__ == '__main__':
     print('以下展示的是通过__init__内初始化的属性')
     print(pd.name)
     print(pd.sex)
-    print('以下展示的是通过@property装饰器初始化的属性')
+
+    print('以下展示的是通过@property装饰器访问属性的值')
+    print(pd.my_name)
+
+    print('以下展示的是通过@property.setter装饰器设置属性的值')
+    pd.my_name = '李四'
     print(pd.my_name)

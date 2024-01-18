@@ -7,16 +7,13 @@
  * @company: HiLand & RainyTop
 """
 from dataclasses import dataclass
-from typing import TypeVar
-
-T = TypeVar("T")
 
 
 @dataclass
-class ReturnResult(object):
+class ReturnResult[T](object):
     """
     返回结果
     """
     status: bool = True
     message: str = ""
-    data: str = ""
+    data: T = None
