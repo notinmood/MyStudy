@@ -34,9 +34,10 @@ def outer_func_wrapper(fn):
 pass
 
 if __name__ == '__main__':
-    foo = outer_func_wrapper(inner_func)
-    foo(5, 7)
-
     #  直接返回内部函数的方式更好，其参数的性质没有改变
     bar = outer_func_directly(inner_func)
     bar(a=5, b=9)
+
+    #  包装内部函数的方式，其参数的性质发生了改变
+    foo = outer_func_wrapper(inner_func)
+    foo(5, 7)
