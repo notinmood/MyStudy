@@ -13,7 +13,9 @@
 <button>4</button>
 <button>5</button>
 <script>
+    /* eslint-disable */
     var buttons = document.getElementsByTagName("button");
+    /* eslint-enable */
     for (var i = 0; i < buttons.length; i++) {
         // 因为给普通属性赋值是同步的动作，所以给每个按钮添加一个普通的index属性,
         // 这样index中就可以获取到正确的i值了。

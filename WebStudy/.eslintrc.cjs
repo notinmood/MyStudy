@@ -7,7 +7,8 @@ module.exports = {
     "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:vue/vue3-essential"
+        "plugin:vue/vue3-essential",
+        "plugin:prettier/recommended"
     ],
     "overrides": [
         {
@@ -31,6 +32,10 @@ module.exports = {
         "@typescript-eslint",
         "vue"
     ],
-    "rules": {},
+    "rules": {
+        // 你的其他规则
+        "no-console": "off",
+        "no-var": "off"
+    },
     "ignorePatterns": ["node_modules/", "dist/", "JavaScript的异步事件/"],
 }
