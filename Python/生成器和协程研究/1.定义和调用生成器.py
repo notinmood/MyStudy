@@ -1,7 +1,13 @@
+"""
+生成器的研究与使用
+"""
 # 1. 生成器的标准定义方法
 def standard_generator():
-    _list = range(3)
-    for _i in _list:
+    """
+    生成器标准定义方法
+    :return:
+    """
+    for _i in range(3):
         yield _i * _i
     pass
 
@@ -14,6 +20,10 @@ def standard_generator():
 # 具体参见：文件“语言技巧/3.推导式研究.py”
 # +--------------------------------------------------------------------------
 def rappid_generator():
+    """
+    生成器快速定义方法
+    :return:
+    """
     return (_i * _i for _i in range(3))
 
 

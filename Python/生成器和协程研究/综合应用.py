@@ -1,4 +1,8 @@
-from builtins import *
+"""
+使用生成器来计算移动平均值的算法。该算法接受一个整数参数specimen_size，然后打印出specimen_size个值的移动平均值。
+该算法返回一个生成器对象，该生成器对象不断产生新的移动平均值。
+"""
+
 from collections import namedtuple
 
 Result = namedtuple('Result', 'count average')
@@ -6,11 +10,15 @@ Result = namedtuple('Result', 'count average')
 
 # 子生成器
 def averager():
+    """
+    子生成器，计算移动平均值
+    :return:
+    """
     total = 0.0
     count = 0
     average = None
     while True:
-        # main 函数发送数据到这里 
+        # main 函数发送数据到这里
         print("in averager, before yield")
         term = yield
         if term is None:  # 终止条件
@@ -25,6 +33,12 @@ def averager():
 
 # 委派生成器
 def grouper(results, key):
+    """
+    委派生成器，接受一个结果容器和键，生成键对应的平均值
+    :param results:
+    :param key:
+    :return:
+    """
     # 这个循环每次都会新建一个averager 实例，每个实例都是作为协程使用的生成器对象
     while True:
         print("in grouper, before yield from averager, key is ", key)
@@ -56,6 +70,11 @@ def main_func(data):
 
 # 输出报告
 def report(results):
+    """
+    生成报告
+    :param results:
+    :return:
+    """
     for key, result in sorted(results.items()):
         group, unit = key.split(';')
         print('{:2} {:5} averaging {:.2f}{}'.format(result.count, group, result.average, unit))
