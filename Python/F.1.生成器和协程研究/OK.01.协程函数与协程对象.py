@@ -8,6 +8,7 @@
 """
 import asyncio
 import types
+import typing
 
 
 # 1. 创建协程函数
@@ -26,3 +27,4 @@ if __name__ == '__main__':
     print(asyncio.iscoroutine(coro))  # True
 
     print(isinstance(coro, types.CoroutineType))  # True
+    print(isinstance(coro, typing.Coroutine))  # True
