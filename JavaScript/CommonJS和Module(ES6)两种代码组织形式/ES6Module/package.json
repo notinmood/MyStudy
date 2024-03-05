@@ -1,7 +1,0 @@
-{
-  "name"        : "ES6Module",
-  "version"     : "1.0.0",
-  "type"        : "module",
-  "dependencies": {
-  }
-}

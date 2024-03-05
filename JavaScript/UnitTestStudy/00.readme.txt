@@ -1,1 +1,0 @@
-因为JavaScript的加载分为commonjs和module(es6)两种，因此分开测试.

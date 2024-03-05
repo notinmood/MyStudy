@@ -1,3 +1,0 @@
-本目录下的js模块格式为CommonJS模式
-1、在package.json内的type="commonjs"
-2、每个文件导入其他模块的时候,使用的require方式
