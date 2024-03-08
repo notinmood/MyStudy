@@ -1,0 +1,22 @@
+[project]
+name = "smartmbti"
+version = "0.0.1"
+authors = [
+    { name = "山东解大劦", email = "9727005@qq.com" },
+] # 作者
+license = {file = "LICENSE"}
+description = "一个使用新项目结构的展示与学习项目" # 说明
+readme = "README.md" # pypi介绍内容会读取的readme文件
+requires-python = ">=3.9" # 依赖
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/A-Corner/Sanic-Admin" # 源连接
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
