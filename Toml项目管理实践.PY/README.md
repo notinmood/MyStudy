@@ -9,10 +9,10 @@
     python -m pip install --upgrade twine
     ```
 
-2. 打包
+2. 打包（使用build）
 
    `python -m build`
-3. 发布（使用twine等）
+3. 发布（使用twine）
 
     ```shell
     twine upload dist/*
@@ -23,7 +23,7 @@
 |参考：https://zhuanlan.zhihu.com/p/666166082#/
 
 ## 项目结构的推荐格式
-
+|使用Poetry项目管理工具的new命令可以自动生成次目录结构
 ```shell
 tree ./ ./ 
 ├── LICENSE 
@@ -39,15 +39,10 @@ tree ./ ./
 ## pyproject.toml的说明
 
 1. Python从PEP 518开始引入的使用pyproject.toml管理项目元数据的方案。
-
 2. 该方案已被大多数Python项目采用，并作为PEP 621的实现。
-
 3. pyproject.toml文件用于定义项目的元数据，例如依赖项、版本号等。
-
 4. 该文件应放置在项目的根目录下，并使用特定的语法和结构。
-
 5. 可以使用第三方工具或库（如pip、setuptools等）来解析和处理pyproject.toml文件。
-
 6. 该方案已被证明是管理Python项目的有效方式，并已成为标准。
 
 ### 示例：

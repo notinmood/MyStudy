@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "PoetryStudy.PY"
-version = "0.1.4"
+version = "0.1.5"
 description = ""
 authors = ["解大劦 <9727005@qq.com>"]
 readme = "README.md"
@@ -8,7 +8,7 @@ packages = [{ include = "PoetryStudy" }]
 
 [tool.poetry.dependencies]
 python = "^3.12"
-"BasicLibrary.PY" = "^0.5.39"
+"BasicLibrary.PY" = "^0.6.1"
 
 
 [tool.poetry.dev-dependencies]
