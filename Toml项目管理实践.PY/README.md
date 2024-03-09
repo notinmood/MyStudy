@@ -45,6 +45,8 @@ tree ./ ./
 5. 可以使用第三方工具或库（如pip、setuptools等）来解析和处理pyproject.toml文件。
 6. 该方案已被证明是管理Python项目的有效方式，并已成为标准。
 
+|参考：https://blog.csdn.net/ViniJack/article/details/134133414#/
+
 ### 示例：
 
 ```shell
