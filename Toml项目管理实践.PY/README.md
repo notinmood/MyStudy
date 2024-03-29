@@ -1,5 +1,5 @@
 # 说明：
-
+（后续添加的说明：项目管理推荐使用poetry调用pyproject.toml文件进行。本项目只是前期对toml的入门研究，不具有实际项目应用价值。）
 安装下面推荐的项目目录格式设置好之后，就可以编译和发布项目到pypi平台了。
 
 1. 安装构建和上传工具
@@ -42,7 +42,7 @@ tree ./ ./
 2. 该方案已被大多数Python项目采用，并作为PEP 621的实现。
 3. pyproject.toml文件用于定义项目的元数据，例如依赖项、版本号等。
 4. 该文件应放置在项目的根目录下，并使用特定的语法和结构。
-5. 可以使用第三方工具或库（如pip、setuptools等）来解析和处理pyproject.toml文件。
+5. 可以使用第三方工具或库（如pip、setuptools等，但极度推荐使用poetry）来解析和处理pyproject.toml文件。
 6. 该方案已被证明是管理Python项目的有效方式，并已成为标准。
 
 |参考：https://blog.csdn.net/ViniJack/article/details/134133414#/
