@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "pylint-study"
+version = "0.1.0"
+description = ""
+authors = ["解大劦 <develope@163.com>"]
+readme = "README.md"
+packages = [{ include = "pylint" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+basiclibrary-py = "^0.6.3"
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^3.1.0"
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+# 使用国内的类库镜像源
+[[tool.poetry.source]]
+name = "mirrors"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
+priority = "default"
+
+
+[[tool.poetry.source]]
+name = "tencent"
+url = "https://mirrors.cloud.tencent.com/pypi/simple/"
+priority = "primary"
+
