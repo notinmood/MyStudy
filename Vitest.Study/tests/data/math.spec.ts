@@ -3,7 +3,7 @@
  * @Mail         : 9727005@qq.com
  * @Date         : 2025-01-12 15:17:50
  * @LastEditors  : Shandong Xiedali
- * @LastEditTime : 2025-01-12 16:19:11
+ * @LastEditTime : 2025-01-12 16:53:45
  * @FilePath     : math.spec.ts
  * @Description  : 
  * Copyright (c) 2025 by Hiland & RainyTop, All Rights Reserved. 
